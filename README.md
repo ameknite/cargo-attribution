@@ -55,7 +55,7 @@ homepage = "https://rustwasm.github.io/"
 
 ```
 
-You can check an example of the files generated in the [attribution folder](./attribution/) of this repository.
+You can check the [dependencies.toml](./attribution/dependencies.toml) file and [licenses](./attribution/licenses/) generated for this project.
 
 ## Purpose
 
@@ -64,7 +64,6 @@ This command allows you to comply with licenses that require you to retain the l
 MIT license extract:
 
 > The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 
 ## LICENSE
 
