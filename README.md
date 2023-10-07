@@ -14,22 +14,21 @@ Install cargo-attribution with: `cargo install cargo-attribution`.
 Run it in your project directory with: `cargo attribution`.
 
 ```bash
-Usage: cargo-attribution [--manifest-path <manifest-path>] [--current-dir <current-dir>] [--output-dir <output-dir>] [--all-features] [--no-default-features] [--features <features>] [--filter-platform <filter-platform>] [--only-normal-dependencies]
-
 A cargo subcommand to give credit to your dependencies
 
+Usage: cargo-attribution [OPTIONS]
+
 Options:
-  --manifest-path   path to the Cargo.toml, default to: ./Cargo.toml
-  --current-dir     directory of the cargo process, default to current dir: .
-  --output-dir      directory of the output files, default to: ./attribution
-  --all-features    activate all available features
-  --no-default-features
-                    deactivate default features
-  --features        select features to activate, e.g. "f1 f2 f3"
-  --filter-platform filter by target triple, e.g. "wasm32-unknown-unknown"
-  --only-normal-dependencies
-                    avoid dev, build and unknown dependencies
-  --help            display usage information
+      --manifest-path <MANIFEST_PATH>      Path to the Cargo.toml, [default: ./Cargo.toml]
+      --current-dir <CURRENT_DIR>          Directory of the cargo process, [default: .]
+      --output-dir <OUTPUT_DIR>            Directory of the output files, [default: ./attribution]
+      --all-features                       Activate all available features
+      --no-default-features                Deactivate default features
+      --features <FEATURES>                Select features to activate, e.g. f1,f2,f3
+      --filter-platform <FILTER_PLATFORM>  Filter by target triple, e.g., "wasm32-unknown-unknown"
+      --only-normal-dependencies           Avoid dev, build, and unknown dependencies
+  -h, --help                               Print help
+  -V, --version                            Print version
 ```
 
 ## Main Features

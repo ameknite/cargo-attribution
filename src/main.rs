@@ -59,7 +59,7 @@ async fn main() -> anyhow::Result<()> {
 }
 
 #[derive(Parser)]
-#[command(author, version, about, name = "cargo attribution")]
+#[command(author, version, about)]
 struct Args {
     /// Path to the Cargo.toml,
     #[arg(long, default_value = "./Cargo.toml")]
