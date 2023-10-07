@@ -1,0 +1,25 @@
+[package]
+name = "cargo-attribution"
+version = "0.1.0"
+authors = ["AmeKnite"]
+edition = "2021"
+rust-version = "1.66.1"
+description = "A cargo subcommand to give credit to your dependencies"
+documentation = "https://docs.rs/cargo-attribution"
+readme = "README.md"
+repository = "https://github.com/ameknite/cargo-attribution"
+license = "MPL-2.0"
+keywords = ["cli", "attribution", "credits", "licenses"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+anyhow = "1.0.75"
+argh = "0.1.12"
+bytes = "1.5.0"
+cargo_metadata = "0.18.0"
+reqwest = "0.11.22"
+serde = { version = "1.0", features = ["derive"] }
+spdx = "0.10.2"
+tokio = { version = "1.32.0", features = ["full"] }
+toml = "0.8.2"
+walkdir = "2.4.0"
