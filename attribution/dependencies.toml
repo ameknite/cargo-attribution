@@ -16,51 +16,56 @@ authors = ["Jonas Schievink <jonasschievink@gmail.com>"]
 repository = "https://github.com/jonas-schievink/adler.git"
 
 [[dependency]]
+name = "anstream"
+version = "0.6.4"
+description = "A simple cross platform library for writing colored text to a terminal."
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Individual contributors"]
+repository = "https://github.com/rust-cli/anstyle.git"
+homepage = "https://github.com/rust-cli/anstyle"
+
+[[dependency]]
+name = "anstyle"
+version = "1.0.4"
+description = "ANSI text styling"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2022 The rust-cli Developers"]
+repository = "https://github.com/rust-cli/anstyle.git"
+homepage = "https://github.com/rust-cli/anstyle"
+
+[[dependency]]
+name = "anstyle-parse"
+version = "0.2.2"
+description = "Parse ANSI Style Escapes"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2016 Joe Wilm and individual contributors"]
+repository = "https://github.com/rust-cli/anstyle.git"
+homepage = "https://github.com/rust-cli/anstyle"
+
+[[dependency]]
+name = "anstyle-query"
+version = "1.0.0"
+description = "Look up colored console capabilities"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Individual contributors"]
+repository = "https://github.com/rust-cli/anstyle"
+
+[[dependency]]
+name = "anstyle-wincon"
+version = "3.0.1"
+description = "Styling legacy Windows terminals"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015 Josh Triplett, 2022 The rust-cli Developers"]
+repository = "https://github.com/rust-cli/anstyle.git"
+homepage = "https://github.com/rust-cli/anstyle"
+
+[[dependency]]
 name = "anyhow"
 version = "1.0.75"
 description = "Flexible concrete Error type built on std::error::Error"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 repository = "https://github.com/dtolnay/anyhow"
-
-[[dependency]]
-name = "argh"
-version = "0.1.12"
-description = "Derive-based argument parser optimized for code size"
-license = "BSD-3-Clause"
-notices = ["Copyright 2019 The Fuchsia Authors. All rights reserved."]
-authors = [
-    "Taylor Cramer <cramertj@google.com>",
-    "Benjamin Brittain <bwb@google.com>",
-    "Erick Tryzelaar <etryzelaar@google.com>",
-]
-repository = "https://github.com/google/argh"
-
-[[dependency]]
-name = "argh_derive"
-version = "0.1.12"
-description = "Derive-based argument parsing optimized for code size"
-license = "BSD-3-Clause"
-notices = ["Copyright 2019 The Fuchsia Authors. All rights reserved."]
-authors = [
-    "Taylor Cramer <cramertj@google.com>",
-    "Benjamin Brittain <bwb@google.com>",
-    "Erick Tryzelaar <etryzelaar@google.com>",
-]
-repository = "https://github.com/google/argh"
-
-[[dependency]]
-name = "argh_shared"
-version = "0.1.12"
-description = "Derive-based argument parsing optimized for code size"
-license = "BSD-3-Clause"
-notices = ["Copyright 2019 The Fuchsia Authors. All rights reserved."]
-authors = [
-    "Taylor Cramer <cramertj@google.com>",
-    "Benjamin Brittain <bwb@google.com>",
-    "Erick Tryzelaar <etryzelaar@google.com>",
-]
-repository = "https://github.com/google/argh"
 
 [[dependency]]
 name = "autocfg"
@@ -198,6 +203,46 @@ license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["Alex Crichton <alex@alexcrichton.com>"]
 repository = "https://github.com/alexcrichton/cfg-if"
+
+[[dependency]]
+name = "clap"
+version = "4.4.6"
+description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Individual contributors"]
+repository = "https://github.com/clap-rs/clap"
+
+[[dependency]]
+name = "clap_builder"
+version = "4.4.6"
+description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
+repository = "https://github.com/clap-rs/clap"
+
+[[dependency]]
+name = "clap_derive"
+version = "4.4.2"
+description = "Parse command line argument by defining a struct, derive crate."
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
+repository = "https://github.com/clap-rs/clap/tree/master/clap_derive"
+
+[[dependency]]
+name = "clap_lex"
+version = "0.5.1"
+description = "Minimal, flexible command line parser"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
+repository = "https://github.com/clap-rs/clap/tree/master/clap_lex"
+
+[[dependency]]
+name = "colorchoice"
+version = "1.0.0"
+description = "Global override of color control"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Individual contributors"]
+repository = "https://github.com/rust-cli/anstyle"
 
 [[dependency]]
 name = "core-foundation"
@@ -403,6 +448,15 @@ license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Amanieu d'Antras"]
 authors = ["Amanieu d'Antras <amanieu@gmail.com>"]
 repository = "https://github.com/rust-lang/hashbrown"
+
+[[dependency]]
+name = "heck"
+version = "0.4.1"
+description = "heck is a case conversion library."
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015 The Rust Project Developers"]
+authors = ["Without Boats <woboats@gmail.com>"]
+repository = "https://github.com/withoutboats/heck"
 
 [[dependency]]
 name = "hermit-abi"
@@ -1044,6 +1098,22 @@ authors = [
 repository = "https://github.com/EmbarkStudios/spdx"
 
 [[dependency]]
+name = "strsim"
+version = "0.10.0"
+description = """
+Implementations of string similarity metrics. Includes Hamming, Levenshtein,
+OSA, Damerau-Levenshtein, Jaro, Jaro-Winkler, and Sørensen-Dice.
+"""
+license = "MIT"
+notices = [
+    "Copyright (c) 2015 Danny Guo",
+    "Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>",
+    "Copyright (c) 2018 Akash Kurdekar",
+]
+authors = ["Danny Guo <danny@dannyguo.com>"]
+repository = "https://github.com/dguo/strsim-rs"
+
+[[dependency]]
 name = "syn"
 version = "2.0.38"
 description = "Parser for Rust source code"
@@ -1302,6 +1372,18 @@ license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
 authors = ["The rust-url developers"]
 repository = "https://github.com/servo/rust-url"
+
+[[dependency]]
+name = "utf8parse"
+version = "0.2.1"
+description = "Table-driven UTF-8 parser"
+license = "Apache-2.0 OR MIT"
+notices = ["Copyright (c) 2016 Joe Wilm"]
+authors = [
+    "Joe Wilm <joe@jwilm.com>",
+    "Christian Duerr <contact@christianduerr.com>",
+]
+repository = "https://github.com/alacritty/vte"
 
 [[dependency]]
 name = "vcpkg"

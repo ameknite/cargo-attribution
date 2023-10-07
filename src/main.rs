@@ -4,13 +4,13 @@
 
 use std::path::PathBuf;
 
-use argh::FromArgs;
 use cargo_attribution::{
     licenses,
     metadata::{self},
     serialize::SerializeFile,
 };
 use cargo_metadata::{CargoOpt, MetadataCommand};
+use clap::Parser;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -23,7 +23,7 @@ async fn main() -> anyhow::Result<()> {
         output_dir,
         filter_platform,
         only_normal_dependencies,
-    } = argh::from_env();
+    } = Args::parse();
 
     let mut mc = MetadataCommand::new();
     mc.manifest_path(manifest_path);
@@ -37,14 +37,12 @@ async fn main() -> anyhow::Result<()> {
         mc.features(CargoOpt::NoDefaultFeatures);
     }
 
-    if !features.is_empty() {
-        mc.features(CargoOpt::SomeFeatures(
-            features.split_whitespace().map(|f| f.to_owned()).collect(),
-        ));
+    if let Some(features) = features {
+        mc.features(CargoOpt::SomeFeatures(features));
     }
 
-    if !filter_platform.is_empty() {
-        mc.other_options([format!("--filter-platform {filter_platform}")]);
+    if let Some(platform) = filter_platform {
+        mc.other_options([format!("--filter-platform {platform}")]);
     }
 
     let metadata = mc.exec()?;
@@ -60,43 +58,40 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-#[derive(FromArgs)]
-/// A cargo subcommand to give credit to your dependencies
+#[derive(Parser)]
+#[command(author, version, about, name = "cargo attribution")]
 struct Args {
-    /// path to the Cargo.toml,
-    /// default to: ./Cargo.toml
-    #[argh(option, default = "PathBuf::from(\"./Cargo.toml\")")]
+    /// Path to the Cargo.toml,
+    #[arg(long, default_value = "./Cargo.toml")]
     manifest_path: PathBuf,
 
-    /// directory of the cargo process,
-    /// default to current dir: .
-    #[argh(option, default = "PathBuf::from(\".\")")]
+    /// Directory of the cargo process,
+    #[arg(long, default_value = ".")]
     current_dir: PathBuf,
 
-    /// directory of the output files,
-    /// default to: ./attribution
-    #[argh(option, default = "PathBuf::from(\"./attribution\")")]
+    /// Directory of the output files,
+    #[arg(long, default_value = "./attribution")]
     output_dir: PathBuf,
 
-    /// activate all available features
-    #[argh(switch)]
+    /// Activate all available features
+    #[arg(long)]
     all_features: bool,
 
-    /// deactivate default features
-    #[argh(switch)]
+    /// Deactivate default features
+    #[arg(long)]
     no_default_features: bool,
 
-    /// select features to activate,
-    /// e.g. "f1 f2 f3"
-    #[argh(option, default = "String::new()")]
-    features: String,
+    /// Select features to activate,
+    /// e.g. f1,f2,f3
+    #[arg(long, value_delimiter = ',')]
+    features: Option<Vec<String>>,
 
-    /// filter by target triple,
-    /// e.g. "wasm32-unknown-unknown"
-    #[argh(option, default = "String::new()")]
-    filter_platform: String,
+    /// Filter by target triple,
+    /// e.g., "wasm32-unknown-unknown"
+    #[arg(long)]
+    filter_platform: Option<String>,
 
-    /// avoid dev, build and unknown dependencies
-    #[argh(switch)]
+    /// Avoid dev, build, and unknown dependencies
+    #[arg(long)]
     only_normal_dependencies: bool,
 }
