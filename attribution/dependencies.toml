@@ -157,7 +157,7 @@ repository = "https://github.com/camino-rs/camino"
 
 [[dependency]]
 name = "cargo-attribution"
-version = "0.2.0"
+version = "0.3.0"
 description = "A cargo subcommand to give credit to your dependencies"
 license = "MPL-2.0"
 authors = ["AmeKnite"]
@@ -165,7 +165,7 @@ repository = "https://github.com/ameknite/cargo-attribution"
 
 [[dependency]]
 name = "cargo-platform"
-version = "0.1.3"
+version = "0.1.4"
 description = "Cargo's representation of a target platform."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/rust-lang/cargo"
@@ -281,21 +281,12 @@ repository = "https://github.com/cuviper/equivalent"
 
 [[dependency]]
 name = "errno"
-version = "0.3.4"
+version = "0.3.5"
 description = "Cross-platform interface to the `errno` variable."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Chris Wong"]
 authors = ["Chris Wong <lambda.fairy@gmail.com>"]
 repository = "https://github.com/lambda-fairy/rust-errno"
-
-[[dependency]]
-name = "errno-dragonfly"
-version = "0.1.2"
-description = "Exposes errno functionality to stable Rust on DragonFlyBSD"
-license = "MIT"
-notices = ["Copyright (c) 2017 Michael Neumann"]
-authors = ["Michael Neumann <mneumann@ntecs.de>"]
-repository = "https://github.com/mneumann/errno-dragonfly-rs"
 
 [[dependency]]
 name = "fastrand"
@@ -603,7 +594,7 @@ repository = "https://github.com/rust-lang-nursery/lazy-static.rs"
 
 [[dependency]]
 name = "libc"
-version = "0.2.148"
+version = "0.2.149"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -614,7 +605,7 @@ repository = "https://github.com/rust-lang/libc"
 
 [[dependency]]
 name = "linux-raw-sys"
-version = "0.4.8"
+version = "0.4.9"
 description = "Generated bindings for Linux's userspace API"
 license = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
 authors = ["Dan Gohman <dev@sunfishcode.online>"]
