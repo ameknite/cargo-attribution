@@ -9,7 +9,7 @@ documentation = "https://docs.rs/cargo-attribution"
 readme = "README.md"
 repository = "https://github.com/ameknite/cargo-attribution"
 license = "MPL-2.0"
-keywords = ["cli", "attribution", "credits", "licenses"]
+keywords = ["cli", "attribution", "credits", "license"]
 categories = ["command-line-utilities"]
 
 [dependencies]
