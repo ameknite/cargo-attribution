@@ -16,7 +16,7 @@ Run it in your project directory with: `cargo attribution`.
 ```bash
 A cargo subcommand to give credit to your dependencies
 
-Usage: cargo-attribution [OPTIONS]
+Usage: cargo attribution [OPTIONS]
 
 Options:
       --manifest-path <MANIFEST_PATH>      Path to the Cargo.toml, [default: ./Cargo.toml]
