@@ -14,7 +14,7 @@ use clap::Parser;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let Args {
+    let CargoCli::Attribution(Args {
         manifest_path,
         current_dir,
         all_features,
@@ -23,7 +23,7 @@ async fn main() -> anyhow::Result<()> {
         output_dir,
         filter_platform,
         only_normal_dependencies,
-    } = Args::parse();
+    }) = CargoCli::parse();
 
     let mut mc = MetadataCommand::new();
     mc.manifest_path(manifest_path);
@@ -58,7 +58,7 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-#[derive(Parser)]
+#[derive(clap::Args)]
 #[command(author, version, about)]
 struct Args {
     /// Path to the Cargo.toml,
@@ -94,4 +94,11 @@ struct Args {
     /// Avoid dev, build, and unknown dependencies
     #[arg(long)]
     only_normal_dependencies: bool,
+}
+
+#[derive(Parser)]
+#[command(name = "cargo")]
+#[command(bin_name = "cargo")]
+enum CargoCli {
+    Attribution(Args),
 }
