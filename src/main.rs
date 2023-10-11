@@ -48,7 +48,7 @@ async fn main() -> anyhow::Result<()> {
     let metadata = mc.exec()?;
     let dependencies_data = metadata::get_data(metadata, only_normal_dependencies)?;
 
-    cargo_attribution::create_output_dir(&output_dir)?;
+    cargo_attribution::create_folder(&output_dir)?;
 
     let serialize_file = SerializeFile::new(&dependencies_data);
     serialize_file.create_toml(&output_dir)?;

@@ -8,12 +8,21 @@ pub mod licenses;
 pub mod metadata;
 pub mod serialize;
 
-pub fn create_output_dir(path: &Path) -> anyhow::Result<()> {
+pub fn recreate_folder(path: &Path) -> anyhow::Result<()> {
     if path.try_exists()? {
         fs::remove_dir_all(path)?;
     }
 
     fs::create_dir(path)?;
 
+    Ok(())
+}
+
+pub fn create_folder(path: &Path) -> anyhow::Result<()> {
+    if path.try_exists()? {
+        return Ok(());
+    }
+
+    fs::create_dir(path)?;
     Ok(())
 }

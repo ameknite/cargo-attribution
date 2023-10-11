@@ -42,7 +42,7 @@ pub async fn generate_licenses(
     output_dir: PathBuf,
 ) -> anyhow::Result<()> {
     let output_dir = output_dir.join("licenses");
-    super::create_output_dir(&output_dir)?;
+    super::recreate_folder(&output_dir)?;
 
     let mut licenses = crates_data
         .iter()
