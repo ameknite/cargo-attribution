@@ -1,0 +1,17 @@
+[[inspiration]]
+name = "cargo-license"
+version = "0.5.1"
+description = "Cargo subcommand to see license of dependencies"
+license = "MIT"
+notices = ["Copyright (c) 2016  Onur Aslan  <onur@onur.im>"]
+authors = ["Onur Aslan <onur@onur.im>"]
+repository = "https://github.com/onur/cargo-license"
+
+[[inspiration]]
+name = "cargo-credits"
+version = "0.2.1"
+description = "display licenses of dependencies"
+license = "MIT"
+notices = ["Copyright (c) 2020 sinofseven"]
+authors = ["sinofseven <em.s.00001@gmail.com>"]
+repository = "https://github.com/sinofseven/cargo-credits"
