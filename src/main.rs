@@ -46,7 +46,9 @@ async fn main() -> anyhow::Result<()> {
     }
 
     let metadata = mc.exec()?;
+    println!("Extracting Metadata");
     let dependencies_data = metadata::get_data(metadata, only_normal_dependencies)?;
+    println!("Complete Metadata");
 
     cargo_attribution::create_folder(&output_dir)?;
 
