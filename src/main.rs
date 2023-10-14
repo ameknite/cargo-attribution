@@ -42,7 +42,7 @@ async fn main() -> anyhow::Result<()> {
     }
 
     if let Some(platform) = filter_platform {
-        mc.other_options([format!("--filter-platform {platform}")]);
+        mc.other_options(["--filter-platform".to_owned(), platform]);
     }
 
     let metadata = mc.exec()?;
