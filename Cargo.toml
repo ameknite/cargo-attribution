@@ -1,9 +1,9 @@
 [package]
 name = "cargo-attribution"
-version = "0.4.1"
+version = "0.4.2"
 authors = ["AmeKnite"]
 edition = "2021"
-rust-version = "1.66.1"
+rust-version = "1.70.0"
 description = "A cargo subcommand to give credit to your dependencies"
 documentation = "https://docs.rs/cargo-attribution"
 readme = "README.md"
@@ -15,11 +15,11 @@ categories = ["command-line-utilities"]
 [dependencies]
 anyhow = "1.0.75"
 bytes = "1.5.0"
-cargo_metadata = "0.18.0"
+cargo_metadata = "0.18.1"
 clap = { version = "4.4.6", features = ["derive"] }
 reqwest = "0.11.22"
-serde = { version = "1.0.188", features = ["derive"] }
+serde = { version = "1.0.189", features = ["derive"] }
 spdx = "0.10.2"
-tokio = { version = "1.32.0", features = ["full"] }
+tokio = { version = "1.33.0", features = ["full"] }
 toml = "0.8.2"
 walkdir = "2.4.0"
