@@ -25,6 +25,8 @@ pub struct DependencyData {
     pub homepage: Option<String>,
     #[serde(skip_serializing)]
     pub licenses: Vec<String>,
+    #[serde(skip_serializing)]
+    pub exceptions: Vec<String>,
 }
 
 impl DependencyData {
@@ -43,6 +45,7 @@ impl DependencyData {
             license: package.license.clone(),
             licenses: Vec::new(),
             notices: Vec::new(),
+            exceptions: Vec::new(),
         }
     }
 }
@@ -116,7 +119,7 @@ impl DependencyData {
             }
 
             if let Some(exception_id) = license_req.exception {
-                self.licenses.push(exception_id.name.to_owned());
+                self.exceptions.push(exception_id.name.to_owned());
             }
         }
 

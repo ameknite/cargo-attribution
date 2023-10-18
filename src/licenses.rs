@@ -42,9 +42,6 @@ pub async fn generate_licenses(
     crates_data: &[DependencyData],
     output_dir: PathBuf,
 ) -> anyhow::Result<()> {
-    let output_dir = output_dir.join("licenses");
-    super::recreate_folder(&output_dir)?;
-
     let mut licenses = crates_data
         .iter()
         .flat_map(|c| c.licenses.clone())
@@ -52,10 +49,13 @@ pub async fn generate_licenses(
     licenses.sort_unstable();
     licenses.dedup();
 
+    let licenses_dir = output_dir.join("licenses");
+    super::recreate_folder(&licenses_dir)?;
+
     let mut tasks = Vec::new();
     for license in licenses {
         let license_data = LicenseData {
-            path: output_dir.join(&license),
+            path: licenses_dir.join(&license),
             url: Url::parse(&format!(
                 "https://raw.githubusercontent.com/spdx/license-list-data/main/text/{license}.txt"
             ))?,
@@ -65,6 +65,32 @@ pub async fn generate_licenses(
         tasks.push(task::spawn(
             async move { license_data.generate_license().await },
         ));
+    }
+
+    let mut exceptions = crates_data
+        .iter()
+        .flat_map(|c| c.exceptions.clone())
+        .collect::<Vec<_>>();
+    exceptions.sort_unstable();
+    exceptions.dedup();
+
+    if !exceptions.is_empty() {
+        let exceptions_dir = licenses_dir.join("exceptions");
+        super::recreate_folder(&exceptions_dir)?;
+
+        for exception in exceptions {
+            let exception_data = LicenseData {
+                path: exceptions_dir.join(&exception),
+                url: Url::parse(&format!(
+                "https://raw.githubusercontent.com/spdx/license-list-data/main/text/{exception}.txt"
+            ))?,
+                name: exception,
+            };
+
+            tasks.push(task::spawn(async move {
+                exception_data.generate_license().await
+            }));
+        }
     }
 
     for task in tasks {
