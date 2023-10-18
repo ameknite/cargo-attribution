@@ -35,14 +35,12 @@ impl<'a> DependencySerialized<'a> {
 #[derive(Debug, Serialize)]
 pub struct SelfSerialized<'a> {
     #[serde(rename = "self")]
-    dependency: &'a [DependencyData],
+    self_crate: &'a DependencyData,
 }
 
 impl<'a> SelfSerialized<'a> {
-    pub fn new(dependencies: &'a [DependencyData]) -> Self {
-        Self {
-            dependency: dependencies,
-        }
+    pub fn new(self_crate: &'a DependencyData) -> Self {
+        Self { self_crate }
     }
 
     pub fn to_toml(&self) -> Result<String, toml::ser::Error> {

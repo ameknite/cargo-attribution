@@ -1,4 +1,4 @@
-[[self]]
+[self]
 name = "cargo-attribution"
 version = "0.6.0"
 description = "A cargo subcommand to give credit to your dependencies"

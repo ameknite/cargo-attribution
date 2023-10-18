@@ -58,10 +58,9 @@ async fn main() -> anyhow::Result<()> {
     dependencies_file.create_toml(&output_dir)?;
 
     if let Some(crate_data) = crate_data {
-        let crate_data = vec![crate_data];
         let crate_file = SelfSerialized::new(&crate_data);
         crate_file.create_toml(&output_dir)?;
-        dependencies_data.extend(crate_data);
+        dependencies_data.push(crate_data);
     }
 
     licenses::generate_licenses(&dependencies_data, output_dir).await?;
