@@ -156,14 +156,6 @@ authors = [
 repository = "https://github.com/camino-rs/camino"
 
 [[dependency]]
-name = "cargo-attribution"
-version = "0.4.2"
-description = "A cargo subcommand to give credit to your dependencies"
-license = "MPL-2.0"
-authors = ["AmeKnite"]
-repository = "https://github.com/ameknite/cargo-attribution"
-
-[[dependency]]
 name = "cargo-platform"
 version = "0.1.4"
 description = "Cargo's representation of a target platform."

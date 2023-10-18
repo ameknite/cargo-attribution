@@ -8,7 +8,7 @@ use std::path::PathBuf;
 use cargo_attribution::{
     licenses,
     metadata::{self},
-    serialize::SerializeFile,
+    serialize::{DependencySerialized, SelfSerialized},
 };
 use cargo_metadata::{CargoOpt, MetadataCommand};
 use clap::Parser;
@@ -48,16 +48,23 @@ async fn main() -> anyhow::Result<()> {
 
     let metadata = mc.exec()?;
     println!("Extracting Metadata");
-    let dependencies_data = metadata::get_data(metadata, only_normal_dependencies)?;
+    let (mut dependencies_data, crate_data) =
+        metadata::get_data(metadata, only_normal_dependencies)?;
     println!("Complete Metadata");
 
     cargo_attribution::create_folder(&output_dir)?;
 
-    let serialize_file = SerializeFile::new(&dependencies_data);
-    serialize_file.create_toml(&output_dir)?;
+    let dependencies_file = DependencySerialized::new(&dependencies_data);
+    dependencies_file.create_toml(&output_dir)?;
+
+    if let Some(crate_data) = crate_data {
+        let crate_data = vec![crate_data];
+        let crate_file = SelfSerialized::new(&crate_data);
+        crate_file.create_toml(&output_dir)?;
+        dependencies_data.extend(crate_data);
+    }
 
     licenses::generate_licenses(&dependencies_data, output_dir).await?;
-
     Ok(())
 }
 

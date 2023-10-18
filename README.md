@@ -35,7 +35,7 @@ Options:
 
 - Download a general version of the licenses used by your dependencies. They are downloaded from the spdx license-list-data: <https://github.com/spdx/license-list-data>
 
-- Create a "dependencies.toml" file containing the dependencies metadata used in your project. Including copyright notices.
+- Create a "dependencies.toml" file containing the dependencies metadata used in your project and a "self.toml" containing metadata of yor project. Including copyright notices.
 
 Example of a dependency:
 
@@ -54,7 +54,7 @@ homepage = "https://rustwasm.github.io/"
 
 ```
 
-You can check the [dependencies.toml](./attribution/dependencies.toml) file and [licenses](./attribution/licenses/) generated for this project.
+You can check the [dependencies.toml](./attribution/dependencies.toml) file, [self.toml](./attribution/self.toml) and [licenses](./attribution/licenses/) generated for this project.
 
 ## Purpose
 

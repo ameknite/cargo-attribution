@@ -10,11 +10,11 @@ use serde::Serialize;
 use crate::metadata::DependencyData;
 
 #[derive(Debug, Serialize)]
-pub struct SerializeFile<'a> {
+pub struct DependencySerialized<'a> {
     dependency: &'a [DependencyData],
 }
 
-impl<'a> SerializeFile<'a> {
+impl<'a> DependencySerialized<'a> {
     pub fn new(dependencies: &'a [DependencyData]) -> Self {
         Self {
             dependency: dependencies,
@@ -27,6 +27,30 @@ impl<'a> SerializeFile<'a> {
 
     pub fn create_toml(&self, output_dir: &Path) -> anyhow::Result<()> {
         let mut file = File::create(output_dir.join("dependencies.toml"))?;
+        file.write_all(self.to_toml()?.as_bytes())?;
+        Ok(())
+    }
+}
+
+#[derive(Debug, Serialize)]
+pub struct SelfSerialized<'a> {
+    #[serde(rename = "self")]
+    dependency: &'a [DependencyData],
+}
+
+impl<'a> SelfSerialized<'a> {
+    pub fn new(dependencies: &'a [DependencyData]) -> Self {
+        Self {
+            dependency: dependencies,
+        }
+    }
+
+    pub fn to_toml(&self) -> Result<String, toml::ser::Error> {
+        toml::to_string_pretty(&self)
+    }
+
+    pub fn create_toml(&self, output_dir: &Path) -> anyhow::Result<()> {
+        let mut file = File::create(output_dir.join("self.toml"))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
     }

@@ -130,8 +130,9 @@ impl DependencyData {
 pub fn get_data(
     metadata: Metadata,
     only_normal_dependencies: bool,
-) -> anyhow::Result<Vec<DependencyData>> {
+) -> anyhow::Result<(Vec<DependencyData>, Option<DependencyData>)> {
     let mut dependencies = Vec::with_capacity(metadata.packages.len());
+    let mut my_crate = None;
 
     for package in &metadata.packages {
         let mut dependency = DependencyData::new(package);
@@ -155,7 +156,15 @@ pub fn get_data(
             continue;
         };
 
-        dependencies.push(dependency);
+        if metadata
+            .root_package()
+            .iter()
+            .any(|root| root.id == package.id)
+        {
+            my_crate = Some(dependency);
+        } else {
+            dependencies.push(dependency);
+        }
     }
-    Ok(dependencies)
+    Ok((dependencies, my_crate))
 }
