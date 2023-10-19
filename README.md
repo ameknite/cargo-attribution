@@ -40,7 +40,7 @@ Options:
 Example of a dependency:
 
 ```toml
-[[dependency]]
+[[crate]]
 name = "wasm-bindgen"
 version = "0.2.87"
 description = """
