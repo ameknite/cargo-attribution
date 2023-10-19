@@ -9,7 +9,6 @@ use anyhow::Context;
 use cargo_metadata::{DependencyKind, Metadata, Package};
 use serde::Serialize;
 use spdx::Expression;
-use walkdir::WalkDir;
 
 #[derive(Debug, Serialize)]
 pub struct DependencyData {
@@ -56,7 +55,7 @@ impl DependencyData {
             .manifest_path
             .parent()
             .context("Not manifest parent")?;
-        for entry in WalkDir::new(parent) {
+        for entry in fs::read_dir(parent)? {
             let entry = entry?;
             let file_path = entry.path();
 
@@ -84,7 +83,9 @@ impl DependencyData {
                 .filter(|line| {
                     let line = line.trim().to_lowercase();
                     line.starts_with("copyright")
-                        && (line.contains("(c)") || line.chars().any(|c| c.is_ascii_digit()))
+                        && (line.contains("(c)")
+                            || line.contains('©')
+                            || line.chars().any(|c| c.is_ascii_digit()))
                 })
                 .map(|line| line.trim())
             {
