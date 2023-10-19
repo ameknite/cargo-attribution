@@ -35,7 +35,7 @@ Options:
 
 - Download a general version of the licenses used by your dependencies. They are downloaded from the spdx license-list-data: <https://github.com/spdx/license-list-data>
 
-- Create a "dependencies.toml" file containing the dependencies metadata used in your project and a "self.toml" containing metadata of yor project. Including copyright notices.
+- Create a `dependencies.toml` file that contains metadata for the project's dependencies, and a `self.toml` file that includes metadata of the project itself, including copyright notices.
 
 Example of a dependency:
 
