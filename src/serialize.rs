@@ -11,6 +11,7 @@ use crate::metadata::DependencyData;
 
 #[derive(Debug, Serialize)]
 pub struct DependencySerialized<'a> {
+    #[serde(rename = "crate")]
     dependency: &'a [DependencyData],
 }
 
@@ -26,7 +27,7 @@ impl<'a> DependencySerialized<'a> {
     }
 
     pub fn create_toml(&self, output_dir: &Path) -> anyhow::Result<()> {
-        let mut file = File::create(output_dir.join("dependencies.toml"))?;
+        let mut file = File::create(output_dir.join("crates.toml"))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
     }
