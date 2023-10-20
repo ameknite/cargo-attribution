@@ -24,6 +24,7 @@ async fn main() -> anyhow::Result<()> {
         output_dir,
         filter_platform,
         only_normal_dependencies,
+        dependencies_name,
     }) = CargoCli::parse();
 
     let mut mc = MetadataCommand::new();
@@ -54,7 +55,7 @@ async fn main() -> anyhow::Result<()> {
 
     cargo_attribution::create_folder(&output_dir)?;
 
-    let dependencies_file = DependencySerialized::new(&dependencies_data);
+    let dependencies_file = DependencySerialized::new(&dependencies_data, dependencies_name);
     dependencies_file.create_toml(&output_dir)?;
 
     if let Some(crate_data) = crate_data {
@@ -81,6 +82,10 @@ struct Args {
     /// Directory of the output files,
     #[arg(long, default_value = "./attribution")]
     output_dir: PathBuf,
+
+    /// Dependencies file name
+    #[arg(short, long, default_value = "dependencies")]
+    dependencies_name: String,
 
     /// Activate all available features
     #[arg(long)]

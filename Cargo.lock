@@ -144,6 +144,7 @@ dependencies = [
  "spdx",
  "tokio",
  "toml",
+ "toml_edit",
 ]
 
 [[package]]

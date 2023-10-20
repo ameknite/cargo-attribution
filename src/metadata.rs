@@ -10,7 +10,7 @@ use cargo_metadata::{DependencyKind, Metadata, Package};
 use serde::Serialize;
 use spdx::Expression;
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Clone)]
 pub struct DependencyData {
     pub name: String,
     pub version: String,
