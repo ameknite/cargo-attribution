@@ -25,6 +25,7 @@ async fn main() -> anyhow::Result<()> {
         filter_platform,
         only_normal_dependencies,
         dependencies_name,
+        self_name,
     }) = CargoCli::parse();
 
     let mut mc = MetadataCommand::new();
@@ -59,7 +60,7 @@ async fn main() -> anyhow::Result<()> {
     dependencies_file.create_toml(&output_dir)?;
 
     if let Some(crate_data) = crate_data {
-        let crate_file = SelfSerialized::new(&crate_data);
+        let crate_file = SelfSerialized::new(&crate_data, self_name);
         crate_file.create_toml(&output_dir)?;
         dependencies_data.push(crate_data);
     }
@@ -86,6 +87,10 @@ struct Args {
     /// Dependencies file name
     #[arg(short, long, default_value = "dependencies")]
     dependencies_name: String,
+
+    /// Self file name
+    #[arg(long, default_value = "self")]
+    self_name: String,
 
     /// Activate all available features
     #[arg(long)]

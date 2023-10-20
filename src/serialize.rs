@@ -6,7 +6,7 @@
 use std::{fs::File, io::Write, path::Path};
 
 use serde::Serialize;
-use toml_edit::{ArrayOfTables, Document, Item};
+use toml_edit::{ArrayOfTables, Document, Item, Table};
 
 use crate::metadata::DependencyData;
 
@@ -27,23 +27,24 @@ impl<'a> DependencySerialized<'a> {
 
     pub fn to_toml(&self) -> anyhow::Result<String> {
         // Serialize your struct to a TOML string
-        let mut toml_str = toml::to_string_pretty(&self)?;
+        let toml_str = toml::to_string_pretty(&self)?;
 
-        if self.file_name != "dependencies" {
-            // Parse the TOML string into a toml_edit::Document
-            let mut doc = toml_str.parse::<Document>()?;
-
-            if let Item::ArrayOfTables(array_of_tables) = &mut doc["dependencies"] {
-                // Rename the list
-                let mut new_list = ArrayOfTables::new();
-                std::mem::swap(array_of_tables, &mut new_list);
-                doc[&self.file_name] = Item::ArrayOfTables(new_list)
-            }
-
-            // Convert the modified document back to a TOML string
-            toml_str = doc.to_string();
+        if self.file_name == "dependencies" {
+            return Ok(toml_str);
         }
 
+        // Parse the TOML string into a toml_edit::Document
+        let mut doc = toml_str.parse::<Document>()?;
+
+        if let Item::ArrayOfTables(array_of_tables) = &mut doc["dependencies"] {
+            // Rename the list
+            let mut new_list = ArrayOfTables::new();
+            std::mem::swap(array_of_tables, &mut new_list);
+            doc[&self.file_name] = Item::ArrayOfTables(new_list)
+        }
+
+        // Convert the modified document back to a TOML string
+        let toml_str = doc.to_string();
         Ok(toml_str)
     }
 
@@ -58,19 +59,44 @@ impl<'a> DependencySerialized<'a> {
 pub struct SelfSerialized<'a> {
     #[serde(rename = "self")]
     self_crate: &'a DependencyData,
+    #[serde(skip)]
+    file_name: String,
 }
 
 impl<'a> SelfSerialized<'a> {
-    pub fn new(self_crate: &'a DependencyData) -> Self {
-        Self { self_crate }
+    pub fn new(self_crate: &'a DependencyData, file_name: String) -> Self {
+        Self {
+            self_crate,
+            file_name,
+        }
     }
 
-    pub fn to_toml(&self) -> Result<String, toml::ser::Error> {
-        toml::to_string_pretty(&self)
+    pub fn to_toml(&self) -> anyhow::Result<String> {
+        // Serialize your struct to a TOML string
+        let toml_str = toml::to_string_pretty(&self)?;
+
+        if self.file_name == "self" {
+            return Ok(toml_str);
+        }
+
+        // Parse the TOML string into a toml_edit::Document
+        let mut doc = toml_str.parse::<Document>()?;
+
+        if let Item::Table(table) = &mut doc["self"] {
+            // Rename the table
+            let mut new_table = Table::new();
+            std::mem::swap(table, &mut new_table);
+            doc[&self.file_name] = Item::Table(new_table);
+            doc.remove("self");
+        }
+
+        // Convert the modified document back to a TOML string
+        let toml_str = doc.to_string();
+        Ok(toml_str)
     }
 
     pub fn create_toml(&self, output_dir: &Path) -> anyhow::Result<()> {
-        let mut file = File::create(output_dir.join("self.toml"))?;
+        let mut file = File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
     }
