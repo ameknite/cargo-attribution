@@ -19,16 +19,28 @@ A cargo subcommand to give credit to your dependencies
 Usage: cargo attribution [OPTIONS]
 
 Options:
-      --manifest-path <MANIFEST_PATH>      Path to the Cargo.toml, [default: ./Cargo.toml]
-      --current-dir <CURRENT_DIR>          Directory of the cargo process, [default: .]
-      --output-dir <OUTPUT_DIR>            Directory of the output files, [default: ./attribution]
-      --all-features                       Activate all available features
-      --no-default-features                Deactivate default features
-      --features <FEATURES>                Select features to activate, e.g. f1,f2,f3
-      --filter-platform <FILTER_PLATFORM>  Filter by target triple, e.g., "wasm32-unknown-unknown"
-      --only-normal-dependencies           Avoid dev, build, and unknown dependencies
-  -h, --help                               Print help
-  -V, --version                            Print version
+      --manifest-path <MANIFEST_PATH>
+          Path to the Cargo.toml, [default: ./Cargo.toml]
+      --current-dir <CURRENT_DIR>
+          Directory of the cargo process, [default: .]
+      --output-dir <OUTPUT_DIR>
+          Directory of the output files, [default: ./attribution]
+  -d, --dependencies-name <DEPENDENCIES_NAME>
+          Dependencies file name [default: dependencies]
+      --all-features
+          Activate all available features
+      --no-default-features
+          Deactivate default features
+      --features <FEATURES>
+          Select features to activate, e.g. f1,f2,f3
+      --filter-platform <FILTER_PLATFORM>
+          Filter by target triple, e.g., "wasm32-unknown-unknown"
+      --only-normal-dependencies
+          Avoid dev, build, and unknown dependencies
+  -h, --help
+          Print help
+  -V, --version
+          Print version
 ```
 
 ## Main Features
@@ -40,7 +52,7 @@ Options:
 Example of a dependency:
 
 ```toml
-[[crate]]
+[[dependencies]]
 name = "wasm-bindgen"
 version = "0.2.87"
 description = """
