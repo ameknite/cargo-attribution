@@ -13,7 +13,7 @@ Install cargo-attribution with: `cargo install cargo-attribution`.
 
 Run it in your project directory with: `cargo attribution`.
 
-```bash
+```sh
 A cargo subcommand to give credit to your dependencies
 
 Usage: cargo attribution [OPTIONS]
@@ -27,6 +27,8 @@ Options:
           Directory of the output files, [default: ./attribution]
   -d, --dependencies-name <DEPENDENCIES_NAME>
           Dependencies file name [default: dependencies]
+      --self-name <SELF_NAME>
+          Self file name [default: self]
       --all-features
           Activate all available features
       --no-default-features
