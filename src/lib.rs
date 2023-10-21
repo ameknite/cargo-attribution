@@ -3,13 +3,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+use color_eyre::Result;
 use std::{fs, path::Path};
 
 pub mod licenses;
 pub mod metadata;
 pub mod serialize;
 
-pub fn recreate_folder(path: &Path) -> anyhow::Result<()> {
+pub fn recreate_folder(path: &Path) -> Result<()> {
     if path.try_exists()? {
         fs::remove_dir_all(path)?;
     }
@@ -19,7 +20,7 @@ pub fn recreate_folder(path: &Path) -> anyhow::Result<()> {
     Ok(())
 }
 
-pub fn create_folder(path: &Path) -> anyhow::Result<()> {
+pub fn create_folder(path: &Path) -> Result<()> {
     if path.try_exists()? {
         return Ok(());
     }

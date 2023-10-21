@@ -60,14 +60,6 @@ repository = "https://github.com/rust-cli/anstyle.git"
 homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
-name = "anyhow"
-version = "1.0.75"
-description = "Flexible concrete Error type built on std::error::Error"
-license = "MIT OR Apache-2.0"
-authors = ["David Tolnay <dtolnay@gmail.com>"]
-repository = "https://github.com/dtolnay/anyhow"
-
-[[dependencies]]
 name = "autocfg"
 version = "1.1.0"
 description = "Automatic cfg for Rust compiler features"
@@ -229,6 +221,14 @@ notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
 repository = "https://github.com/clap-rs/clap/tree/master/clap_lex"
 
 [[dependencies]]
+name = "color-eyre"
+version = "0.6.2"
+description = "An error report handler for panics and eyre::Reports for colorful, consistent, and well formatted error reports for all kinds of errors."
+license = "MIT OR Apache-2.0"
+authors = ["Jane Lusby <jlusby@yaah.dev>"]
+repository = "https://github.com/yaahc/color-eyre"
+
+[[dependencies]]
 name = "colorchoice"
 version = "1.0.0"
 description = "Global override of color control"
@@ -280,6 +280,17 @@ license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Chris Wong"]
 authors = ["Chris Wong <lambda.fairy@gmail.com>"]
 repository = "https://github.com/lambda-fairy/rust-errno"
+
+[[dependencies]]
+name = "eyre"
+version = "0.6.8"
+description = "Flexible concrete Error Reporting type built on std::error::Error with customizable Reports"
+license = "MIT OR Apache-2.0"
+authors = [
+    "David Tolnay <dtolnay@gmail.com>",
+    "Jane Lusby <jlusby42@gmail.com>",
+]
+repository = "https://github.com/yaahc/eyre"
 
 [[dependencies]]
 name = "fastrand"
@@ -531,6 +542,16 @@ authors = ["The rust-url developers"]
 repository = "https://github.com/servo/rust-url/"
 
 [[dependencies]]
+name = "indenter"
+version = "0.3.3"
+description = """
+A formatter wrapper that indents the text, designed for error display impls
+"""
+license = "MIT OR Apache-2.0"
+authors = ["Jane Lusby <jlusby@yaah.dev>"]
+repository = "https://github.com/yaahc/indenter"
+
+[[dependencies]]
 name = "indexmap"
 version = "1.9.3"
 description = "A hash table with consistent order and fast iteration."
@@ -748,6 +769,15 @@ authors = [
     "Steven Fackler <sfackler@gmail.com>",
 ]
 repository = "https://github.com/sfackler/rust-openssl"
+
+[[dependencies]]
+name = "owo-colors"
+version = "3.5.0"
+description = "Zero-allocation terminal colors that'll make people go owo"
+license = "MIT"
+notices = ["Copyright (c) 2020 - present The owo-colors Developers"]
+authors = ["jam1garner <8260240+jam1garner@users.noreply.github.com>"]
+repository = "https://github.com/jam1garner/owo-colors"
 
 [[dependencies]]
 name = "parking_lot"

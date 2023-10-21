@@ -12,9 +12,12 @@ use cargo_attribution::{
 };
 use cargo_metadata::{CargoOpt, MetadataCommand};
 use clap::Parser;
+use color_eyre::eyre::Result;
 
 #[tokio::main]
-async fn main() -> anyhow::Result<()> {
+async fn main() -> Result<()> {
+    color_eyre::install()?;
+
     let CargoCli::Attribution(Args {
         manifest_path,
         current_dir,

@@ -5,8 +5,8 @@
 
 use std::fs;
 
-use anyhow::Context;
 use cargo_metadata::{DependencyKind, Metadata, Package};
+use color_eyre::{eyre::ContextCompat, Result};
 use serde::Serialize;
 use spdx::Expression;
 
@@ -50,11 +50,11 @@ impl DependencyData {
 }
 
 impl DependencyData {
-    pub fn get_license_notices(&mut self, package: &Package) -> anyhow::Result<()> {
+    pub fn get_license_notices(&mut self, package: &Package) -> Result<()> {
         let parent = package
             .manifest_path
             .parent()
-            .context("Not manifest parent")?;
+            .wrap_err("Not manifest parent")?;
         for entry in fs::read_dir(parent)? {
             let entry = entry?;
             let file_path = entry.path();
@@ -99,8 +99,8 @@ impl DependencyData {
         Ok(())
     }
 
-    pub fn get_parse_licenses(&mut self) -> anyhow::Result<()> {
-        let license_metadata = self.license.clone().context("License not found")?;
+    pub fn get_parse_licenses(&mut self) -> Result<()> {
+        let license_metadata = self.license.clone().wrap_err("License not found")?;
 
         let expression = match Expression::parse(&license_metadata) {
             Ok(spdx) => spdx,
@@ -134,7 +134,7 @@ impl DependencyData {
 pub fn get_data(
     metadata: Metadata,
     only_normal_dependencies: bool,
-) -> anyhow::Result<(Vec<DependencyData>, Option<DependencyData>)> {
+) -> Result<(Vec<DependencyData>, Option<DependencyData>)> {
     let mut dependencies = Vec::with_capacity(metadata.packages.len());
     let mut my_crate = None;
 

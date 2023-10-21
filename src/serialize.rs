@@ -5,6 +5,7 @@
 
 use std::{fs::File, io::Write, path::Path};
 
+use color_eyre::eyre::Result;
 use serde::Serialize;
 use toml_edit::{ArrayOfTables, Document, Item, Table};
 
@@ -25,7 +26,7 @@ impl<'a> DependencySerialized<'a> {
         }
     }
 
-    pub fn to_toml(&self) -> anyhow::Result<String> {
+    pub fn to_toml(&self) -> Result<String> {
         // Serialize your struct to a TOML string
         let toml_str = toml::to_string_pretty(&self)?;
 
@@ -48,7 +49,7 @@ impl<'a> DependencySerialized<'a> {
         Ok(toml_str)
     }
 
-    pub fn create_toml(&self, output_dir: &Path) -> anyhow::Result<()> {
+    pub fn create_toml(&self, output_dir: &Path) -> Result<()> {
         let mut file = File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
@@ -71,7 +72,7 @@ impl<'a> SelfSerialized<'a> {
         }
     }
 
-    pub fn to_toml(&self) -> anyhow::Result<String> {
+    pub fn to_toml(&self) -> Result<String> {
         // Serialize your struct to a TOML string
         let toml_str = toml::to_string_pretty(&self)?;
 
@@ -95,7 +96,7 @@ impl<'a> SelfSerialized<'a> {
         Ok(toml_str)
     }
 
-    pub fn create_toml(&self, output_dir: &Path) -> anyhow::Result<()> {
+    pub fn create_toml(&self, output_dir: &Path) -> Result<()> {
         let mut file = File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())

@@ -3,10 +3,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-use std::path::PathBuf;
-
 use bytes::Bytes;
+use color_eyre::Result;
 use reqwest::{self, Url};
+use std::path::PathBuf;
 use tokio::{fs::File, io::AsyncWriteExt, task};
 
 use crate::metadata::DependencyData;
@@ -18,18 +18,18 @@ pub struct LicenseData {
 }
 
 impl LicenseData {
-    pub async fn get_license_content(&self) -> anyhow::Result<Bytes> {
+    pub async fn get_license_content(&self) -> Result<Bytes> {
         let content = reqwest::get(self.url.clone()).await?.bytes().await?;
         Ok(content)
     }
 
-    pub async fn create_license_file(&self, content: Bytes) -> anyhow::Result<()> {
+    pub async fn create_license_file(&self, content: Bytes) -> Result<()> {
         let mut file = File::create(&self.path).await?;
         file.write_all(&content).await?;
         Ok(())
     }
 
-    pub async fn generate_license(&self) -> anyhow::Result<()> {
+    pub async fn generate_license(&self) -> Result<()> {
         println!("Downloading {}", self.name);
         let content = self.get_license_content().await?;
         self.create_license_file(content).await?;
@@ -38,10 +38,7 @@ impl LicenseData {
     }
 }
 
-pub async fn generate_licenses(
-    crates_data: &[DependencyData],
-    output_dir: PathBuf,
-) -> anyhow::Result<()> {
+pub async fn generate_licenses(crates_data: &[DependencyData], output_dir: PathBuf) -> Result<()> {
     let mut licenses = crates_data
         .iter()
         .flat_map(|c| c.licenses.clone())

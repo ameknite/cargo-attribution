@@ -13,10 +13,10 @@ keywords = ["cli", "attribution", "credits", "license"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-anyhow = "1.0.75"
 bytes = "1.5.0"
 cargo_metadata = "0.18.1"
 clap = { version = "4.4.6", features = ["derive"] }
+color-eyre = { version = "0.6.2", default-features = false }
 reqwest = "0.11.22"
 serde = { version = "1.0.189", features = ["derive"] }
 spdx = "0.10.2"
