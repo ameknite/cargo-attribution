@@ -1,6 +1,6 @@
 [package]
 name = "cargo-attribution"
-version = "0.6.0"
+version = "0.6.1"
 authors = ["AmeKnite"]
 edition = "2021"
 rust-version = "1.70.0"
