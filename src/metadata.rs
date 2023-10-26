@@ -73,7 +73,7 @@ impl DependencyData {
 
             if ["license", "copying"]
                 .iter()
-                .any(|name| !file_name.to_lowercase().contains(name))
+                .all(|name| !file_name.to_lowercase().contains(name))
             {
                 continue;
             }
