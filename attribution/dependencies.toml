@@ -1513,7 +1513,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows-targets"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import libs for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1531,7 +1531,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_aarch64_gnullvm"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1549,7 +1549,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_aarch64_msvc"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1567,7 +1567,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_i686_gnu"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1585,7 +1585,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_i686_msvc"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1603,7 +1603,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_x86_64_gnu"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1621,7 +1621,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_x86_64_gnullvm"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1639,7 +1639,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows_x86_64_msvc"
-version = "0.52.3"
+version = "0.52.4"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
