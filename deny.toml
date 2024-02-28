@@ -1,24 +1,38 @@
-# targets = []
+[graph]
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "aarch64-unknown-linux-gnu",
+    "x86_64-unknown-linux-musl",
+    "aarch64-apple-darwin",
+    "x86_64-apple-darwin",
+    "x86_64-pc-windows-msvc",
+]
 all-features = true
 # no-default-features = false
-# feature-depth = 1
+
+[output]
+feature-depth = 1
 
 [advisories]
-db-path = "~/.cargo/advisory-db"
-db-urls = ["https://github.com/rustsec/advisory-db"]
-vulnerability = "deny"
-unmaintained = "deny"
-yanked = "deny"
-notice = "deny"
+version = 2
 ignore = []
 
 [licenses]
-unlicensed = "deny"
-allow = ["MPL-2.0"]
-deny = []
-copyleft = "deny"
-allow-osi-fsf-free = "either"
-default = "deny"
+version = 2
+allow = [
+    # Permissive
+    "0BSD",
+    "Unlicense",
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "BSL-1.0",
+    "ISC",
+    "MIT",
+    "Unicode-DFS-2016",
+    "Zlib",
+    # CopyLeft - Only Source Code
+    "MPL-2.0",
+]
 confidence-threshold = 0.8
 exceptions = []
 
@@ -34,7 +48,6 @@ workspace-default-features = "allow"
 external-default-features = "allow"
 allow = []
 deny = []
-
 skip = []
 skip-tree = []
 
@@ -43,3 +56,8 @@ unknown-registry = "deny"
 unknown-git = "deny"
 allow-registry = ["https://github.com/rust-lang/crates.io-index"]
 allow-git = []
+
+[sources.allow-org]
+# github = [""]
+# gitlab = [""]
+# bitbucket = [""]

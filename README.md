@@ -49,26 +49,25 @@ Options:
 
 - Download a general version of the licenses used by your dependencies. They are downloaded from the spdx license-list-data: <https://github.com/spdx/license-list-data>
 
-- Create a `crates.toml` file that contains metadata for the project's dependencies, and a `self.toml` file that includes metadata of the project itself, including copyright notices.
+- Create a `dependencies.toml` file that contains metadata for the project's dependencies, and a `self.toml` file that includes metadata of the project itself, including copyright notices.
 
 Example of a dependency:
 
 ```toml
 [[dependencies]]
 name = "wasm-bindgen"
-version = "0.2.87"
+version = "0.2.91"
 description = """
 Easy support for interacting between JS and Rust.
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen"
 homepage = "https://rustwasm.github.io/"
-
 ```
 
-You can check the [crates.toml](./attribution/crates.toml) file, [self.toml](./attribution/self.toml) and [licenses](./attribution/licenses/) generated for this project.
+You can check the [dependencies.toml](./attribution/dependencies.toml) file, [self.toml](./attribution/self.toml) and [licenses](./attribution/licenses/) generated for this project.
 
 ## Purpose
 

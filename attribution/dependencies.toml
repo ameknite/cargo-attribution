@@ -17,7 +17,7 @@ repository = "https://github.com/jonas-schievink/adler.git"
 
 [[dependencies]]
 name = "anstream"
-version = "0.6.4"
+version = "0.6.13"
 description = "A simple cross platform library for writing colored text to a terminal."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -26,7 +26,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle"
-version = "1.0.4"
+version = "1.0.6"
 description = "ANSI text styling"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2022 The rust-cli Developers"]
@@ -35,7 +35,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-parse"
-version = "0.2.2"
+version = "0.2.3"
 description = "Parse ANSI Style Escapes"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Joe Wilm and individual contributors"]
@@ -44,7 +44,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-query"
-version = "1.0.0"
+version = "1.0.2"
 description = "Look up colored console capabilities"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -52,7 +52,7 @@ repository = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-wincon"
-version = "3.0.1"
+version = "3.0.2"
 description = "Styling legacy Windows terminals"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Josh Triplett, 2022 The rust-cli Developers"]
@@ -81,7 +81,7 @@ repository = "https://github.com/rust-lang/backtrace-rs"
 
 [[dependencies]]
 name = "base64"
-version = "0.21.4"
+version = "0.21.7"
 description = "encodes and decodes base64 as bytes or utf8"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Alice Maz"]
@@ -104,7 +104,7 @@ repository = "https://github.com/bitflags/bitflags"
 
 [[dependencies]]
 name = "bitflags"
-version = "2.4.0"
+version = "2.4.2"
 description = """
 A macro to generate structures which behave like bitflags.
 """
@@ -115,7 +115,7 @@ repository = "https://github.com/bitflags/bitflags"
 
 [[dependencies]]
 name = "bumpalo"
-version = "3.14.0"
+version = "3.15.3"
 description = "A fast bump allocation arena for Rust."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Nick Fitzgerald"]
@@ -149,7 +149,7 @@ repository = "https://github.com/camino-rs/camino"
 
 [[dependencies]]
 name = "cargo-platform"
-version = "0.1.4"
+version = "0.1.7"
 description = "Cargo's representation of a target platform."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/rust-lang/cargo"
@@ -164,7 +164,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.83"
+version = "1.0.88"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -190,7 +190,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.4.7"
+version = "4.5.1"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -198,7 +198,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.4.7"
+version = "4.5.1"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -206,7 +206,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.4.7"
+version = "4.5.0"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -214,7 +214,7 @@ repository = "https://github.com/clap-rs/clap/tree/master/clap_derive"
 
 [[dependencies]]
 name = "clap_lex"
-version = "0.6.0"
+version = "0.7.0"
 description = "Minimal, flexible command line parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -238,18 +238,18 @@ repository = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "core-foundation"
-version = "0.9.3"
+version = "0.9.4"
 description = "Bindings to Core Foundation for macOS"
-license = "MIT / Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2012-2013 Mozilla Foundation"]
 authors = ["The Servo Project Developers"]
 repository = "https://github.com/servo/core-foundation-rs"
 
 [[dependencies]]
 name = "core-foundation-sys"
-version = "0.8.4"
+version = "0.8.6"
 description = "Bindings to Core Foundation for macOS"
-license = "MIT / Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2012-2013 Mozilla Foundation"]
 authors = ["The Servo Project Developers"]
 repository = "https://github.com/servo/core-foundation-rs"
@@ -274,7 +274,7 @@ repository = "https://github.com/cuviper/equivalent"
 
 [[dependencies]]
 name = "errno"
-version = "0.3.5"
+version = "0.3.8"
 description = "Cross-platform interface to the `errno` variable."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Chris Wong"]
@@ -283,14 +283,14 @@ repository = "https://github.com/lambda-fairy/rust-errno"
 
 [[dependencies]]
 name = "eyre"
-version = "0.6.8"
+version = "0.6.12"
 description = "Flexible concrete Error Reporting type built on std::error::Error with customizable Reports"
 license = "MIT OR Apache-2.0"
 authors = [
     "David Tolnay <dtolnay@gmail.com>",
     "Jane Lusby <jlusby42@gmail.com>",
 ]
-repository = "https://github.com/yaahc/eyre"
+repository = "https://github.com/eyre-rs/eyre"
 
 [[dependencies]]
 name = "fastrand"
@@ -329,7 +329,7 @@ repository = "https://github.com/sfackler/foreign-types"
 
 [[dependencies]]
 name = "form_urlencoded"
-version = "1.2.0"
+version = "1.2.1"
 description = "Parser and serializer for the application/x-www-form-urlencoded syntax, as used by HTML forms."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2016 The rust-url developers"]
@@ -338,7 +338,7 @@ repository = "https://github.com/servo/rust-url"
 
 [[dependencies]]
 name = "futures-channel"
-version = "0.3.28"
+version = "0.3.30"
 description = """
 Channels for asynchronous communication using futures-rs.
 """
@@ -352,7 +352,7 @@ homepage = "https://rust-lang.github.io/futures-rs"
 
 [[dependencies]]
 name = "futures-core"
-version = "0.3.28"
+version = "0.3.30"
 description = """
 The core traits and types in for the `futures` library.
 """
@@ -366,7 +366,7 @@ homepage = "https://rust-lang.github.io/futures-rs"
 
 [[dependencies]]
 name = "futures-sink"
-version = "0.3.28"
+version = "0.3.30"
 description = """
 The asynchronous `Sink` trait for the futures-rs library.
 """
@@ -380,7 +380,7 @@ homepage = "https://rust-lang.github.io/futures-rs"
 
 [[dependencies]]
 name = "futures-task"
-version = "0.3.28"
+version = "0.3.30"
 description = """
 Tools for working with tasks.
 """
@@ -394,7 +394,7 @@ homepage = "https://rust-lang.github.io/futures-rs"
 
 [[dependencies]]
 name = "futures-util"
-version = "0.3.28"
+version = "0.3.30"
 description = """
 Common utilities and extension traits for the futures-rs library.
 """
@@ -408,7 +408,7 @@ homepage = "https://rust-lang.github.io/futures-rs"
 
 [[dependencies]]
 name = "gimli"
-version = "0.28.0"
+version = "0.28.1"
 description = "A library for reading and writing the DWARF debugging format."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 The Rust Project Developers"]
@@ -416,7 +416,7 @@ repository = "https://github.com/gimli-rs/gimli"
 
 [[dependencies]]
 name = "h2"
-version = "0.3.21"
+version = "0.3.24"
 description = "An HTTP/2 client and server"
 license = "MIT"
 notices = ["Copyright (c) 2017 h2 authors"]
@@ -428,16 +428,7 @@ repository = "https://github.com/hyperium/h2"
 
 [[dependencies]]
 name = "hashbrown"
-version = "0.12.3"
-description = "A Rust port of Google's SwissTable hash map"
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2016 Amanieu d'Antras"]
-authors = ["Amanieu d'Antras <amanieu@gmail.com>"]
-repository = "https://github.com/rust-lang/hashbrown"
-
-[[dependencies]]
-name = "hashbrown"
-version = "0.14.1"
+version = "0.14.3"
 description = "A Rust port of Google's SwissTable hash map"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Amanieu d'Antras"]
@@ -455,15 +446,15 @@ repository = "https://github.com/withoutboats/heck"
 
 [[dependencies]]
 name = "hermit-abi"
-version = "0.3.3"
+version = "0.3.8"
 description = "Hermit system calls definitions."
 license = "MIT OR Apache-2.0"
 authors = ["Stefan Lankes"]
-repository = "https://github.com/hermitcore/hermit-rs"
+repository = "https://github.com/hermit-os/hermit-rs"
 
 [[dependencies]]
 name = "http"
-version = "0.2.9"
+version = "0.2.11"
 description = """
 A set of types for representing HTTP requests and responses.
 """
@@ -481,7 +472,7 @@ repository = "https://github.com/hyperium/http"
 
 [[dependencies]]
 name = "http-body"
-version = "0.4.5"
+version = "0.4.6"
 description = """
 Trait representing an asynchronous, streaming, HTTP request or response body.
 """
@@ -514,7 +505,7 @@ repository = "https://github.com/pyfisch/httpdate"
 
 [[dependencies]]
 name = "hyper"
-version = "0.14.27"
+version = "0.14.28"
 description = "A fast and correct HTTP library."
 license = "MIT"
 notices = ["Copyright (c) 2014-2021 Sean McArthur"]
@@ -534,7 +525,7 @@ homepage = "https://hyper.rs"
 
 [[dependencies]]
 name = "idna"
-version = "0.4.0"
+version = "0.5.0"
 description = "IDNA (Internationalizing Domain Names in Applications) and Punycode."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -553,23 +544,15 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "1.9.3"
+version = "2.2.3"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
-repository = "https://github.com/bluss/indexmap"
-
-[[dependencies]]
-name = "indexmap"
-version = "2.0.2"
-description = "A hash table with consistent order and fast iteration."
-license = "Apache-2.0 OR MIT"
-notices = ["Copyright (c) 2016--2017"]
-repository = "https://github.com/bluss/indexmap"
+repository = "https://github.com/indexmap-rs/indexmap"
 
 [[dependencies]]
 name = "ipnet"
-version = "2.8.0"
+version = "2.9.0"
 description = "Provides types and useful methods for working with IPv4 and IPv6 network addresses, commonly called IP prefixes. The new `IpNet`, `Ipv4Net`, and `Ipv6Net` types build on the existing `IpAddr`, `Ipv4Addr`, and `Ipv6Addr` types already provided in Rust's standard library and align to their design to stay consistent. The module also provides useful traits that extend `Ipv4Addr` and `Ipv6Addr` with methods for `Add`, `Sub`, `BitAnd`, and `BitOr` operations. The module only uses stable feature so it is guaranteed to compile using the stable toolchain."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright 2017 Juniper Networks, Inc."]
@@ -578,7 +561,7 @@ repository = "https://github.com/krisprice/ipnet"
 
 [[dependencies]]
 name = "itoa"
-version = "1.0.9"
+version = "1.0.10"
 description = "Fast integer primitive to string conversion"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -586,12 +569,12 @@ repository = "https://github.com/dtolnay/itoa"
 
 [[dependencies]]
 name = "js-sys"
-version = "0.3.64"
+version = "0.3.68"
 description = """
 Bindings for all JS global objects and functions in all JS environments like
 Node.js and browsers, built on `#[wasm_bindgen]` using the `wasm-bindgen` crate.
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/js-sys"
@@ -608,7 +591,7 @@ repository = "https://github.com/rust-lang-nursery/lazy-static.rs"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.149"
+version = "0.2.153"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -619,7 +602,7 @@ repository = "https://github.com/rust-lang/libc"
 
 [[dependencies]]
 name = "linux-raw-sys"
-version = "0.4.9"
+version = "0.4.13"
 description = "Generated bindings for Linux's userspace API"
 license = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
 authors = ["Dan Gohman <dev@sunfishcode.online>"]
@@ -627,7 +610,7 @@ repository = "https://github.com/sunfishcode/linux-raw-sys"
 
 [[dependencies]]
 name = "lock_api"
-version = "0.4.10"
+version = "0.4.11"
 description = "Wrappers to create fully-featured Mutex and RwLock types. Compatible with no_std."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 The Rust Project Developers"]
@@ -647,7 +630,7 @@ repository = "https://github.com/rust-lang/log"
 
 [[dependencies]]
 name = "memchr"
-version = "2.6.4"
+version = "2.7.1"
 description = """
 Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for
 1, 2 or 3 byte search and single substring search.
@@ -671,7 +654,7 @@ repository = "https://github.com/hyperium/mime"
 
 [[dependencies]]
 name = "miniz_oxide"
-version = "0.7.1"
+version = "0.7.2"
 description = "DEFLATE compression and decompression library rewritten in Rust based on miniz"
 license = "MIT OR Zlib OR Apache-2.0"
 notices = [
@@ -686,7 +669,7 @@ repository = "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
 
 [[dependencies]]
 name = "mio"
-version = "0.8.8"
+version = "0.8.10"
 description = "Lightweight non-blocking I/O."
 license = "MIT"
 notices = ["Copyright (c) 2014 Carl Lerche and other MIO contributors"]
@@ -717,7 +700,7 @@ repository = "https://github.com/seanmonstar/num_cpus"
 
 [[dependencies]]
 name = "object"
-version = "0.32.1"
+version = "0.32.2"
 description = "A unified interface for reading and writing object file formats."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2015 The Gimli Developers"]
@@ -725,7 +708,7 @@ repository = "https://github.com/gimli-rs/object"
 
 [[dependencies]]
 name = "once_cell"
-version = "1.18.0"
+version = "1.19.0"
 description = "Single assignment cells and lazy values."
 license = "MIT OR Apache-2.0"
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
@@ -733,7 +716,7 @@ repository = "https://github.com/matklad/once_cell"
 
 [[dependencies]]
 name = "openssl"
-version = "0.10.57"
+version = "0.10.64"
 description = "OpenSSL bindings"
 license = "Apache-2.0"
 notices = ["Copyright 2011-2017 Google Inc."]
@@ -760,7 +743,7 @@ repository = "https://github.com/alexcrichton/openssl-probe"
 
 [[dependencies]]
 name = "openssl-sys"
-version = "0.9.93"
+version = "0.9.101"
 description = "FFI bindings to OpenSSL"
 license = "MIT"
 notices = ["Copyright (c) 2014 Alex Crichton"]
@@ -790,7 +773,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "parking_lot_core"
-version = "0.9.8"
+version = "0.9.9"
 description = "An advanced API for creating custom synchronization primitives."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 The Rust Project Developers"]
@@ -799,7 +782,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "percent-encoding"
-version = "2.3.0"
+version = "2.3.1"
 description = "Percent encoding and decoding"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -831,7 +814,7 @@ repository = "https://github.com/rust-lang-nursery/pin-utils"
 
 [[dependencies]]
 name = "pkg-config"
-version = "0.3.27"
+version = "0.3.30"
 description = """
 A library to run the pkg-config system tool at build time in order to be used in
 Cargo build scripts.
@@ -843,7 +826,7 @@ repository = "https://github.com/rust-lang/pkg-config-rs"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.68"
+version = "1.0.78"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -854,7 +837,7 @@ repository = "https://github.com/dtolnay/proc-macro2"
 
 [[dependencies]]
 name = "quote"
-version = "1.0.33"
+version = "1.0.35"
 description = "Quasi-quoting macro quote!(...)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -862,7 +845,7 @@ repository = "https://github.com/dtolnay/quote"
 
 [[dependencies]]
 name = "redox_syscall"
-version = "0.3.5"
+version = "0.4.1"
 description = "A Rust library to access raw Redox system calls"
 license = "MIT"
 notices = ["Copyright (c) 2017 Redox OS Developers"]
@@ -871,7 +854,7 @@ repository = "https://gitlab.redox-os.org/redox-os/syscall"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.11.22"
+version = "0.11.24"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
 notices = [
@@ -894,8 +877,8 @@ repository = "https://github.com/alexcrichton/rustc-demangle"
 
 [[dependencies]]
 name = "rustix"
-version = "0.38.17"
-description = "Safe Rust bindings to POSIX/Unix/Linux/Winsock2-like syscalls"
+version = "0.38.31"
+description = "Safe Rust bindings to POSIX/Unix/Linux/Winsock-like syscalls"
 license = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
 authors = [
     "Dan Gohman <dev@sunfishcode.online>",
@@ -904,8 +887,19 @@ authors = [
 repository = "https://github.com/bytecodealliance/rustix"
 
 [[dependencies]]
+name = "rustls-pemfile"
+version = "1.0.4"
+description = "Basic .pem file parser for keys and certificates"
+license = "Apache-2.0 OR ISC OR MIT"
+notices = [
+    "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
+]
+repository = "https://github.com/rustls/pemfile"
+
+[[dependencies]]
 name = "ryu"
-version = "1.0.15"
+version = "1.0.17"
 description = "Fast floating point to string conversion"
 license = "Apache-2.0 OR BSL-1.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -913,7 +907,7 @@ repository = "https://github.com/dtolnay/ryu"
 
 [[dependencies]]
 name = "schannel"
-version = "0.1.22"
+version = "0.1.23"
 description = "Schannel bindings for rust, allowing SSL/TLS (e.g. https) without openssl"
 license = "MIT"
 notices = ["Copyright (c) 2015 steffengy"]
@@ -966,7 +960,7 @@ homepage = "https://lib.rs/crates/security-framework-sys"
 
 [[dependencies]]
 name = "semver"
-version = "1.0.19"
+version = "1.0.22"
 description = "Parser and evaluator for Cargo's flavor of Semantic Versioning"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -974,7 +968,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.190"
+version = "1.0.197"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -986,7 +980,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.190"
+version = "1.0.197"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -998,7 +992,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.107"
+version = "1.0.114"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1009,7 +1003,7 @@ repository = "https://github.com/serde-rs/json"
 
 [[dependencies]]
 name = "serde_spanned"
-version = "0.6.4"
+version = "0.6.5"
 description = "Serde-compatible spanned Value"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1047,7 +1041,7 @@ repository = "https://github.com/tokio-rs/slab"
 
 [[dependencies]]
 name = "smallvec"
-version = "1.11.1"
+version = "1.13.1"
 description = "'Small vector' optimization: store up to a small number of items on the stack"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The Servo Project Developers"]
@@ -1056,22 +1050,7 @@ repository = "https://github.com/servo/rust-smallvec"
 
 [[dependencies]]
 name = "socket2"
-version = "0.4.9"
-description = """
-Utilities for handling networking sockets with a maximal amount of configuration
-possible intended.
-"""
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2014 Alex Crichton"]
-authors = [
-    "Alex Crichton <alex@alexcrichton.com>",
-    "Thomas de Zeeuw <thomasdezeeuw@gmail.com>",
-]
-repository = "https://github.com/rust-lang/socket2"
-
-[[dependencies]]
-name = "socket2"
-version = "0.5.4"
+version = "0.5.6"
 description = """
 Utilities for handling networking sockets with a maximal amount of configuration
 possible intended.
@@ -1086,7 +1065,7 @@ repository = "https://github.com/rust-lang/socket2"
 
 [[dependencies]]
 name = "spdx"
-version = "0.10.2"
+version = "0.10.4"
 description = "Helper crate for SPDX expressions"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Embark Studios"]
@@ -1098,7 +1077,7 @@ repository = "https://github.com/EmbarkStudios/spdx"
 
 [[dependencies]]
 name = "strsim"
-version = "0.10.0"
+version = "0.11.0"
 description = """
 Implementations of string similarity metrics. Includes Hamming, Levenshtein,
 OSA, Damerau-Levenshtein, Jaro, Jaro-Winkler, and Sørensen-Dice.
@@ -1109,16 +1088,28 @@ notices = [
     "Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>",
     "Copyright (c) 2018 Akash Kurdekar",
 ]
-authors = ["Danny Guo <danny@dannyguo.com>"]
-repository = "https://github.com/dguo/strsim-rs"
+authors = [
+    "Danny Guo <danny@dannyguo.com>",
+    "maxbachmann <oss@maxbachmann.de>",
+]
+repository = "https://github.com/rapidfuzz/strsim-rs"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.38"
+version = "2.0.51"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 repository = "https://github.com/dtolnay/syn"
+
+[[dependencies]]
+name = "sync_wrapper"
+version = "0.1.2"
+description = "A tool for enlisting the compiler’s help in proving the absence of concurrency"
+license = "Apache-2.0"
+authors = ["Actyx AG <developer@actyx.io>"]
+repository = "https://github.com/Actyx/sync_wrapper"
+homepage = "https://docs.rs/sync_wrapper"
 
 [[dependencies]]
 name = "system-configuration"
@@ -1138,7 +1129,7 @@ repository = "https://github.com/mullvad/system-configuration-rs"
 
 [[dependencies]]
 name = "tempfile"
-version = "3.8.0"
+version = "3.10.1"
 description = "A library for managing temporary files and directories."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Steven Allen"]
@@ -1153,7 +1144,7 @@ homepage = "https://stebalien.com/projects/tempfile-rs/"
 
 [[dependencies]]
 name = "thiserror"
-version = "1.0.49"
+version = "1.0.57"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1161,7 +1152,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "1.0.49"
+version = "1.0.57"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1190,7 +1181,7 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.33.0"
+version = "1.36.0"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
@@ -1203,7 +1194,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-macros"
-version = "2.1.0"
+version = "2.2.0"
 description = """
 Tokio's proc macros.
 """
@@ -1231,7 +1222,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-util"
-version = "0.7.9"
+version = "0.7.10"
 description = """
 Additional utilities for working with Tokio.
 """
@@ -1243,7 +1234,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "toml"
-version = "0.8.5"
+version = "0.8.10"
 description = """
 A native Rust encoder and decoder of TOML-formatted files and streams. Provides
 implementations of the standard Serialize/Deserialize traits for TOML data to
@@ -1265,7 +1256,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_edit"
-version = "0.20.5"
+version = "0.22.6"
 description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1288,7 +1279,7 @@ repository = "https://github.com/tower-rs/tower"
 
 [[dependencies]]
 name = "tracing"
-version = "0.1.37"
+version = "0.1.40"
 description = """
 Application-level tracing for Rust.
 """
@@ -1303,7 +1294,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tracing-core"
-version = "0.1.31"
+version = "0.1.32"
 description = """
 Core primitives for application-level tracing.
 """
@@ -1315,19 +1306,19 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "try-lock"
-version = "0.2.4"
+version = "0.2.5"
 description = "A lightweight atomic lock."
 license = "MIT"
 notices = [
     "Copyright (c) 2016 Alex Crichton",
-    "Copyright (c) 2018 Sean McArthur",
+    "Copyright (c) 2018-2023 Sean McArthur",
 ]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
 name = "unicode-bidi"
-version = "0.3.13"
+version = "0.3.15"
 description = "Implementation of the Unicode Bidirectional Algorithm"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 The Rust Project Developers"]
@@ -1345,7 +1336,7 @@ repository = "https://github.com/dtolnay/unicode-ident"
 
 [[dependencies]]
 name = "unicode-normalization"
-version = "0.1.22"
+version = "0.1.23"
 description = """
 This crate provides functions for normalization of
 Unicode strings, including Canonical and Compatible
@@ -1362,7 +1353,7 @@ repository = "https://github.com/unicode-rs/unicode-normalization"
 
 [[dependencies]]
 name = "url"
-version = "2.4.1"
+version = "2.5.0"
 description = "URL library for Rust, based on the WHATWG URL Standard"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -1412,11 +1403,11 @@ repository = "https://github.com/bytecodealliance/wasi"
 
 [[dependencies]]
 name = "wasm-bindgen"
-version = "0.2.87"
+version = "0.2.91"
 description = """
 Easy support for interacting between JS and Rust.
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen"
@@ -1424,11 +1415,11 @@ homepage = "https://rustwasm.github.io/"
 
 [[dependencies]]
 name = "wasm-bindgen-backend"
-version = "0.2.87"
+version = "0.2.91"
 description = """
 Backend code generation of the wasm-bindgen tool
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/backend"
@@ -1436,9 +1427,9 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-futures"
-version = "0.4.37"
+version = "0.4.41"
 description = "Bridging the gap between Rust Futures and JavaScript Promises"
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/futures"
@@ -1446,11 +1437,11 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro"
-version = "0.2.87"
+version = "0.2.91"
 description = """
 Definition of the `#[wasm_bindgen]` attribute, an internal dependency
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro"
@@ -1458,11 +1449,11 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.87"
+version = "0.2.91"
 description = """
 The part of the implementation of the `#[wasm_bindgen]` attribute that is not in the shared backend crate
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro-support"
@@ -1470,12 +1461,12 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-shared"
-version = "0.2.87"
+version = "0.2.91"
 description = """
 Shared support between wasm-bindgen and wasm-bindgen cli, an internal
 dependency.
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/shared"
@@ -1483,44 +1474,28 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "web-sys"
-version = "0.3.64"
+version = "0.3.68"
 description = """
 Bindings for all Web APIs, a procedurally generated crate from WebIDL
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["The wasm-bindgen Developers"]
 repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/web-sys"
 homepage = "https://rustwasm.github.io/wasm-bindgen/web-sys/index.html"
 
 [[dependencies]]
-name = "winapi"
-version = "0.3.9"
-description = "Raw FFI bindings for all of Windows API."
-license = "MIT/Apache-2.0"
-notices = ["Copyright (c) 2015-2018 The winapi-rs Developers"]
-authors = ["Peter Atashian <retep998@gmail.com>"]
-repository = "https://github.com/retep998/winapi-rs"
-
-[[dependencies]]
-name = "winapi-i686-pc-windows-gnu"
-version = "0.4.0"
-description = "Import libraries for the i686-pc-windows-gnu target. Please don't use this crate directly, depend on winapi instead."
-license = "MIT/Apache-2.0"
-authors = ["Peter Atashian <retep998@gmail.com>"]
-repository = "https://github.com/retep998/winapi-rs"
-
-[[dependencies]]
-name = "winapi-x86_64-pc-windows-gnu"
-version = "0.4.0"
-description = "Import libraries for the x86_64-pc-windows-gnu target. Please don't use this crate directly, depend on winapi instead."
-license = "MIT/Apache-2.0"
-authors = ["Peter Atashian <retep998@gmail.com>"]
-repository = "https://github.com/retep998/winapi-rs"
+name = "windows-sys"
+version = "0.48.0"
+description = "Rust for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows-sys"
-version = "0.48.0"
+version = "0.52.0"
 description = "Rust for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1537,8 +1512,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows-targets"
+version = "0.52.3"
+description = "Import libs for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_aarch64_gnullvm"
 version = "0.48.5"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_aarch64_gnullvm"
+version = "0.52.3"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1555,8 +1548,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_aarch64_msvc"
+version = "0.52.3"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_i686_gnu"
 version = "0.48.5"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_i686_gnu"
+version = "0.52.3"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1573,8 +1584,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_i686_msvc"
+version = "0.52.3"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_x86_64_gnu"
 version = "0.48.5"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_x86_64_gnu"
+version = "0.52.3"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1591,6 +1620,15 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_x86_64_gnullvm"
+version = "0.52.3"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_x86_64_msvc"
 version = "0.48.5"
 description = "Import lib for Windows"
@@ -1600,8 +1638,17 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_x86_64_msvc"
+version = "0.52.3"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "winnow"
-version = "0.5.16"
+version = "0.6.3"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
