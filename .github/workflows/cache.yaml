@@ -7,4 +7,4 @@ jobs:
   clean-cache:
     runs-on: ubuntu-latest
     steps:
-      - run: gh cache delete -all
+      - run: gh cache delete --all
