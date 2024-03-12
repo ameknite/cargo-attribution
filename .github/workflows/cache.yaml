@@ -1,0 +1,10 @@
+name: Clean cache
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh cache delete -all
