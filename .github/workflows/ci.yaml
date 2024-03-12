@@ -36,7 +36,6 @@ jobs:
 
       - name: Rustfmt Check
         uses: actions-rust-lang/rustfmt@v1
-    
 
   clippy:
     name: Clippy
