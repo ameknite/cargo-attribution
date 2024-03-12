@@ -19,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo ${{ inputs.version != github.ref_name }}
+          echo ${{ inputs.version }}
+          echo ${{ github.ref_name }}
       - name: Create tag
         uses: actions/github-script@v5
         if: ${{ inputs.version != github.ref_name }}
