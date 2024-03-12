@@ -17,11 +17,8 @@ on:
 jobs:
   load-tag:
     runs-on: ubuntu-latest
-    steps:
-      - id: get_version
-        uses: olegtarasov/get-tag@v2.1.2
     outputs:
-      tag: ${{ ( inputs.version || steps.get_version.outputs.tag ) }}
+      tag: ${{ inputs.version ||  github.ref_name }}
 
   create-tag:
     needs: load-tag
@@ -53,7 +50,7 @@ jobs:
           ref: refs/tags/${{  needs.load-tag.outputs.tag }}
 
   build-and-release:
-    needs: create-release
+    needs: [create-tag, load-tag]
     name: ${{ matrix.job.target }} (${{ matrix.job.os }})
     runs-on: ${{ matrix.job.os }}
     strategy:
@@ -79,3 +76,4 @@ jobs:
           target: ${{ matrix.job.target }}
           include: attribution
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: refs/tags/${{  needs.load-tag.outputs.tag }}
