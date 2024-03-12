@@ -25,3 +25,10 @@ toml = "0.8.10"
 toml_edit = "0.22.6"
 memchr = "2.7.1"
 adler = "1.0.2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
