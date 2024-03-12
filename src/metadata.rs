@@ -6,7 +6,8 @@
 use std::fs;
 
 use cargo_metadata::{DependencyKind, Metadata, Package};
-use color_eyre::{eyre::ContextCompat, Result};
+use color_eyre::Result;
+use regex::Regex;
 use serde::Serialize;
 use spdx::Expression;
 
@@ -50,13 +51,19 @@ impl DependencyData {
 }
 
 impl DependencyData {
-    pub fn get_license_notices(&mut self, package: &Package) -> Result<()> {
-        let parent = package
-            .manifest_path
-            .parent()
-            .wrap_err("Not manifest parent")?;
-        for entry in fs::read_dir(parent)? {
-            let entry = entry?;
+    pub fn get_license_notices(&mut self, package: &Package) {
+        let re = Regex::new(r"\d{4,}").unwrap();
+
+        let Some(parent) = package.manifest_path.parent() else {
+            return;
+        };
+        let Ok(entry) = fs::read_dir(parent) else {
+            return;
+        };
+        for entry in entry {
+            let Ok(entry) = entry else {
+                return;
+            };
             let file_path = entry.path();
 
             if file_path.is_dir() {
@@ -81,14 +88,15 @@ impl DependencyData {
             let Ok(license) = fs::read_to_string(file_path) else {
                 continue;
             };
+
             for notice in license
                 .lines()
                 .filter(|line| {
                     let line = line.trim().to_lowercase();
-                    line.starts_with("copyright")
+                    line.contains("copyright")
                         && (line.contains("(c)")
                             || line.contains('©')
-                            || line.chars().any(|c| c.is_ascii_digit()))
+                            || re.is_match(&line))
                 })
                 .map(|line| line.trim())
             {
@@ -98,14 +106,14 @@ impl DependencyData {
 
         self.notices.sort_unstable();
         self.notices.dedup();
-
-        Ok(())
     }
 
-    pub fn get_parse_licenses(&mut self) -> Result<()> {
-        let license_metadata = self.license.clone().wrap_err("License not found")?;
+    pub fn get_parse_licenses(&mut self) {
+        let Some(license_metadata) = self.license.as_ref() else {
+            return;
+        };
 
-        let expression = match Expression::parse(&license_metadata) {
+        let expression = match Expression::parse(license_metadata) {
             Ok(spdx) => spdx,
             Err(_) => {
                 let license = license_metadata
@@ -129,8 +137,6 @@ impl DependencyData {
 
         self.licenses.sort_unstable();
         self.licenses.dedup();
-
-        Ok(())
     }
 }
 
@@ -155,13 +161,9 @@ pub fn get_data(
             continue;
         }
 
-        let Ok(_) = dependency.get_license_notices(package) else {
-            continue;
-        };
+        dependency.get_license_notices(package);
 
-        let Ok(_) = dependency.get_parse_licenses() else {
-            continue;
-        };
+        dependency.get_parse_licenses();
 
         if metadata
             .root_package()

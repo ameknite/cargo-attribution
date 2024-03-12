@@ -16,6 +16,15 @@ authors = ["Jonas Schievink <jonasschievink@gmail.com>"]
 repository = "https://github.com/jonas-schievink/adler.git"
 
 [[dependencies]]
+name = "aho-corasick"
+version = "1.1.2"
+description = "Fast multiple substring searching."
+license = "Unlicense OR MIT"
+notices = ["Copyright (c) 2015 Andrew Gallant"]
+authors = ["Andrew Gallant <jamslam@gmail.com>"]
+repository = "https://github.com/BurntSushi/aho-corasick"
+
+[[dependencies]]
 name = "anstream"
 version = "0.6.13"
 description = "A simple cross platform library for writing colored text to a terminal."
@@ -743,6 +752,45 @@ authors = ["Jeremy Soller <jackpot51@gmail.com>"]
 repository = "https://gitlab.redox-os.org/redox-os/syscall"
 
 [[dependencies]]
+name = "regex"
+version = "1.10.3"
+description = """
+An implementation of regular expressions for Rust. This implementation uses
+finite automata and guarantees linear time matching on all inputs.
+"""
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2014 The Rust Project Developers"]
+authors = [
+    "The Rust Project Developers",
+    "Andrew Gallant <jamslam@gmail.com>",
+]
+repository = "https://github.com/rust-lang/regex"
+
+[[dependencies]]
+name = "regex-automata"
+version = "0.4.6"
+description = "Automata construction and matching using regular expressions."
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2014 The Rust Project Developers"]
+authors = [
+    "The Rust Project Developers",
+    "Andrew Gallant <jamslam@gmail.com>",
+]
+repository = "https://github.com/rust-lang/regex/tree/master/regex-automata"
+
+[[dependencies]]
+name = "regex-syntax"
+version = "0.8.2"
+description = "A regular expression parser."
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2014 The Rust Project Developers"]
+authors = [
+    "The Rust Project Developers",
+    "Andrew Gallant <jamslam@gmail.com>",
+]
+repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
+
+[[dependencies]]
 name = "reqwest"
 version = "0.11.26"
 description = "higher level HTTP client library"
@@ -753,6 +801,20 @@ notices = [
 ]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/reqwest"
+
+[[dependencies]]
+name = "ring"
+version = "0.17.8"
+description = "Safe, fast, small crypto using Rust."
+notices = [
+    "* Copyright (c) 1998-2011 The OpenSSL Project.  All rights reserved.",
+    "/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)",
+    "/* Copyright (c) 2015, Google Inc.",
+    "Copyright (c) 2015-2016 the fiat-crypto authors (see",
+    "Copyright 2015-2016 Brian Smith.",
+]
+authors = ["Brian Smith <brian@briansmith.org>"]
+repository = "https://github.com/briansmith/ring"
 
 [[dependencies]]
 name = "rustc-demangle"
@@ -1224,6 +1286,7 @@ name = "untrusted"
 version = "0.9.0"
 description = "Safe, fast, zero-panic, zero-crashing, zero-allocation parsing of untrusted inputs in Rust."
 license = "ISC"
+notices = ["// Copyright 2015-2016 Brian Smith."]
 authors = ["Brian Smith <brian@briansmith.org>"]
 repository = "https://github.com/briansmith/untrusted"
 
