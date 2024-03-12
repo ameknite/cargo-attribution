@@ -19,11 +19,19 @@ jobs:
     if: ${{ inputs.version }}
     runs-on: ubuntu-latest
     steps:
-    - uses: rickstaa/action-create-tag@v1
+    - name: Create tag
+      uses: actions/github-script@v5
       with:
-        tag: ${{ inputs.version }}
+        script: |
+          github.rest.git.createRef({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            ref: 'refs/tags/${{ inputs.version }}',
+            sha: context.sha
+          })
 
   create-release:
+    needs: create-tag
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
