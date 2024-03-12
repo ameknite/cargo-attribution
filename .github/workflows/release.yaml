@@ -39,14 +39,17 @@ jobs:
       matrix:
         job:
           - { target: x86_64-unknown-linux-gnu, os: ubuntu-latest }
-          - { target: aarch64-unknown-linux-gnu, os: ubuntu-latest }
           - { target: x86_64-apple-darwin, os: macos-latest }
-          - { target: aarch64-apple-darwin, os: macos-latest }
           - { target: x86_64-pc-windows-msvc, os: windows-latest }
+          - { target: aarch64-unknown-linux-gnu, os: ubuntu-latest }
+          - { target: aarch64-apple-darwin, os: macos-latest }
           - { target: aarch64-pc-windows-msvc, os: windows-latest }
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
+      
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
