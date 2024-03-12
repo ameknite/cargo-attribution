@@ -40,7 +40,7 @@ jobs:
       - uses: taiki-e/create-gh-release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: refs/tags/${{steps.get-tag.outputs.tag}}
+          ref: refs/tags/${{  github.ref_name }}
 
   build-and-release:
     needs: create-release
