@@ -83,8 +83,13 @@ jobs:
 
       - name: Install openssl
         if: ${{ matrix.target == 'aarch64-unknown-linux-gnu' }} 
-        run: sudo apt-get update; sudo apt-get install libssl-dev
+        run: sudo apt-get update; sudo apt-get install libssl-dev, pkg-config, libudev-dev
 
+      - run: |
+          which openssl
+          echo $OPENSSL_DIR
+          which libssl-dev
+      
       - name: Install cross-compilation tools
         if: ${{ matrix.cross }} == 'true'
         uses: taiki-e/setup-cross-toolchain-action@v1
