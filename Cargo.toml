@@ -15,14 +15,16 @@ categories = ["command-line-utilities"]
 [dependencies]
 bytes = "1.5.0"
 cargo_metadata = "0.18.1"
-clap = { version = "4.5.1", features = ["derive"] }
+clap = { version = "4.5.2", features = ["derive"] }
 color-eyre = { version = "0.6.2", default-features = false }
-reqwest = "0.11.24"
+reqwest = { version = "0.11.25", default-features = false, features = [
+    "rustls-tls",
+] }
 serde = { version = "1.0.197", features = ["derive"] }
 spdx = "0.10.4"
 tokio = { version = "1.36.0", features = ["full"] }
-toml = "0.8.10"
-toml_edit = "0.22.6"
+toml = "0.8.11"
+toml_edit = "0.22.7"
 memchr = "2.7.1"
 adler = "1.0.2"
 
