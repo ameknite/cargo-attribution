@@ -15,23 +15,33 @@ on:
         required: true
 
 jobs:
+  load-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - id: get_version
+        uses: olegtarasov/get-tag@v2.1.2
+    outputs:
+      tag: ${{ ( inputs.version || steps.get_version.outputs.tag ) }}
+
   create-tag:
+    needs: load-tag
     if: ${{ inputs.version }}
     runs-on: ubuntu-latest
     steps:
-    - name: Create tag
-      uses: actions/github-script@v5
-      with:
-        script: |
-          github.rest.git.createRef({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            ref: 'refs/tags/${{ inputs.version }}',
-            sha: context.sha
-          })
+      - name: Create tag
+        uses: actions/github-script@v5
+        if: load-tag != ${{  github.ref_name }}
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: 'refs/tags/${{ inputs.version }}',
+                sha: context.sha
+              })
 
   create-release:
-    needs: create-tag
+    needs: [create-tag, load-tag]
     runs-on: ubuntu-latest
     steps:
       - id: get-tag
@@ -40,7 +50,7 @@ jobs:
       - uses: taiki-e/create-gh-release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: refs/tags/${{  github.ref_name }}
+          ref: refs/tags/${{  needs.load-tag.outputs.tag }}
 
   build-and-release:
     needs: create-release
