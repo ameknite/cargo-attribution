@@ -20,13 +20,13 @@ jobs:
     steps:
       - name: Create tag
         uses: actions/github-script@v5
-        if: load-tag != ${{  github.ref_name }}
+        if: ${{inputs.version }}
         with:
           script: |
             github.rest.git.createRef({
               owner: context.repo.owner,
                 repo: context.repo.repo,
-                ref: 'refs/tags/${{ inputs.version ||  github.ref_name }}',
+                ref: 'refs/tags/${{ inputs.version }}',
                 sha: context.sha
               })
 
@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
-      
+
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
 
