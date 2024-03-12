@@ -15,9 +15,6 @@ jobs:
       - name: Fetch Repository
         uses: actions/checkout@v4
 
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-
       - name: cargo build
         run: cargo b
 
@@ -29,11 +26,6 @@ jobs:
       - name: Fetch Repository
         uses: actions/checkout@v4
 
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          components: rustfmt
-
       - name: Rustfmt Check
         uses: actions-rust-lang/rustfmt@v1
 
@@ -44,11 +36,6 @@ jobs:
     steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
-
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          components: clippy
 
       - name: Clippy Check
         run: cargo clippy
