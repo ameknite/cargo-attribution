@@ -24,7 +24,7 @@ jobs:
           tag: ${{ inputs.version }}
       - name: Create tag
         uses: actions/github-script@v5
-        if: steps.check-tag.outputs.exists == 'false'
+        if: steps.check-tag.outputs.exists != 'true'
         with:
           script: |
             github.rest.git.createRef({
