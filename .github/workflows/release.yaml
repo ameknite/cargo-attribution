@@ -15,14 +15,7 @@ on:
         required: true
 
 jobs:
-  load-tag:
-    runs-on: ubuntu-latest
-    outputs:
-      tag: ${{ inputs.version ||  github.ref_name }}
-
   create-tag:
-    needs: load-tag
-    if: ${{ inputs.version }}
     runs-on: ubuntu-latest
     steps:
       - name: Create tag
@@ -33,12 +26,12 @@ jobs:
             github.rest.git.createRef({
               owner: context.repo.owner,
                 repo: context.repo.repo,
-                ref: 'refs/tags/${{ inputs.version }}',
+                ref: 'refs/tags/${{ inputs.version ||  github.ref_name }}',
                 sha: context.sha
               })
 
   create-release:
-    needs: [create-tag, load-tag]
+    needs: [create-tag]
     runs-on: ubuntu-latest
     steps:
       - id: get-tag
@@ -47,10 +40,10 @@ jobs:
       - uses: taiki-e/create-gh-release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: refs/tags/${{  needs.load-tag.outputs.tag }}
+          ref: refs/tags/${{ inputs.version ||  github.ref_name }}
 
   build-and-release:
-    needs: [create-tag, load-tag]
+    needs: [create-release]
     name: ${{ matrix.job.target }} (${{ matrix.job.os }})
     runs-on: ${{ matrix.job.os }}
     strategy:
@@ -76,4 +69,4 @@ jobs:
           target: ${{ matrix.job.target }}
           include: attribution
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: refs/tags/${{  needs.load-tag.outputs.tag }}
+          ref: refs/tags/${{ inputs.version ||  github.ref_name }}
