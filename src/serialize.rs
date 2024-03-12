@@ -7,7 +7,7 @@ use std::{fs::File, io::Write, path::Path};
 
 use color_eyre::eyre::Result;
 use serde::Serialize;
-use toml_edit::{ArrayOfTables, Document, Item, Table};
+use toml_edit::{ArrayOfTables, DocumentMut, Item, Table};
 
 use crate::metadata::DependencyData;
 
@@ -34,8 +34,8 @@ impl<'a> DependencySerialized<'a> {
             return Ok(toml_str);
         }
 
-        // Parse the TOML string into a toml_edit::Document
-        let mut doc = toml_str.parse::<Document>()?;
+        // Parse the TOML string into a toml_edit::DocumentMut
+        let mut doc = toml_str.parse::<DocumentMut>()?;
 
         if let Item::ArrayOfTables(array_of_tables) = &mut doc["dependencies"] {
             // Rename the list
@@ -80,8 +80,8 @@ impl<'a> SelfSerialized<'a> {
             return Ok(toml_str);
         }
 
-        // Parse the TOML string into a toml_edit::Document
-        let mut doc = toml_str.parse::<Document>()?;
+        // Parse the TOML string into a toml_edit::DocumentMut
+        let mut doc = toml_str.parse::<DocumentMut>()?;
 
         if let Item::Table(table) = &mut doc["self"] {
             // Rename the table
