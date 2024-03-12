@@ -16,12 +16,12 @@ on:
 
 jobs:
   create-tag:
+    if: ${{ inputs.version }}
     runs-on: ubuntu-latest
     steps:
     - uses: rickstaa/action-create-tag@v1
       with:
         tag: ${{ inputs.version }}
-      if: ${{ inputs.version }}
 
   create-release:
     runs-on: ubuntu-latest
@@ -51,6 +51,6 @@ jobs:
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: ${{ github.event.repository.name }}
-          target: ${{ matrix.target }}
+          target: ${{ matrix.job.target }}
           include: attribution
           token: ${{ secrets.GITHUB_TOKEN }}
