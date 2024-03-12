@@ -70,6 +70,11 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          target: ${{ matrix.target }}
+
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: ${{ github.event.repository.name }}
