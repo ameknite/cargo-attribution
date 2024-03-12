@@ -82,10 +82,14 @@ jobs:
           target: ${{ matrix.target }}
 
       - name: Install cross-compilation tools
-        if: ${{ matrix.target }} == 'true'
+        if: ${{ matrix.cross }} == 'true'
         uses: taiki-e/setup-cross-toolchain-action@v1
         with:
           target: ${{ matrix.target }}
+      
+      - name: Install openssl
+        if: ${{ matrix.target }} == 'aarch64-unknown-linux-gnu'
+        run: sudo apt-get install libssl-dev
 
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
