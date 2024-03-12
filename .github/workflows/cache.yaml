@@ -11,3 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: gh cache delete --all
+        env:
+          GH_TOKEN: ${{ github.token }}
