@@ -23,7 +23,7 @@ jobs:
         with: 
           tag: ${{ inputs.version ||  github.ref_name }}
       - name: Create tag
-        uses: actions/github-script@v5
+        uses: actions/github-script@v7
         if: steps.check-tag.outputs.exists == 'false' 
         with:
           script: |
