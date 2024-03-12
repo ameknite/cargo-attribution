@@ -17,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: taiki-e/create-gh-release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   build-and-upload:
     name: ${{ matrix.job.target }} (${{ matrix.job.os }})
@@ -39,3 +41,4 @@ jobs:
         with:
           bin: ${{ github.event.repository.name }}
           include: attribution
+          token: ${{ secrets.GITHUB_TOKEN }}
