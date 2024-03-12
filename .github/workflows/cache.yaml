@@ -1,4 +1,4 @@
-name: Clean cache
+name: Clean Cache
 
 permissions:
   actions: write
