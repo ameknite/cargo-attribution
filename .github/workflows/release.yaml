@@ -8,10 +8,21 @@ on:
   push:
     tags:
       - v[0-9]+.*
-  release:
-    types: [created]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Add tag version: (e.g. -> v3.6.1)"
+        required: true
 
 jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: rickstaa/action-create-tag@v1
+      with:
+        tag: ${{ inputs.version }}
+      if: ${{ inputs.version }}
+
   create-release:
     runs-on: ubuntu-latest
     steps:
@@ -40,5 +51,6 @@ jobs:
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: ${{ github.event.repository.name }}
+          target: ${{ matrix.target }}
           include: attribution
           token: ${{ secrets.GITHUB_TOKEN }}
