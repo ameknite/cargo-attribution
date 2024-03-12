@@ -18,12 +18,13 @@ jobs:
   create-tag:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo ${{ inputs.version }}
-          echo ${{ github.ref_name }}
+      - uses: mukunku/tag-exists-action@v1.6.0
+        id: check-tag
+        with: 
+          tag: ${{ inputs.version }}
       - name: Create tag
         uses: actions/github-script@v5
-        if: inputs.version  != github.ref_name 
+        if: steps.check-tag.outputs.exists == 'false'
         with:
           script: |
             github.rest.git.createRef({
