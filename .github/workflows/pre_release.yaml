@@ -32,7 +32,7 @@ jobs:
       - name: Install cargo msrv
         uses: taiki-e/install-action@v2
         with:
-          tool: cargo msrv verify
+          tool: cargo-msrv
         
       - name: Run cargo msrv 
         run: cargo msrv verify
