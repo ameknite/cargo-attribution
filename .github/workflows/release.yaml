@@ -34,12 +34,17 @@ jobs:
     needs: create-tag
     runs-on: ubuntu-latest
     steps:
+      - name: get-tag
+        id: tag
+        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v4
       - uses: taiki-e/create-gh-release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: refs/tags/${{steps.tag.outputs.tag}}
 
   build-and-release:
+    needs: create-release
     name: ${{ matrix.job.target }} (${{ matrix.job.os }})
     runs-on: ${{ matrix.job.os }}
     strategy:
