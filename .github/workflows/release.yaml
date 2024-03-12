@@ -21,10 +21,10 @@ jobs:
       - uses: mukunku/tag-exists-action@v1.6.0
         id: check-tag
         with: 
-          tag: ${{ inputs.version }}
+          tag: ${{ inputs.version ||  github.ref_name }}
       - name: Create tag
         uses: actions/github-script@v5
-        if: steps.check-tag.outputs.exists != 'true'
+        if: steps.check-tag.outputs.exists == 'false' 
         with:
           script: |
             github.rest.git.createRef({
