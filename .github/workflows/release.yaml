@@ -56,22 +56,34 @@ jobs:
         include:
           - target: x86_64-unknown-linux-gnu
             os: ubuntu-latest
+            cross: false
           - target: x86_64-apple-darwin
             os: macos-latest 
+            cross: false
           - target: x86_64-pc-windows-msvc
             os: windows-latest 
+            cross: false
           - target: aarch64-unknown-linux-gnu 
             os: ubuntu-latest 
+            cross: true
           - target: aarch64-apple-darwin
             os: macos-latest 
+            cross: false
           - target: aarch64-pc-windows-msvc
             os: windows-latest 
+            cross: false
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
 
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          target: ${{ matrix.target }}
+
+      - name: Install cross-compilation tools
+        if: ${{ matrix.target }} == 'true'
+        uses: taiki-e/setup-cross-toolchain-action@v1
         with:
           target: ${{ matrix.target }}
 
