@@ -18,8 +18,8 @@ jobs:
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
 
-      - name: cargo b
-        run: cargo build
+      - name: cargo build
+        run: cargo b
 
   fmt:
     name: Formatting
@@ -52,5 +52,4 @@ jobs:
           components: clippy
 
       - name: Clippy Check
-        uses: cargo clippy
-
+        run: cargo clippy
