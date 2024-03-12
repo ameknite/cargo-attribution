@@ -80,10 +80,6 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           target: ${{ matrix.target }}
-
-      - name: Install openssl
-        if: ${{ matrix.target == 'aarch64-unknown-linux-gnu' }} 
-        run: sudo apt-get update; sudo apt-get install libssl-dev pkg-config libudev-dev
       
       - name: Install cross-compilation tools
         if: ${{ matrix.cross }} == 'true'
