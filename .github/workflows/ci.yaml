@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main
-  pull_request:
-
+  pull_request:  
+  workflow_dispatch:
+    
 jobs:
   build:
     name: Build
