@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Create tag
         uses: actions/github-script@v5
-        if: ${{inputs.version }}
+        if: ${{ inputs.version }} != ${{ github.ref_name }} 
         with:
           script: |
             github.rest.git.createRef({
