@@ -15,11 +15,11 @@ on:
         required: true
 
 jobs:
-  pre-release:
-    uses: ./.github/workflows/pre_release.yaml
+  # pre-release:
+    # uses: ./.github/workflows/pre_release.yaml
 
   create-tag:
-    needs: [pre-release]
+    # needs: [pre-release]
     runs-on: ubuntu-latest
     steps:
       - uses: mukunku/tag-exists-action@v1.6.0
@@ -93,6 +93,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: refs/tags/${{ inputs.version ||  github.ref_name }}
       
-  publish-crate:
-    needs: [create-tag]
-    uses: ./.github/workflows/publish.yaml
+  # publish-crate:
+    # needs: [create-tag]
+    # uses: ./.github/workflows/publish.yaml
