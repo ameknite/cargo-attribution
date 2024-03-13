@@ -58,9 +58,32 @@ jobs:
         id: version
     outputs:
       bump: ${{ steps.version.outputs.bump }}
+ 
+  cargo-semver-checks:
+    needs: get-bump-version
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+
+      - name: Install cargo-bump
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-bump
+
+      - name: Run cargo bump
+        run: cargo bump ${{ needs.get-bump-version.outputs.bump }}
+      
+      - name: Check semver
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          rust-toolchain: manual
 
   bump-version:
-    needs: get-bump-version
+    needs: [get-bump-version, cargo-semver-checks]
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
@@ -81,24 +104,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Bump version: ${{ needs.get-bump-version.outputs.bump }}"
- 
-  cargo-semver-checks:
-    needs: bump-version
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Fetch Repository
-        uses: actions/checkout@v4
-
-      - name: Git Pull
-        run: git pull
-
-      - name: Install stable toolchain
-        uses: actions-rust-lang/setup-rust-toolchain@v1
-      
-      - name: Check semver
-        uses: obi1kenobi/cargo-semver-checks-action@v2
-        with:
-          rust-toolchain: manual
   
   update-attribution:
     needs: [get-bump-version, bump-version]
@@ -106,9 +111,6 @@ jobs:
     steps: 
       - name: Fetch Repository
         uses: actions/checkout@v4
-
-      - name: Git Pull
-        run: git pull
 
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
