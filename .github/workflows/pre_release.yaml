@@ -2,14 +2,14 @@ name: Pre Release
 
 on:
   workflow_call:
-  # workflow_dispatch:
+  workflow_dispatch:
 
 permissions: 
   contents: write
 
 jobs:
-  # run-ci:
-    # uses: ./.github/workflows/ci.yaml
+  run-ci:
+    uses: ./.github/workflows/ci.yaml
 
   cargo-deny:
     runs-on: ubuntu-latest
