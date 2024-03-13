@@ -26,9 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: |
-          git pull
-          git checkout HEAD
+      - run: git pull
 
       - uses: mukunku/tag-exists-action@v1.6.0
         id: check-tag
@@ -36,16 +34,12 @@ jobs:
           tag: ${{ inputs.version ||  github.ref_name }}
 
       - name: Create tag
-        uses: actions/github-script@v7
         if: steps.check-tag.outputs.exists == 'false'
-        with:
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-                repo: context.repo.repo,
-                ref: 'refs/tags/${{ inputs.version }}',
-                sha: context.sha
-              })
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git tag ${{ inputs.version ||  github.ref_name }}
+          git push origin ${{ inputs.version ||  github.ref_name }}
 
   create-release:
     needs: [create-tag]

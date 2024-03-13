@@ -11,9 +11,7 @@ jobs:
       - name: Fetch Repository
         uses: actions/checkout@v4
 
-      - run: |
-          git pull
-          git checkout HEAD
+      - run: git pull
 
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
