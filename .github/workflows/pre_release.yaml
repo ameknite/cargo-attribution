@@ -129,6 +129,6 @@ jobs:
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[${{ needs.get-bump-version.outputs.bump }}]Update Attributions"
+          commit_message: "[${{ needs.get-bump-version.outputs.bump }}]: Update Attributions"
 
     
