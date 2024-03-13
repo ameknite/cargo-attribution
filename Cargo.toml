@@ -26,8 +26,8 @@ tokio = { version = "1.36.0", features = ["full"] }
 toml = "0.8.11"
 toml_edit = "0.22.6"
 memchr = "2.7.1"
-adler = "1.0.2"
 regex = "1.10.3"
+adler = "1.0.2"
 taplo = "0.13.0"
 
 [profile.release]
