@@ -1,0 +1,37 @@
+name: Publish
+
+on:
+  workflow_call:
+    inputs:
+      bump-version:
+        type: string
+        required: true
+  workflow_dispatch:
+    inputs:
+      bump-dispatch:
+        description: "Bump version: (e.g. -> 3.6.1)"
+        required: true
+        type: string
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+
+      - name: Install cargo-bump
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-bump
+
+      - name: Run cargo bump
+        run: cargo bump ${{ inputs.bump-version || inputs.bump-dispatch }}
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Bump version: ${{ inputs.bump-version || inputs.bump-dispatch }}"

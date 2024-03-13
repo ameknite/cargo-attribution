@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Add tag version: (e.g. -> v3.6.1)"
+        description: "Tag version: (e.g. -> v3.6.1)"
         required: true
 
 jobs:
@@ -78,8 +78,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Git Pull
-        run: git pull
+      - run: git pull
 
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
