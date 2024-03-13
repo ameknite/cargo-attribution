@@ -113,8 +113,8 @@ description = "encodes and decodes base64 as bytes or utf8"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Alice Maz"]
 authors = [
-  "Alice Maz <alice@alicemaz.com>",
-  "Marshall Pierce <marshall@mpierce.org>",
+    "Alice Maz <alice@alicemaz.com>",
+    "Marshall Pierce <marshall@mpierce.org>",
 ]
 repository = "https://github.com/marshallpierce/rust-base64"
 
@@ -124,8 +124,8 @@ version = "0.5.2"
 description = "More compact Cow"
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2020 Maciej Hirsz <hello@maciej.codes>",
-  "Copyright 2020 Maciej Hirsz <hello@maciej.codes>",
+    "Copyright (c) 2020 Maciej Hirsz <hello@maciej.codes>",
+    "Copyright 2020 Maciej Hirsz <hello@maciej.codes>",
 ]
 authors = ["Maciej Hirsz <hello@maciej.codes>"]
 repository = "https://github.com/maciejhirsz/beef"
@@ -166,8 +166,8 @@ description = "Types and traits for working with bytes"
 license = "MIT"
 notices = ["Copyright (c) 2018 Carl Lerche"]
 authors = [
-  "Carl Lerche <me@carllerche.com>",
-  "Sean McArthur <sean@seanmonstar.com>",
+    "Carl Lerche <me@carllerche.com>",
+    "Sean McArthur <sean@seanmonstar.com>",
 ]
 repository = "https://github.com/tokio-rs/bytes"
 
@@ -177,10 +177,10 @@ version = "1.1.6"
 description = "UTF-8 paths"
 license = "MIT OR Apache-2.0"
 authors = [
-  "Without Boats <saoirse@without.boats>",
-  "Ashley Williams <ashley666ashley@gmail.com>",
-  "Steve Klabnik <steve@steveklabnik.com>",
-  "Rain <rain@sunshowers.io>",
+    "Without Boats <saoirse@without.boats>",
+    "Ashley Williams <ashley666ashley@gmail.com>",
+    "Steve Klabnik <steve@steveklabnik.com>",
+    "Rain <rain@sunshowers.io>",
 ]
 repository = "https://github.com/camino-rs/camino"
 
@@ -305,8 +305,8 @@ version = "0.3.11"
 description = "Ranged integers"
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2022 Jacob Pratt et al.",
-  "Copyright 2022 Jacob Pratt et al.",
+    "Copyright (c) 2022 Jacob Pratt et al.",
+    "Copyright 2022 Jacob Pratt et al.",
 ]
 authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/deranged"
@@ -346,8 +346,8 @@ version = "0.6.12"
 description = "Flexible concrete Error Reporting type built on std::error::Error with customizable Reports"
 license = "MIT OR Apache-2.0"
 authors = [
-  "David Tolnay <dtolnay@gmail.com>",
-  "Jane Lusby <jlusby42@gmail.com>",
+    "David Tolnay <dtolnay@gmail.com>",
+    "Jane Lusby <jlusby42@gmail.com>",
 ]
 repository = "https://github.com/eyre-rs/eyre"
 
@@ -377,8 +377,8 @@ Channels for asynchronous communication using futures-rs.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2017 The Tokio Authors",
+    "Copyright (c) 2016 Alex Crichton",
+    "Copyright (c) 2017 The Tokio Authors",
 ]
 repository = "https://github.com/rust-lang/futures-rs"
 homepage = "https://rust-lang.github.io/futures-rs"
@@ -391,8 +391,8 @@ The core traits and types in for the `futures` library.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2017 The Tokio Authors",
+    "Copyright (c) 2016 Alex Crichton",
+    "Copyright (c) 2017 The Tokio Authors",
 ]
 repository = "https://github.com/rust-lang/futures-rs"
 homepage = "https://rust-lang.github.io/futures-rs"
@@ -405,8 +405,8 @@ The asynchronous `Sink` trait for the futures-rs library.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2017 The Tokio Authors",
+    "Copyright (c) 2016 Alex Crichton",
+    "Copyright (c) 2017 The Tokio Authors",
 ]
 repository = "https://github.com/rust-lang/futures-rs"
 homepage = "https://rust-lang.github.io/futures-rs"
@@ -419,8 +419,8 @@ Tools for working with tasks.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2017 The Tokio Authors",
+    "Copyright (c) 2016 Alex Crichton",
+    "Copyright (c) 2017 The Tokio Authors",
 ]
 repository = "https://github.com/rust-lang/futures-rs"
 homepage = "https://rust-lang.github.io/futures-rs"
@@ -433,8 +433,8 @@ Common utilities and extension traits for the futures-rs library.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2017 The Tokio Authors",
+    "Copyright (c) 2016 Alex Crichton",
+    "Copyright (c) 2017 The Tokio Authors",
 ]
 repository = "https://github.com/rust-lang/futures-rs"
 homepage = "https://rust-lang.github.io/futures-rs"
@@ -445,8 +445,8 @@ version = "0.2.12"
 description = "A small cross-platform library for retrieving random data from system source"
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2014 The Rust Project Developers",
-  "Copyright (c) 2018-2024 The rust-random Project Developers",
+    "Copyright (c) 2014 The Rust Project Developers",
+    "Copyright (c) 2018-2024 The rust-random Project Developers",
 ]
 authors = ["The Rand Project Developers"]
 repository = "https://github.com/rust-random/getrandom"
@@ -479,8 +479,8 @@ description = "An HTTP/2 client and server"
 license = "MIT"
 notices = ["Copyright (c) 2017 h2 authors"]
 authors = [
-  "Carl Lerche <me@carllerche.com>",
-  "Sean McArthur <sean@seanmonstar.com>",
+    "Carl Lerche <me@carllerche.com>",
+    "Sean McArthur <sean@seanmonstar.com>",
 ]
 repository = "https://github.com/hyperium/h2"
 
@@ -518,13 +518,13 @@ A set of types for representing HTTP requests and responses.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2017 http-rs authors",
-  "Copyright 2017 http-rs authors",
+    "Copyright (c) 2017 http-rs authors",
+    "Copyright 2017 http-rs authors",
 ]
 authors = [
-  "Alex Crichton <alex@alexcrichton.com>",
-  "Carl Lerche <me@carllerche.com>",
-  "Sean McArthur <sean@seanmonstar.com>",
+    "Alex Crichton <alex@alexcrichton.com>",
+    "Carl Lerche <me@carllerche.com>",
+    "Sean McArthur <sean@seanmonstar.com>",
 ]
 repository = "https://github.com/hyperium/http"
 
@@ -537,9 +537,9 @@ Trait representing an asynchronous, streaming, HTTP request or response body.
 license = "MIT"
 notices = ["Copyright (c) 2019 Hyper Contributors"]
 authors = [
-  "Carl Lerche <me@carllerche.com>",
-  "Lucio Franco <luciofranco14@gmail.com>",
-  "Sean McArthur <sean@seanmonstar.com>",
+    "Carl Lerche <me@carllerche.com>",
+    "Lucio Franco <luciofranco14@gmail.com>",
+    "Sean McArthur <sean@seanmonstar.com>",
 ]
 repository = "https://github.com/hyperium/http-body"
 
@@ -577,8 +577,8 @@ version = "0.24.2"
 description = "Rustls+hyper integration for pure rust HTTPS"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
-  "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
-  "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
 ]
 repository = "https://github.com/rustls/hyper-rustls"
 
@@ -704,7 +704,10 @@ Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for
 """
 license = "Unlicense OR MIT"
 notices = ["Copyright (c) 2015 Andrew Gallant"]
-authors = ["Andrew Gallant <jamslam@gmail.com>", "bluss"]
+authors = [
+    "Andrew Gallant <jamslam@gmail.com>",
+    "bluss",
+]
 repository = "https://github.com/BurntSushi/memchr"
 
 [[dependencies]]
@@ -730,10 +733,13 @@ name = "miniz_oxide"
 version = "0.7.2"
 description = "DEFLATE compression and decompression library rewritten in Rust based on miniz"
 license = "MIT OR Zlib OR Apache-2.0"
-notices = ["Copyright (c) 2017 Frommi", "Copyright (c) 2020 Frommi"]
+notices = [
+    "Copyright (c) 2017 Frommi",
+    "Copyright (c) 2020 Frommi",
+]
 authors = [
-  "Frommi <daniil.liferenko@gmail.com>",
-  "oyvindln <oyvindln@users.noreply.github.com>",
+    "Frommi <daniil.liferenko@gmail.com>",
+    "oyvindln <oyvindln@users.noreply.github.com>",
 ]
 repository = "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
 
@@ -744,9 +750,9 @@ description = "Lightweight non-blocking I/O."
 license = "MIT"
 notices = ["Copyright (c) 2014 Carl Lerche and other MIO contributors"]
 authors = [
-  "Carl Lerche <me@carllerche.com>",
-  "Thomas de Zeeuw <thomasdezeeuw@gmail.com>",
-  "Tokio Contributors <team@tokio.rs>",
+    "Carl Lerche <me@carllerche.com>",
+    "Thomas de Zeeuw <thomasdezeeuw@gmail.com>",
+    "Tokio Contributors <team@tokio.rs>",
 ]
 repository = "https://github.com/tokio-rs/mio"
 
@@ -759,7 +765,10 @@ better certainty when refactoring, makes the exact behavior of code more explici
 turbofish syntax.
 """
 license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2023 Jacob Pratt", "Copyright 2023 Jacob Pratt"]
+notices = [
+    "Copyright (c) 2023 Jacob Pratt",
+    "Copyright 2023 Jacob Pratt",
+]
 authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/num-conv"
 
@@ -841,8 +850,8 @@ Utilities for pinning
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2018 The pin-utils authors",
-  "Copyright 2018 The pin-utils authors",
+    "Copyright (c) 2018 The pin-utils authors",
+    "Copyright 2018 The pin-utils authors",
 ]
 authors = ["Josef Brandl <mail@josefbrandl.de>"]
 repository = "https://github.com/rust-lang-nursery/pin-utils"
@@ -857,8 +866,8 @@ description = """
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2023 Jacob Pratt et al.",
-  "Copyright 2023 Jacob Pratt et al.",
+    "Copyright (c) 2023 Jacob Pratt et al.",
+    "Copyright 2023 Jacob Pratt et al.",
 ]
 authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/powerfmt"
@@ -869,8 +878,8 @@ version = "1.0.79"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
-  "David Tolnay <dtolnay@gmail.com>",
-  "Alex Crichton <alex@alexcrichton.com>",
+    "David Tolnay <dtolnay@gmail.com>",
+    "Alex Crichton <alex@alexcrichton.com>",
 ]
 repository = "https://github.com/dtolnay/proc-macro2"
 
@@ -900,7 +909,10 @@ finite automata and guarantees linear time matching on all inputs.
 """
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
-authors = ["The Rust Project Developers", "Andrew Gallant <jamslam@gmail.com>"]
+authors = [
+    "The Rust Project Developers",
+    "Andrew Gallant <jamslam@gmail.com>",
+]
 repository = "https://github.com/rust-lang/regex"
 
 [[dependencies]]
@@ -909,7 +921,10 @@ version = "0.4.6"
 description = "Automata construction and matching using regular expressions."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
-authors = ["The Rust Project Developers", "Andrew Gallant <jamslam@gmail.com>"]
+authors = [
+    "The Rust Project Developers",
+    "Andrew Gallant <jamslam@gmail.com>",
+]
 repository = "https://github.com/rust-lang/regex/tree/master/regex-automata"
 
 [[dependencies]]
@@ -927,7 +942,10 @@ version = "0.8.2"
 description = "A regular expression parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
-authors = ["The Rust Project Developers", "Andrew Gallant <jamslam@gmail.com>"]
+authors = [
+    "The Rust Project Developers",
+    "Andrew Gallant <jamslam@gmail.com>",
+]
 repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
@@ -935,23 +953,12 @@ name = "reqwest"
 version = "0.11.26"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
+notices = [
+    "Copyright (c) 2016 Sean McArthur",
+    "Copyright 2016 Sean McArthur",
+]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/reqwest"
-
-[[dependencies]]
-name = "ring"
-version = "0.17.8"
-description = "Safe, fast, small crypto using Rust."
-notices = [
-  "* Copyright (c) 1998-2011 The OpenSSL Project.  All rights reserved.",
-  "/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)",
-  "/* Copyright (c) 2015, Google Inc.",
-  "Copyright (c) 2015-2016 the fiat-crypto authors (see",
-  "Copyright 2015-2016 Brian Smith.",
-]
-authors = ["Brian Smith <brian@briansmith.org>"]
-repository = "https://github.com/briansmith/ring"
 
 [[dependencies]]
 name = "rowan"
@@ -986,8 +993,8 @@ version = "0.21.10"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
-  "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
-  "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
 ]
 repository = "https://github.com/rustls/rustls"
 
@@ -997,8 +1004,8 @@ version = "1.0.4"
 description = "Basic .pem file parser for keys and certificates"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
-  "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
-  "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
 ]
 repository = "https://github.com/rustls/pemfile"
 
@@ -1029,9 +1036,7 @@ Defines the macros `defer!`, `defer_on_unwind!`, `defer_on_success!` as
 shorthands for guards with one of the implemented strategies.
 """
 license = "MIT OR Apache-2.0"
-notices = [
-  "Copyright (c) 2016-2019 Ulrik Sverdrup \"bluss\" and scopeguard developers",
-]
+notices = ["Copyright (c) 2016-2019 Ulrik Sverdrup \"bluss\" and scopeguard developers"]
 authors = ["bluss"]
 repository = "https://github.com/bluss/scopeguard"
 
@@ -1041,8 +1046,8 @@ version = "0.7.1"
 description = "Certificate transparency SCT verification library"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
-  "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
-  "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
+    "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
 ]
 authors = ["Joseph Birr-Pixton <jpixton@gmail.com>"]
 repository = "https://github.com/rustls/sct.rs"
@@ -1061,8 +1066,8 @@ version = "1.0.197"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
-  "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
-  "David Tolnay <dtolnay@gmail.com>",
+    "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
+    "David Tolnay <dtolnay@gmail.com>",
 ]
 repository = "https://github.com/serde-rs/serde"
 homepage = "https://serde.rs"
@@ -1073,8 +1078,8 @@ version = "1.0.197"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
-  "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
-  "David Tolnay <dtolnay@gmail.com>",
+    "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
+    "David Tolnay <dtolnay@gmail.com>",
 ]
 repository = "https://github.com/serde-rs/serde"
 homepage = "https://serde.rs"
@@ -1085,8 +1090,8 @@ version = "1.0.114"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
-  "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
-  "David Tolnay <dtolnay@gmail.com>",
+    "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
+    "David Tolnay <dtolnay@gmail.com>",
 ]
 repository = "https://github.com/serde-rs/json"
 
@@ -1114,8 +1119,8 @@ description = "Backend crate for signal-hook"
 license = "Apache-2.0/MIT"
 notices = ["Copyright (c) 2017 tokio-jsonrpc developers"]
 authors = [
-  "Michal 'vorner' Vaner <vorner@vorner.cz>",
-  "Masaki Hara <ackie.h.gmai@gmail.com>",
+    "Michal 'vorner' Vaner <vorner@vorner.cz>",
+    "Masaki Hara <ackie.h.gmai@gmail.com>",
 ]
 repository = "https://github.com/vorner/signal-hook"
 
@@ -1147,8 +1152,8 @@ possible intended.
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = [
-  "Alex Crichton <alex@alexcrichton.com>",
-  "Thomas de Zeeuw <thomasdezeeuw@gmail.com>",
+    "Alex Crichton <alex@alexcrichton.com>",
+    "Thomas de Zeeuw <thomasdezeeuw@gmail.com>",
 ]
 repository = "https://github.com/rust-lang/socket2"
 
@@ -1159,8 +1164,8 @@ description = "Helper crate for SPDX expressions"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Embark Studios"]
 authors = [
-  "Embark <opensource@embark-studios.com>",
-  "Jake Shadle <jake.shadle@embark-studios.com>",
+    "Embark <opensource@embark-studios.com>",
+    "Jake Shadle <jake.shadle@embark-studios.com>",
 ]
 repository = "https://github.com/EmbarkStudios/spdx"
 
@@ -1171,9 +1176,9 @@ description = "Spin-based synchronization primitives"
 license = "MIT"
 notices = ["Copyright (c) 2014 Mathijs van de Nes"]
 authors = [
-  "Mathijs van de Nes <git@mathijs.vd-nes.nl>",
-  "John Ericson <git@JohnEricson.me>",
-  "Joshua Barretto <joshua.s.barretto@gmail.com>",
+    "Mathijs van de Nes <git@mathijs.vd-nes.nl>",
+    "John Ericson <git@JohnEricson.me>",
+    "Joshua Barretto <joshua.s.barretto@gmail.com>",
 ]
 repository = "https://github.com/mvdnes/spin-rs.git"
 
@@ -1186,11 +1191,14 @@ OSA, Damerau-Levenshtein, Jaro, Jaro-Winkler, and Sørensen-Dice.
 """
 license = "MIT"
 notices = [
-  "Copyright (c) 2015 Danny Guo",
-  "Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>",
-  "Copyright (c) 2018 Akash Kurdekar",
+    "Copyright (c) 2015 Danny Guo",
+    "Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>",
+    "Copyright (c) 2018 Akash Kurdekar",
 ]
-authors = ["Danny Guo <danny@dannyguo.com>", "maxbachmann <oss@maxbachmann.de>"]
+authors = [
+    "Danny Guo <danny@dannyguo.com>",
+    "maxbachmann <oss@maxbachmann.de>",
+]
 repository = "https://github.com/rapidfuzz/strsim-rs"
 
 [[dependencies]]
@@ -1249,8 +1257,8 @@ version = "1.1.1"
 description = "Newtypes for text offsets"
 license = "MIT OR Apache-2.0"
 authors = [
-  "Aleksey Kladov <aleksey.kladov@gmail.com>",
-  "Christopher Durham (CAD97) <cad97@cad97.com>",
+    "Aleksey Kladov <aleksey.kladov@gmail.com>",
+    "Christopher Durham (CAD97) <cad97@cad97.com>",
 ]
 repository = "https://github.com/rust-analyzer/text-size"
 
@@ -1276,10 +1284,13 @@ version = "0.3.34"
 description = "Date and time library. Fully interoperable with the standard library. Mostly compatible with #![no_std]."
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2024 Jacob Pratt et al.",
-  "Copyright 2024 Jacob Pratt et al.",
+    "Copyright (c) 2024 Jacob Pratt et al.",
+    "Copyright 2024 Jacob Pratt et al.",
 ]
-authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
+authors = [
+    "Jacob Pratt <open-source@jhpratt.dev>",
+    "Time contributors",
+]
 repository = "https://github.com/time-rs/time"
 homepage = "https://time-rs.github.io"
 
@@ -1289,10 +1300,13 @@ version = "0.1.2"
 description = "This crate is an implementation detail and should not be relied upon directly."
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2022 Jacob Pratt et al.",
-  "Copyright 2022 Jacob Pratt et al.",
+    "Copyright (c) 2022 Jacob Pratt et al.",
+    "Copyright 2022 Jacob Pratt et al.",
 ]
-authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
+authors = [
+    "Jacob Pratt <open-source@jhpratt.dev>",
+    "Time contributors",
+]
 repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
@@ -1304,10 +1318,13 @@ description = """
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2024 Jacob Pratt et al.",
-  "Copyright 2024 Jacob Pratt et al.",
+    "Copyright (c) 2024 Jacob Pratt et al.",
+    "Copyright 2024 Jacob Pratt et al.",
 ]
-authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
+authors = [
+    "Jacob Pratt <open-source@jhpratt.dev>",
+    "Time contributors",
+]
 repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
@@ -1324,7 +1341,10 @@ name = "tinyvec_macros"
 version = "0.1.1"
 description = "Some macros for tiny containers"
 license = "MIT OR Apache-2.0 OR Zlib"
-notices = ["Copyright (c) 2020 Soveu", "Copyright 2020 Tomasz \"Soveu\" Marx"]
+notices = [
+    "Copyright (c) 2020 Soveu",
+    "Copyright 2020 Tomasz \"Soveu\" Marx",
+]
 authors = ["Soveu <marx.tomasz@gmail.com>"]
 repository = "https://github.com/Soveu/tinyvec_macros"
 
@@ -1349,8 +1369,8 @@ Tokio's proc macros.
 """
 license = "MIT"
 notices = [
-  "Copyright (c) 2019 Yoshua Wuyts",
-  "Copyright (c) 2023 Tokio Contributors",
+    "Copyright (c) 2019 Yoshua Wuyts",
+    "Copyright (c) 2023 Tokio Contributors",
 ]
 authors = ["Tokio Contributors <team@tokio.rs>"]
 repository = "https://github.com/tokio-rs/tokio"
@@ -1361,7 +1381,10 @@ name = "tokio-rustls"
 version = "0.24.1"
 description = "Asynchronous TLS/SSL streams for Tokio using Rustls."
 license = "MIT/Apache-2.0"
-notices = ["Copyright (c) 2017 quininer kel", "Copyright 2017 quininer kel"]
+notices = [
+    "Copyright (c) 2017 quininer kel",
+    "Copyright 2017 quininer kel",
+]
 repository = "https://github.com/rustls/tokio-rustls"
 
 [[dependencies]]
@@ -1405,8 +1428,8 @@ description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
 authors = [
-  "Andronik Ordian <write@reusable.software>",
-  "Ed Page <eopage@gmail.com>",
+    "Andronik Ordian <write@reusable.software>",
+    "Ed Page <eopage@gmail.com>",
 ]
 repository = "https://github.com/toml-rs/toml"
 
@@ -1430,8 +1453,8 @@ Application-level tracing for Rust.
 license = "MIT"
 notices = ["Copyright (c) 2019 Tokio Contributors"]
 authors = [
-  "Eliza Weisman <eliza@buoyant.io>",
-  "Tokio Contributors <team@tokio.rs>",
+    "Eliza Weisman <eliza@buoyant.io>",
+    "Tokio Contributors <team@tokio.rs>",
 ]
 repository = "https://github.com/tokio-rs/tracing"
 homepage = "https://tokio.rs"
@@ -1445,9 +1468,9 @@ Procedural macro attributes for automatically instrumenting functions.
 license = "MIT"
 notices = ["Copyright (c) 2019 Tokio Contributors"]
 authors = [
-  "Tokio Contributors <team@tokio.rs>",
-  "Eliza Weisman <eliza@buoyant.io>",
-  "David Barsky <dbarsky@amazon.com>",
+    "Tokio Contributors <team@tokio.rs>",
+    "Eliza Weisman <eliza@buoyant.io>",
+    "David Barsky <dbarsky@amazon.com>",
 ]
 repository = "https://github.com/tokio-rs/tracing"
 homepage = "https://tokio.rs"
@@ -1470,8 +1493,8 @@ version = "0.2.5"
 description = "A lightweight atomic lock."
 license = "MIT"
 notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2018-2023 Sean McArthur",
+    "Copyright (c) 2016 Alex Crichton",
+    "Copyright (c) 2018-2023 Sean McArthur",
 ]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/try-lock"
@@ -1506,8 +1529,8 @@ Unicode Standard Annex #15.
 license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2015 The Rust Project Developers"]
 authors = [
-  "kwantam <kwantam@gmail.com>",
-  "Manish Goregaokar <manishsmail@gmail.com>",
+    "kwantam <kwantam@gmail.com>",
+    "Manish Goregaokar <manishsmail@gmail.com>",
 ]
 repository = "https://github.com/unicode-rs/unicode-normalization"
 
@@ -1516,7 +1539,6 @@ name = "untrusted"
 version = "0.9.0"
 description = "Safe, fast, zero-panic, zero-crashing, zero-allocation parsing of untrusted inputs in Rust."
 license = "ISC"
-notices = ["// Copyright 2015-2016 Brian Smith."]
 authors = ["Brian Smith <brian@briansmith.org>"]
 repository = "https://github.com/briansmith/untrusted"
 
@@ -1536,8 +1558,8 @@ description = "Table-driven UTF-8 parser"
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016 Joe Wilm"]
 authors = [
-  "Joe Wilm <joe@jwilm.com>",
-  "Christian Duerr <contact@christianduerr.com>",
+    "Joe Wilm <joe@jwilm.com>",
+    "Christian Duerr <contact@christianduerr.com>",
 ]
 repository = "https://github.com/alacritty/vte"
 
@@ -1841,8 +1863,8 @@ version = "0.7.32"
 description = "Utilities for zero-copy parsing and serialization"
 license = "BSD-2-Clause OR Apache-2.0 OR MIT"
 notices = [
-  "Copyright 2019 The Fuchsia Authors.",
-  "Copyright 2023 The Fuchsia Authors",
+    "Copyright 2019 The Fuchsia Authors.",
+    "Copyright 2023 The Fuchsia Authors",
 ]
 authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
 repository = "https://github.com/google/zerocopy"
@@ -1853,8 +1875,8 @@ version = "0.7.32"
 description = "Custom derive for traits from the zerocopy crate"
 license = "BSD-2-Clause OR Apache-2.0 OR MIT"
 notices = [
-  "Copyright 2019 The Fuchsia Authors.",
-  "Copyright 2023 The Fuchsia Authors",
+    "Copyright 2019 The Fuchsia Authors.",
+    "Copyright 2023 The Fuchsia Authors",
 ]
 authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
 repository = "https://github.com/google/zerocopy"
