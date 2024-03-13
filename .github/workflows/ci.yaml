@@ -1,13 +1,15 @@
 name: CI
 
 on:
+  workflow_dispatch:
+  workflow_call:
+  pull_request:  
   push:
     branches:
       - main
-  pull_request:
-
+    
 jobs:
-  build:
+  cargo-build:
     name: Build
     runs-on: ubuntu-latest
 
@@ -16,16 +18,69 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install stable toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+
+      - name: cargo build
+        run: cargo b
+
+  cargo-fmt:
+    name: Formatting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with: 
+          components: rustfmt
+
+      - name: Rustfmt Check
+        uses: actions-rust-lang/rustfmt@v1
+
+  cargo-clippy:
+    name: Clippy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+        
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with: 
+          components: clippy
+
+      - name: Clippy Check
+        run: cargo clippy
+
+  typos-cli:
+    name: Check for typos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Install Typos 
+        uses: taiki-e/install-action@v2
         with:
-          components: clippy, rustfmt
+          tool: typos-cli
 
-      - name: cargo-build
-        run: cargo build
-          
-      - name: cargo-clippy
-        run: cargo clippy -- -D warnings
+      - name: run typos
+        run: typos
 
-      - name: cargo-fmt
-        run: cargo fmt --all -- --check
+  taplo-toml-fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
 
+      - name: Install Taplo
+        uses: taiki-e/install-action@v2
+        with:
+          tool: taplo-cli
+
+      - name: Run Taplo
+        id: taplo
+        run: taplo fmt --check --diff
