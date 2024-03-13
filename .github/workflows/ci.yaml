@@ -10,7 +10,7 @@ on:
     
 jobs:
   cargo-build:
-    name: Build
+    name: Cargo Build
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +24,7 @@ jobs:
         run: cargo b
 
   cargo-fmt:
-    name: Formatting
+    name: Cargo fmt
     runs-on: ubuntu-latest
 
     steps:
@@ -40,7 +40,7 @@ jobs:
         uses: actions-rust-lang/rustfmt@v1
 
   cargo-clippy:
-    name: Clippy
+    name: Cargo clipy
     runs-on: ubuntu-latest
 
     steps:
@@ -56,7 +56,7 @@ jobs:
         run: cargo clippy
 
   typos-cli:
-    name: Check for typos
+    name: typos
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
@@ -71,6 +71,7 @@ jobs:
         run: typos
 
   taplo-toml-fmt:
+    name: taplo fmt
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
