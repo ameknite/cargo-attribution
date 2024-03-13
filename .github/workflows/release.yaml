@@ -17,11 +17,16 @@ on:
 jobs:
   pre-release:
     uses: ./.github/workflows/pre_release.yaml
+    with:
+      tag-version: ${{ inputs.version ||  github.ref_name }}
 
   create-tag:
-    needs: [pre-release]
+    needs: pre-release
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Git Pull
+        run: git pull
       - uses: mukunku/tag-exists-action@v1.6.0
         id: check-tag
         with: 
