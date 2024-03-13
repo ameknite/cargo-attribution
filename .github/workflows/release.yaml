@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: git checout HEAD
+      - run: git checkout HEAD
 
       - uses: mukunku/tag-exists-action@v1.6.0
         id: check-tag
