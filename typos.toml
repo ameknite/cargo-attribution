@@ -2,5 +2,5 @@
 
 [files]
 extend-exclude = [
-    "attribution/specific_licenses", # ring_license
+  "attribution/specific_licenses", # ring_license
 ]

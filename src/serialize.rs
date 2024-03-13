@@ -7,6 +7,7 @@ use std::{fs::File, io::Write, path::Path};
 
 use color_eyre::eyre::Result;
 use serde::Serialize;
+use taplo::formatter;
 use toml_edit::{ArrayOfTables, DocumentMut, Item, Table};
 
 use crate::metadata::DependencyData;
@@ -28,10 +29,10 @@ impl<'a> DependencySerialized<'a> {
 
     pub fn to_toml(&self) -> Result<String> {
         // Serialize your struct to a TOML string
-        let toml_str = toml::to_string_pretty(&self)?;
+        let toml_str = toml::to_string(&self)?;
 
         if self.file_name == "dependencies" {
-            return Ok(toml_str);
+            return Ok(format_toml(&toml_str));
         }
 
         // Parse the TOML string into a toml_edit::DocumentMut
@@ -46,7 +47,7 @@ impl<'a> DependencySerialized<'a> {
 
         // Convert the modified document back to a TOML string
         let toml_str = doc.to_string();
-        Ok(toml_str)
+        Ok(format_toml(&toml_str))
     }
 
     pub fn create_toml(&self, output_dir: &Path) -> Result<()> {
@@ -77,7 +78,7 @@ impl<'a> SelfSerialized<'a> {
         let toml_str = toml::to_string_pretty(&self)?;
 
         if self.file_name == "self" {
-            return Ok(toml_str);
+            return Ok(format_toml(&toml_str));
         }
 
         // Parse the TOML string into a toml_edit::DocumentMut
@@ -93,7 +94,7 @@ impl<'a> SelfSerialized<'a> {
 
         // Convert the modified document back to a TOML string
         let toml_str = doc.to_string();
-        Ok(toml_str)
+        Ok(format_toml(&toml_str))
     }
 
     pub fn create_toml(&self, output_dir: &Path) -> Result<()> {
@@ -101,4 +102,8 @@ impl<'a> SelfSerialized<'a> {
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
     }
+}
+
+pub fn format_toml(text: &str) -> String {
+    formatter::format(text, formatter::Options::default())
 }

@@ -69,6 +69,14 @@ jobs:
       - name: Run cargo attribution
         run: cargo attribution
       
+      - name: Install Taplo
+        uses: taiki-e/install-action@v2
+        with:
+          tool: taplo-cli
+
+      - name: Run Taplo
+        run: taplo fmt
+      
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
