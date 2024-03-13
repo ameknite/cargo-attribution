@@ -25,12 +25,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Git Pull
         run: git pull
+
       - uses: mukunku/tag-exists-action@v1.6.0
         id: check-tag
         with: 
           tag: ${{ inputs.version ||  github.ref_name }}
+
       - name: Create tag
         uses: actions/github-script@v7
         if: steps.check-tag.outputs.exists == 'false' 
@@ -47,13 +50,11 @@ jobs:
     needs: [create-tag]
     runs-on: ubuntu-latest
     steps:
-      - id: get-tag
-        uses: olegtarasov/get-tag@2.1.3
-      - uses: actions/checkout@v4
       - uses: taiki-e/create-gh-release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           changelog: CHANGELOG.md
+          allow-missing-changelog: true
           ref: refs/tags/${{ inputs.version ||  github.ref_name }}
   
   build-and-release:
@@ -78,6 +79,9 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
+      
+      - name: Git Pull
+        run: git pull
 
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
