@@ -9,7 +9,7 @@ on:
   workflow_call:
     
 jobs:
-  build:
+  cargo-build:
     name: Build
     runs-on: ubuntu-latest
 
@@ -23,7 +23,7 @@ jobs:
       - name: cargo build
         run: cargo b
 
-  fmt:
+  cargo-fmt:
     name: Formatting
     runs-on: ubuntu-latest
 
@@ -37,7 +37,7 @@ jobs:
       - name: Rustfmt Check
         uses: actions-rust-lang/rustfmt@v1
 
-  clippy:
+  cargo-clippy:
     name: Clippy
     runs-on: ubuntu-latest
 
@@ -51,7 +51,7 @@ jobs:
       - name: Clippy Check
         run: cargo clippy
 
-  typos:
+  typos-cli:
     name: Check for typos
     runs-on: ubuntu-latest
     steps:
