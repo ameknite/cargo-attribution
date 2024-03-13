@@ -93,6 +93,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: refs/tags/${{ inputs.version ||  github.ref_name }}
       
-  # publish-crate:
-    # needs: [create-tag]
-    # uses: ./.github/workflows/publish.yaml
+  publish-crate:
+    needs: [create-tag]
+    uses: ./.github/workflows/publish.yaml
