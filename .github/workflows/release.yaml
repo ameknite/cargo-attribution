@@ -3,7 +3,6 @@ name: Build & Release
 permissions:
   # To upload files to GitHub Releases
   contents: write
-  actions: read
 
 on:
   push:
@@ -51,11 +50,9 @@ jobs:
     needs: [create-tag]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Fetch Repository
+        uses: actions/checkout@v4
 
-      - name: Git Pull
-        run: git pull
-        
       - uses: taiki-e/create-gh-release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
