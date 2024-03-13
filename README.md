@@ -55,16 +55,12 @@ Example of a dependency:
 
 ```toml
 [[dependencies]]
-name = "wasm-bindgen"
-version = "0.2.91"
-description = """
-Easy support for interacting between JS and Rust.
-"""
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2014 Alex Crichton"]
-authors = ["The wasm-bindgen Developers"]
-repository = "https://github.com/rustwasm/wasm-bindgen"
-homepage = "https://rustwasm.github.io/"
+name = "wasi"
+version = "0.11.0+wasi-snapshot-preview1"
+description = "Experimental WASI API bindings for Rust"
+license = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
+authors = ["The Cranelift Project Developers"]
+repository = "https://github.com/bytecodealliance/wasi"
 ```
 
 You can check the [dependencies.toml](./attribution/dependencies.toml) file, [self.toml](./attribution/self.toml) and [licenses](./attribution/licenses/) generated for this project.
