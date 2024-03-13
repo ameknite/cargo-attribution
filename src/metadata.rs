@@ -94,9 +94,7 @@ impl DependencyData {
                 .filter(|line| {
                     let line = line.trim().to_lowercase();
                     line.contains("copyright")
-                        && (line.contains("(c)")
-                            || line.contains('©')
-                            || re.is_match(&line))
+                        && (line.contains("(c)") || line.contains('©') || re.is_match(&line))
                 })
                 .map(|line| line.trim())
             {
