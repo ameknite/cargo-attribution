@@ -1,5 +1,9 @@
 name: Publish
 
+permissions:
+  contents: write
+  actions: read
+
 on:
   workflow_call:
   workflow_dispatch:
