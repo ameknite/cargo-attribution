@@ -13,6 +13,8 @@ on:
       version:
         description: "Tag version: (e.g. -> v3.6.1)"
         required: true
+      dry_run:
+        type: boolean
 
 jobs:
   pre-release:
@@ -99,6 +101,8 @@ jobs:
           archive: $bin-$tag-$target
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: refs/tags/${{ inputs.version ||  github.ref_name }}
+          checksum: sha256
+          dry-run: ${{ inputs.dry_run }}
           
   publish-crate:
     needs: [create-tag]

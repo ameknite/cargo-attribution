@@ -12,7 +12,6 @@ on:
   workflow_dispatch:
     inputs:
       bump-msrv:
-        default: false
         type: boolean
 
 jobs:
