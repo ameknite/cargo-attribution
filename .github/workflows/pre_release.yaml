@@ -27,7 +27,7 @@ jobs:
     uses: ./.github/workflows/ci.yaml
 
   cargo-deny:
-    uses: ./.github/workflows/cargo-deny.yaml
+    uses: ./.github/workflows/cargo_deny.yaml
   
   update-msrv:
     uses: ./.github/workflows/msrv.yaml
@@ -36,7 +36,7 @@ jobs:
 
   cargo-semver-checks:
     needs: get-bump-version
-    uses: ./.github/workflows/cargo-semver-checks.yaml
+    uses: ./.github/workflows/cargo_semver_checks.yaml
     with:
       bump-version: ${{ needs.get-bump-version.outputs.bump-version  }}
 
@@ -53,12 +53,12 @@ jobs:
  
   bump-version:
     needs: [get-bump-version]
-    uses: ./.github/workflows/bump-version.yaml
+    uses: ./.github/workflows/bump_version.yaml
     with:
       bump-version: ${{ needs.get-bump-version.outputs.bump-version  }}
   
   update-attribution:
     needs: [get-bump-version, bump-version]
-    uses: ./.github/workflows/update-attributions.yaml
+    uses: ./.github/workflows/update_attributions.yaml
     with:
       bump-version: ${{ needs.get-bump-version.outputs.bump-version  }}
