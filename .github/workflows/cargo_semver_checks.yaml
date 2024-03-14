@@ -1,6 +1,4 @@
-# Check for licenses and advisores
-# ../../deny.toml
-name: Cargo deny
+name: Cargo Semver Checks
 
 on:
   workflow_call:
