@@ -10,20 +10,37 @@ on:
       - v[0-9]+.[0-9]+.[0-9]+*
   workflow_dispatch:
     inputs:
-      version:
+      tag-version:
+        type: string
         description: "Tag version: (e.g. -> v3.6.1)"
-        required: true
-      dry_run:
+      upload-binaries:
+        type: boolean
+        default: true
+      bump-msrv:
         type: boolean
 
 jobs:
+  tag-name:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: get-latest-tag  
+        if: ${{ !inputs.tag-version }}
+        uses: WyriHaximus/github-action-get-previous-tag@v1
+    outputs:
+      tag: ${{ steps.get-latest-tag.outputs.tag || inputs.tag-version ||  github.ref_name }}
+
   pre-release:
+    needs: tag-name
     uses: ./.github/workflows/pre_release.yaml
     with:
-      bump-version: ${{ inputs.version ||  github.ref_name }}
+      bump-version: ${{ needs.tag-name.outputs.tag }}
+      bump-msrv: ${{ inputs.bump-msrv }}
 
   create-tag:
-    needs: pre-release
+    needs: [tag-name, pre-release]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,18 +50,18 @@ jobs:
       - uses: mukunku/tag-exists-action@v1.6.0
         id: check-tag
         with:
-          tag: ${{ inputs.version ||  github.ref_name }}
+          tag: ${{  needs.tag-name.outputs.tag }}
 
       - name: Create tag
         if: steps.check-tag.outputs.exists == 'false'
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git tag ${{ inputs.version ||  github.ref_name }}
-          git push origin ${{ inputs.version ||  github.ref_name }}
+          git tag ${{ needs.tag-name.outputs.tag }}
+          git push origin ${{  needs.tag-name.outputs.tag }}
 
   create-release:
-    needs: [create-tag]
+    needs: [tag-name, create-tag]
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
@@ -55,10 +72,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           changelog: CHANGELOG.md
           allow-missing-changelog: true
-          ref: refs/tags/${{ inputs.version ||  github.ref_name }}
+          ref: refs/tags/${{  needs.tag-name.outputs.tag }}
 
   build-and-release:
-    needs: [create-release]
+    needs: [tag-name, create-release]
     name: ${{ matrix.target }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -100,9 +117,9 @@ jobs:
           include: attribution
           archive: $bin-$tag-$target
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: refs/tags/${{ inputs.version ||  github.ref_name }}
+          ref: refs/tags/${{  needs.tag-name.outputs.tag }}
           checksum: sha256
-          dry-run: ${{ inputs.dry_run }}
+          dry-run: ${{ !inputs.upload-binaries }}
           
   publish-crate:
     needs: [create-tag]
