@@ -7,7 +7,6 @@ on:
   workflow_call:
     inputs:
       bump-msrv:
-        default: false
         type: boolean
   workflow_dispatch:
     inputs:
