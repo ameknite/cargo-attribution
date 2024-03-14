@@ -1,4 +1,4 @@
-name: Publish
+name: Bump Version
 
 on:
   workflow_call:
@@ -8,7 +8,7 @@ on:
         required: true
   workflow_dispatch:
     inputs:
-      bump-dispatch:
+      bump-version:
         description: "Bump version: (e.g. -> 3.6.1)"
         required: true
         type: string
@@ -29,9 +29,9 @@ jobs:
           tool: cargo-bump
 
       - name: Run cargo bump
-        run: cargo bump ${{ inputs.bump-version || inputs.bump-dispatch }}
+        run: cargo bump ${{ inputs.bump-version }}
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Bump version: ${{ inputs.bump-version || inputs.bump-dispatch }}"
+          commit_message: "Bump version: ${{ inputs.bump-version }}"
