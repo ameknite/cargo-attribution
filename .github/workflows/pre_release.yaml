@@ -4,19 +4,15 @@ on:
   workflow_call:
     inputs:
       bump-version:
-        required: true
         type: string
       bump-msrv:
-        default: false
         type: boolean
   workflow_dispatch:
     inputs:
       bump-version:
         description: "Bump version: (e.g. -> 3.6.1)"
-        required: true
         type: string
       bump-msrv:
-        default: false
         type: boolean
 
 permissions: 
@@ -35,12 +31,17 @@ jobs:
       bump-msrv: ${{ inputs.bump-msrv }}
 
   get-bump-version: 
-    if: inputs.bump-version
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: get-latest-tag  
+        if: ${{ !inputs.bump-version }}
+        uses: WyriHaximus/github-action-get-previous-tag@v1
       - id: version
         run: |
-          tag="${{ inputs.bump-version }}"
+          tag="${{ steps.get-latest-tag.outputs.tag || inputs.bump-version }}"
           echo "bump=${tag##v}" >> $GITHUB_OUTPUT
     outputs:
       bump-version: ${{ steps.version.outputs.bump }}
@@ -55,10 +56,10 @@ jobs:
     needs: [get-bump-version, cargo-semver-checks]
     uses: ./.github/workflows/bump_version.yaml
     with:
-      bump-version: ${{ needs.get-bump-version.outputs.bump-version  }}
+      bump-version: ${{  needs.get-bump-version.outputs.bump-version }}
   
   update-attribution:
     needs: [get-bump-version, bump-version]
     uses: ./.github/workflows/update_attributions.yaml
     with:
-      bump-version: ${{ needs.get-bump-version.outputs.bump-version  }}
+      bump-version: ${{ needs.get-bump-version.outputs.bump-version }}
