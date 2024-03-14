@@ -1,4 +1,4 @@
-name: Publish
+name: Update Attributions
 
 on:
   workflow_call:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-attribution:
+  update-attributions:
     runs-on: ubuntu-latest
     steps: 
       - name: Fetch Repository
@@ -32,5 +32,3 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[${{ inputs.bump-version || 'Manual run' }}]: Update Attributions"
-
-    
