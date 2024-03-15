@@ -36,7 +36,7 @@ jobs:
           echo $result;
 
       - name: print-info - skip cargo-semver-checks
-        if: ${{ contains(steps.searching.outputs.targets, 'lib') }}
+        if: ${{ !contains(steps.searching.outputs.targets, 'lib') }}
         run: echo "cargo semver-check only works in libraries"
 
     outputs: 
