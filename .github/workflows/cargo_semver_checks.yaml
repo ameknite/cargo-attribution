@@ -32,7 +32,7 @@ jobs:
         id: searching
         run: |
           result=$(cargo metadata --format-version=1 --no-deps | jql '"packages"|>"targets"<|[0]|>"kind"' | jql '..' -i);
-          echo "targets"=$result" >> "$GITHUB_OUTPUT";
+          echo "targets=$result" >> "$GITHUB_OUTPUT";
           echo $result;
 
       - name: print-info - skip cargo-semver-checks
