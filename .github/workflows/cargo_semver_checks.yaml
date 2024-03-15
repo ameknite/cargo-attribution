@@ -13,8 +13,9 @@ on:
         type: string
       release_type:
         type: choice
-        default: patch
+        default: none
         options:
+          - none
           - patch
           - minor
           - major
@@ -65,6 +66,7 @@ jobs:
           tool: cargo-bump
 
       - name: Run cargo bump
+        if: ${{ inputs.bump-version || inputs.release_type != 'none'}}
         run: cargo bump ${{ inputs.bump-version || inputs.release_type}}
       
       - name: Check semver
