@@ -35,9 +35,11 @@ jobs:
         
       - name: Fail if don't match regex
         if: ${{ inputs.version && steps.regex-match.outputs.match == '' }}
-        uses: actions/github-script@v3
-        with:
-          script: core.setFailed('${{inputs.version}} doesn't match regex. Use a version similar to v3.1.4-alpha+159')
+        run: exit 1;
+
+      - name: print-info
+        if: failure()
+        run: echo "${{inputs.version}} doesn't match regex. Use a version similar to v3.1.4-alpha+159"
 
   get-version:
     needs: validate-input
