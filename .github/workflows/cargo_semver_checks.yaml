@@ -14,7 +14,34 @@ on:
         type: string
 
 jobs:
+  check-for-lib:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Install jql
+        uses: taiki-e/install-action@v2
+        with:
+          tool: jql
+          
+      - name: Searching for lib
+        id: searching
+        run: |
+          result=$(cargo metadata --format-version=1 --no-deps | jql '"packages"|>"targets"<|[0]|>"kind"' | jql '..' -i)
+          echo "targets"=$result" >> "$GITHUB_OUTPUT";
+          echo $result
+
+      - name: print-info - skip cargo-semver-checks
+        if: ${{ contains(steps.searching.outputs.targets, 'lib') }}
+        run: echo "cargo semver-check only works in libraries"
+
+    outputs: 
+      is_lib: ${{ contains(steps.searching.outputs.targets, 'lib') }}
+
   cargo-semver-checks:
+    needs: check-for-lib
+    if: needs.check-for-lib.outputs.is_lib
     runs-on: ubuntu-latest
     steps: 
       - name: Fetch Repository
