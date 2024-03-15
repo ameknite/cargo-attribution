@@ -14,6 +14,10 @@ jobs:
 
   add-notice:
     uses:  ./.github/workflows/add_notice.yaml
+    with:
+      message: Weekly Checks
 
   update-attribution:
     uses: ./.github/workflows/update_attributions.yaml
+    with:
+      message: Weekly Checks

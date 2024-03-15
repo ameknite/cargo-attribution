@@ -37,7 +37,7 @@ jobs:
   add-notice:
     uses:  ./.github/workflows/add_notice.yaml
     with:
-      crate-version: ${{  inputs.version }}
+      message: ${{  inputs.version }}
 
   bump-version:
     needs: [cargo-semver-checks]
@@ -49,4 +49,4 @@ jobs:
     needs: [bump-version]
     uses: ./.github/workflows/update_attributions.yaml
     with:
-      crate-version: ${{ inputs.version }}
+      message: ${{ inputs.version }}

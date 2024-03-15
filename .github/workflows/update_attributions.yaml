@@ -3,7 +3,7 @@ name: Update Attributions
 on:
   workflow_call:
     inputs:
-      crate-version:
+      message:
         type: string
   workflow_dispatch:
 
@@ -30,4 +30,4 @@ jobs:
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[${{ inputs.crate-version || 'Manual run' }}]: Update Attributions"
+          commit_message: "[${{ inputs.message || 'Manual run' }}]: Update Attributions"
