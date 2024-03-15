@@ -61,6 +61,7 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - name: Install cargo-bump
+        if: ${{ inputs.bump-version || inputs.release_type != 'none'}}
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-bump
