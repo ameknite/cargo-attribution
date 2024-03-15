@@ -33,7 +33,7 @@ jobs:
         run: |
           result=$(cargo metadata --format-version=1 --no-deps | jql '"packages"|>"targets"<|[0]|>"kind"' | jql '..' -i);
           echo "targets=$result" >> "$GITHUB_OUTPUT";
-          echo $result;
+          echo kind of targets $result;
 
       - name: print-info - skip cargo-semver-checks
         if: ${{ !contains(steps.searching.outputs.targets, 'lib') }}
@@ -44,7 +44,7 @@ jobs:
 
   cargo-semver-checks:
     needs: check-for-lib
-    if: needs.check-for-lib.outputs.is_lib
+    if: ${{ needs.check-for-lib.outputs.is_lib == 'true' }}
     runs-on: ubuntu-latest
     steps: 
       - name: Fetch Repository
