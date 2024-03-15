@@ -1,4 +1,4 @@
-name: Update Attributions
+name: Publish
 
 on:
   workflow_call:
@@ -8,8 +8,9 @@ on:
         required: true
   workflow_dispatch:
 
+
 jobs:
-  update-attributions:
+  add-notice:
     runs-on: ubuntu-latest
     steps: 
       - name: Fetch Repository
@@ -23,12 +24,12 @@ jobs:
       - name: Install cargo-attribution
         uses: taiki-e/install-action@v2
         with:
-          tool: cargo-attribution
+          tool: add-header
       
       - name: Run cargo attribution
-        run: cargo attribution
+        run: add-header
       
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[${{ inputs.crate-version || 'Manual run' }}]: Update Attributions"
+          commit_message: "[${{ inputs.crate-version || 'Manual run' }}]: Add Notice to New Files"

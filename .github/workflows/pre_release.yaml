@@ -3,16 +3,18 @@ name: Pre Release
 on:
   workflow_call:
     inputs:
-      bump-version:
+      version:
         type: string
-      bump-msrv:
+        required: true
+      update-msrv:
         type: boolean
   workflow_dispatch:
     inputs:
-      bump-version:
-        description: "Bump version: (e.g. -> 3.6.1)"
+      version:
+        description: "Bump version: (e.g. -> 3.1.4-alpha+159)"
+        required: true
         type: string
-      bump-msrv:
+      update-msrv:
         type: boolean
 
 permissions: 
@@ -22,44 +24,29 @@ jobs:
   run-ci:
     uses: ./.github/workflows/ci.yaml
 
-  cargo-deny:
-    uses: ./.github/workflows/cargo_deny.yaml
-  
   update-msrv:
     uses: ./.github/workflows/msrv.yaml
     with:
-      bump-msrv: ${{ inputs.bump-msrv }}
-
-  get-bump-version: 
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - id: get-latest-tag  
-        if: ${{ !inputs.bump-version }}
-        uses: WyriHaximus/github-action-get-previous-tag@v1
-      - id: version
-        run: |
-          tag="${{ steps.get-latest-tag.outputs.tag || inputs.bump-version }}"
-          echo "bump=${tag##v}" >> $GITHUB_OUTPUT
-    outputs:
-      bump-version: ${{ steps.version.outputs.bump }}
+      update-msrv: ${{ inputs.update-msrv }}
 
   cargo-semver-checks:
-    needs: get-bump-version
     uses: ./.github/workflows/cargo_semver_checks.yaml
     with:
-      bump-version: ${{ needs.get-bump-version.outputs.bump-version  }}
- 
+      bump-version: ${{ inputs.version  }}
+
+  add-notice:
+    uses:  ./.github/workflows/add_notice.yaml
+    with:
+      crate-version: ${{  inputs.version }}
+
   bump-version:
-    needs: [get-bump-version, cargo-semver-checks]
+    needs: [cargo-semver-checks]
     uses: ./.github/workflows/bump_version.yaml
     with:
-      bump-version: ${{  needs.get-bump-version.outputs.bump-version }}
-  
+      crate-version: ${{  inputs.version }}
+
   update-attribution:
-    needs: [get-bump-version, bump-version]
+    needs: [bump-version]
     uses: ./.github/workflows/update_attributions.yaml
     with:
-      bump-version: ${{ needs.get-bump-version.outputs.bump-version }}
+      crate-version: ${{ inputs.version }}

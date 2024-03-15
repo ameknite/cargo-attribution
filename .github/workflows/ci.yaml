@@ -99,3 +99,7 @@ jobs:
       - name: Run Taplo
         id: taplo
         run: taplo fmt --check --diff
+
+  cargo-deny:
+    uses: ./.github/workflows/cargo_deny.yaml
+  

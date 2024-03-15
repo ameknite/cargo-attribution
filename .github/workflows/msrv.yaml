@@ -6,16 +6,16 @@ permissions:
 on:
   workflow_call:
     inputs:
-      bump-msrv:
+      update-msrv:
         type: boolean
   workflow_dispatch:
     inputs:
-      bump-msrv:
+      update-msrv:
         type: boolean
 
 jobs:
   check-msrv:
-    if:  ${{ !inputs.bump-msrv }}
+    if:  ${{ !inputs.update-msrv }}
     runs-on: ubuntu-latest
     steps: 
       - name: Fetch Repository
@@ -47,8 +47,8 @@ jobs:
           new_msrv=$(cargo msrv --output-format minimal);
           echo "new msrv: $new_msrv";
 
-  bump-msrv:
-    if: inputs.bump-msrv && always()
+  update-msrv:
+    if: inputs.update-msrv && always()
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
