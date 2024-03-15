@@ -14,9 +14,8 @@ on:
         type: string
       release_type:
         type: choice
-        default: none
+        default: patch
         options:
-          - none
           - patch
           - minor
           - major
