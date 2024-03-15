@@ -12,6 +12,14 @@ on:
         description: "Bump version: (e.g. -> 3.6.1)"
         required: true
         type: string
+      release_type:
+        type: choice
+        default: none
+        options:
+          - none
+          - patch
+          - minor
+          - major
 
 jobs:
   check-for-lib:
@@ -59,7 +67,7 @@ jobs:
           tool: cargo-bump
 
       - name: Run cargo bump
-        run: cargo bump ${{ inputs.bump-version }}
+        run: cargo bump ${{ inputs.bump-version || inputs.release_type}}
       
       - name: Check semver
         uses: obi1kenobi/cargo-semver-checks-action@v2
