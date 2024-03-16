@@ -227,7 +227,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.2"
+version = "4.5.3"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -243,7 +243,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.5.0"
+version = "4.5.3"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -259,11 +259,11 @@ repository = "https://github.com/clap-rs/clap/tree/master/clap_lex"
 
 [[dependencies]]
 name = "color-eyre"
-version = "0.6.2"
+version = "0.6.3"
 description = "An error report handler for panics and eyre::Reports for colorful, consistent, and well formatted error reports for all kinds of errors."
 license = "MIT OR Apache-2.0"
 authors = ["Jane Lusby <jlusby@yaah.dev>"]
-repository = "https://github.com/yaahc/color-eyre"
+repository = "https://github.com/eyre-rs/eyre"
 
 [[dependencies]]
 name = "colorchoice"
@@ -474,7 +474,7 @@ repository = "https://github.com/BurntSushi/ripgrep/tree/master/crates/globset"
 
 [[dependencies]]
 name = "h2"
-version = "0.3.24"
+version = "0.3.25"
 description = "An HTTP/2 client and server"
 license = "MIT"
 notices = ["Copyright (c) 2017 h2 authors"]
@@ -495,11 +495,10 @@ repository = "https://github.com/rust-lang/hashbrown"
 
 [[dependencies]]
 name = "heck"
-version = "0.4.1"
+version = "0.5.0"
 description = "heck is a case conversion library."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 The Rust Project Developers"]
-authors = ["Without Boats <woboats@gmail.com>"]
 repository = "https://github.com/withoutboats/heck"
 
 [[dependencies]]
