@@ -31,11 +31,11 @@ jobs:
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-bump
-      
+
       - name: Run cargo bump
         run: cargo bump ${{ inputs.crate-version }}
 
       - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Bump version: ${{ inputs.crate-version }}"

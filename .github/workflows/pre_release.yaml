@@ -17,17 +17,12 @@ on:
       update-msrv:
         type: boolean
 
-permissions: 
+permissions:
   contents: write
 
 jobs:
   run-ci:
     uses: ./.github/workflows/ci.yaml
-
-  update-msrv:
-    uses: ./.github/workflows/msrv.yaml
-    with:
-      update-msrv: ${{ inputs.update-msrv }}
 
   cargo-semver-checks:
     uses: ./.github/workflows/cargo_semver_checks.yaml
@@ -35,9 +30,9 @@ jobs:
       bump-version: ${{ inputs.version  }}
 
   add-notice:
-    uses:  ./.github/workflows/add_notice.yaml
+    uses: ./.github/workflows/add_notice.yaml
     with:
-      message: ${{  inputs.version }}
+      commit_message: ${{  inputs.version }}
 
   bump-version:
     needs: [cargo-semver-checks]
@@ -49,4 +44,4 @@ jobs:
     needs: [bump-version]
     uses: ./.github/workflows/update_attributions.yaml
     with:
-      message: ${{ inputs.version }}
+      commit_message: ${{ inputs.version }}

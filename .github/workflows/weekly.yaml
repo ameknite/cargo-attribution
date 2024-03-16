@@ -4,8 +4,7 @@ on:
   schedule:
     - cron: "0 0 * * 0"
 
-
-permissions: 
+permissions:
   contents: write
 
 jobs:
@@ -13,11 +12,11 @@ jobs:
     uses: ./.github/workflows/ci.yaml
 
   add-notice:
-    uses:  ./.github/workflows/add_notice.yaml
+    uses: ./.github/workflows/add_notice.yaml
     with:
-      message: Weekly Checks
+      commit_message: "Weekly run"
 
   update-attribution:
     uses: ./.github/workflows/update_attributions.yaml
     with:
-      message: Weekly Checks
+      commit_message: "Weekly run"

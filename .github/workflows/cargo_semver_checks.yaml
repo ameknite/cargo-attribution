@@ -21,7 +21,7 @@ on:
           - major
 
 jobs:
-  check-for-lib:
+  check-if-lib:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
@@ -34,7 +34,7 @@ jobs:
         uses: taiki-e/install-action@v2
         with:
           tool: jql
-          
+
       - name: Searching for lib
         id: searching
         run: |
@@ -42,18 +42,36 @@ jobs:
           echo "targets=$result" >> "$GITHUB_OUTPUT";
           echo kind of targets $result;
 
-      - name: print-info - skip cargo-semver-checks
+      - name: print if skip cargo-semver-checks
         if: ${{ !contains(steps.searching.outputs.targets, 'lib') }}
         run: echo "cargo semver-check only works in libraries"
 
-    outputs: 
+    outputs:
       is_lib: ${{ contains(steps.searching.outputs.targets, 'lib') }}
 
-  cargo-semver-checks:
-    needs: check-for-lib
-    if: ${{ needs.check-for-lib.outputs.is_lib == 'true' }}
+  get-baseline:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Get latest sha-commit from previous tag
+        id: get_baseline_sha
+        run: |
+          latest_sha=$(git rev-list --tags --max-count=1)
+          echo "baseline=$latest_sha" >> "$GITHUB_OUTPUT";
+
+      - name: print if skip cargo-semver-checks
+        if: ${{ steps.get_baseline_sha.outputs.baseline == '' }}
+        run: echo "semver-checks needs a baseline. The baseline is the latest commit of the previous tag"
+    outputs:
+      baseline: ${{ steps.get_baseline_sha.outputs.baseline }}
+
+  cargo-semver-checks:
+    needs: [check-if-lib, get-baseline]
+    if: ${{ needs.check-if-lib.outputs.is_lib == 'true' && needs.get-baseline.outputs.baseline != ''}}
+    runs-on: ubuntu-latest
+    steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
 
@@ -61,7 +79,7 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
 
       - name: Install cargo-bump
-        if: ${{ inputs.bump-version || inputs.release_type != 'none'}}
+        if: ${{ inputs.bump-version || inputs.release_type != 'none' }}
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-bump
@@ -70,8 +88,10 @@ jobs:
         if: ${{ inputs.bump-version || inputs.release_type != 'none'}}
         run: cargo bump ${{ inputs.bump-version || inputs.release_type}}
       
-      - name: Check semver
-        uses: obi1kenobi/cargo-semver-checks-action@v2
+      - name: Install cargo-semver-checks
+        uses: taiki-e/install-action@v2
         with:
-          rust-toolchain: manual
-          shared-key: my-workspace-semver
+          tool: cargo-semver-checks
+
+      - name: Run cargo-semver-checks
+        run: cargo semver-checks --baseline-rev ${{ needs.get-baseline.outputs.baseline }}

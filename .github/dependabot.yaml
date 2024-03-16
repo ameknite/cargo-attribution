@@ -12,10 +12,23 @@ updates:
         patterns:
           - "*"
         update-types:
-          - "minor"
           - "patch"
+      minor-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+      major-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "major"
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    groups:
+      github-actions-updates:
+        patterns:
+          - "*"

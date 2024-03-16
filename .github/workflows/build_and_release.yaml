@@ -20,26 +20,24 @@ on:
           - major
       update-msrv:
         type: boolean
-      
+
 jobs:
-  validate-input: 
+  validate-input:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: actions-ecosystem/action-regex-match@v2
         id: regex-match
         with:
           text: ${{ inputs.version }}
           regex: '^v(\d+)\.(\d+)\.(\d+)-?(\w*)\+?(\d*)$'
-        
+
       - name: Fail if don't match regex
         if: ${{ inputs.version && steps.regex-match.outputs.match == '' }}
-        run: exit 1;
-
-      - name: print-info - failure()
-        if: failure()
-        run: echo "${{inputs.version}} doesn't match regex. Use a version similar to v3.1.4-alpha+159"
+        run: |
+          echo "${{inputs.version}} doesn't match regex. Use a version similar to v3.1.4-alpha+159"
+          exit 1;
 
   get-version:
     needs: validate-input
@@ -85,7 +83,7 @@ jobs:
 
       - name: Versions using tag
         id: full_version
-        if: inputs.version 
+        if: inputs.version
         run: |
           tag=${{inputs.version}};
           echo $tag;
@@ -93,8 +91,8 @@ jobs:
           echo ${tag##v};
 
     outputs:
-        tag_version: ${{ inputs.version || steps.new_version.outputs.normal_tag_version || steps.current_version.outputs.normal_tag_version }}
-        crate_version: ${{ steps.full_version.outputs.normal_crate_version || steps.new_version.outputs.new_version || steps.current_version.outputs.current_version }}
+      tag_version: ${{ inputs.version || steps.new_version.outputs.normal_tag_version || steps.current_version.outputs.normal_tag_version }}
+      crate_version: ${{ steps.full_version.outputs.normal_crate_version || steps.new_version.outputs.new_version || steps.current_version.outputs.current_version }}
 
   pre-release:
     needs: get-version
@@ -139,8 +137,37 @@ jobs:
           allow-missing-changelog: true
           ref: refs/tags/${{ needs.get-version.outputs.tag_version }}
 
+  check-if-bin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+
+      - name: Install stable toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+
+      - name: Install jql
+        uses: taiki-e/install-action@v2
+        with:
+          tool: jql
+
+      - name: Searching for bin
+        id: searching
+        run: |
+          result=$(cargo metadata --format-version=1 --no-deps | jql '"packages"|>"targets"<|[0]|>"kind"' | jql '..' -i);
+          echo "targets=$result" >> "$GITHUB_OUTPUT";
+          echo kind of targets $result;
+
+      - name: print if skip upploading binaries to github release
+        if: ${{ !contains(steps.searching.outputs.targets, 'bin') }}
+        run: echo "This job avoid publishing binaries to github releases for libraries crates"
+
+    outputs:
+      is_bin: ${{ contains(steps.searching.outputs.targets, 'bin') }}
+
   build-and-release:
-    needs: [get-version, create-release]
+    needs: [get-version, create-release, check-if-bin]
+    if: ${{ needs.check-if-bin.outputs.is_bin == 'true' }}
     name: ${{ matrix.target }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -159,8 +186,16 @@ jobs:
           - {os: macos-latest, target: x86_64-apple-darwin, cross: false}
           - {os: macos-latest, target: aarch64-apple-darwin, cross: false}
     steps:
+      - name: Get sha-commit from tag
+        id: get_baseline_sha
+        run: |
+          latest_sha=$(git rev-list --tags --max-count=1)
+          echo "sha_tag=$latest_sha" >> "$GITHUB_OUTPUT";
+
       - name: Checkout source code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.get_baseline_sha.outputs.sha_tag }}
 
       - name: Install stable toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
@@ -182,7 +217,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: refs/tags/${{  needs.get-version.outputs.tag_version }}
           checksum: sha256
-          
+
   publish-crate:
     needs: [create-tag]
     uses: ./.github/workflows/publish.yaml

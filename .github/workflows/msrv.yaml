@@ -5,9 +5,6 @@ permissions:
 
 on:
   workflow_call:
-    inputs:
-      update-msrv:
-        type: boolean
   workflow_dispatch:
     inputs:
       update-msrv:
@@ -15,9 +12,9 @@ on:
 
 jobs:
   check-msrv:
-    if:  ${{ !inputs.update-msrv }}
+    if: ${{ !inputs.update-msrv }}
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
 
@@ -27,9 +24,9 @@ jobs:
       - uses: cargo-bins/cargo-binstall@main
 
       - name: Install cargo-msrv
-      # waiting for the stable release
-        run : cargo binstall cargo-msrv --version 0.16.0-beta.20 -y --force
-      
+        # waiting for the stable release
+        run: cargo binstall cargo-msrv --version 0.16.0-beta.20 -y --force
+
       - name: Get current msrv
         id: data-msrv
         run: |
@@ -37,7 +34,7 @@ jobs:
           echo "current msrv: $current_msrv";
           echo "current=$current_msrv" >> "$GITHUB_OUTPUT";
 
-      - name: Run cargo msrv 
+      - name: Run cargo msrv
         run: cargo msrv verify --min ${{ steps.data-msrv.outputs.current }}
 
       - name: echo msrv info
@@ -48,7 +45,7 @@ jobs:
           echo "new msrv: $new_msrv";
 
   update-msrv:
-    if: inputs.update-msrv && always()
+    if: inputs.update-msrv
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Repository
@@ -62,8 +59,8 @@ jobs:
       - uses: cargo-bins/cargo-binstall@main
 
       - name: Install cargo-msrv
-      # waiting for the stable release
-        run : cargo binstall cargo-msrv --version 0.16.0-beta.20 -y --force
+        # waiting for the stable release
+        run: cargo binstall cargo-msrv --version 0.16.0-beta.20 -y --force
 
       - name: Get msrv data
         id: data-msrv
@@ -71,7 +68,7 @@ jobs:
           current_msrv=$(cargo msrv show --output-format minimal);
           echo "current msrv: $current_msrv";
           echo "current=$current_msrv" >> "$GITHUB_OUTPUT";
-          new_msrv=$(cargo msrv --output-format minimal);
+          new_msrv=$(cargo msrv --output-format minimal --min $current_msrv);
           echo "new msrv: $new_msrv";
           echo "new=$new_msrv" >> "$GITHUB_OUTPUT";
 
@@ -79,13 +76,13 @@ jobs:
         run: cargo msrv set ${{ steps.data-msrv.outputs.new }}
 
       - name: Update readme msrv
-        uses:  jacobtomlinson/gha-find-replace@v3
+        uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: ${{ steps.data-msrv.outputs.current }}
           replace: ${{ steps.data-msrv.outputs.new }}
           regex: false
 
       - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update MSRV from [${{steps.data-msrv.outputs.current}}] to [${{steps.data-msrv.outputs.new}}]"
