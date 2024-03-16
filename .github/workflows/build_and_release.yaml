@@ -193,6 +193,7 @@ jobs:
 
       - name: Get sha-commit from tag
         id: get_baseline_sha
+        shell: bash
         run: |
           latest_sha=$(git rev-list --tags --max-count=1)
           echo "sha_tag=$latest_sha" >> "$GITHUB_OUTPUT";
