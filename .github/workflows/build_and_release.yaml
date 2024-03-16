@@ -186,13 +186,18 @@ jobs:
           - {os: macos-latest, target: x86_64-apple-darwin, cross: false}
           - {os: macos-latest, target: aarch64-apple-darwin, cross: false}
     steps:
+      - name: Fetch Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Get sha-commit from tag
         id: get_baseline_sha
         run: |
           latest_sha=$(git rev-list --tags --max-count=1)
           echo "sha_tag=$latest_sha" >> "$GITHUB_OUTPUT";
 
-      - name: Checkout source code
+      - name: Checkout source code to specific tag
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.get_baseline_sha.outputs.sha_tag }}

@@ -54,11 +54,14 @@ jobs:
     steps:
       - name: Fetch Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Get latest sha-commit from previous tag
         id: get_baseline_sha
         run: |
           latest_sha=$(git rev-list --tags --max-count=1)
+          echo $latest_sha
           echo "baseline=$latest_sha" >> "$GITHUB_OUTPUT";
 
       - name: print if skip cargo-semver-checks
