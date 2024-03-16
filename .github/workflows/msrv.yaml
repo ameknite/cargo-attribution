@@ -81,6 +81,9 @@ jobs:
           find: ${{ steps.data-msrv.outputs.current }}
           replace: ${{ steps.data-msrv.outputs.new }}
           regex: false
+          include: "README.md"
+
+      - run: git pull
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5

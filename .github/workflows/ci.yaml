@@ -1,4 +1,4 @@
-name: CI
+name: "A+: CI"
 
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
         uses: actions-rust-lang/rustfmt@v1
 
   cargo-clippy:
-    name: Cargo clipy
+    name: Cargo clippy
     runs-on: ubuntu-latest
 
     steps:
@@ -88,6 +88,7 @@ jobs:
         run: typos
 
   taplo-toml-fmt:
+    
     name: taplo fmt
     runs-on: ubuntu-latest
     steps:
@@ -103,6 +104,18 @@ jobs:
         id: taplo
         run: taplo fmt --check --diff
 
+  markdownlint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Fetch Repository
+      uses: actions/checkout@v4
+
+    - name: markdownlint-cli2-action
+      uses: DavidAnson/markdownlint-cli2-action@v15
+      with:
+        globs: '**/*.md'
+            
   cargo-deny:
     uses: ./.github/workflows/cargo_deny.yaml
 
