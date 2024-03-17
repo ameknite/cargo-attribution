@@ -42,7 +42,7 @@ impl<'a> DependencySerialized<'a> {
             // Rename the list
             let mut new_list = ArrayOfTables::new();
             std::mem::swap(array_of_tables, &mut new_list);
-            doc[&self.file_name] = Item::ArrayOfTables(new_list)
+            doc[&self.file_name] = Item::ArrayOfTables(new_list);
         }
 
         // Convert the modified document back to a TOML string
@@ -51,7 +51,8 @@ impl<'a> DependencySerialized<'a> {
     }
 
     pub fn create_toml(&self, output_dir: &Path) -> Result<()> {
-        let mut file = File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
+        let mut file =
+            File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
     }
@@ -98,7 +99,8 @@ impl<'a> SelfSerialized<'a> {
     }
 
     pub fn create_toml(&self, output_dir: &Path) -> Result<()> {
-        let mut file = File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
+        let mut file =
+            File::create(output_dir.join(format!("{}.toml", self.file_name)))?;
         file.write_all(self.to_toml()?.as_bytes())?;
         Ok(())
     }

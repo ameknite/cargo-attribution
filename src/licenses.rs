@@ -38,7 +38,10 @@ impl LicenseData {
     }
 }
 
-pub async fn generate_licenses(crates_data: &[DependencyData], output_dir: PathBuf) -> Result<()> {
+pub async fn generate(
+    crates_data: &[DependencyData],
+    output_dir: PathBuf,
+) -> Result<()> {
     let mut licenses = crates_data
         .iter()
         .flat_map(|c| c.licenses.clone())
@@ -59,9 +62,9 @@ pub async fn generate_licenses(crates_data: &[DependencyData], output_dir: PathB
             name: license,
         };
 
-        tasks.push(task::spawn(
-            async move { license_data.generate_license().await },
-        ));
+        tasks.push(task::spawn(async move {
+            license_data.generate_license().await
+        }));
     }
 
     let mut exceptions = crates_data

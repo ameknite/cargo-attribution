@@ -94,9 +94,11 @@ impl DependencyData {
                 .filter(|line| {
                     let line = line.trim().to_lowercase();
                     line.contains("copyright")
-                        && (line.contains("(c)") || line.contains('©') || re.is_match(&line))
+                        && (line.contains("(c)")
+                            || line.contains('©')
+                            || re.is_match(&line))
                 })
-                .map(|line| line.trim())
+                .map(str::trim)
             {
                 self.notices.push(notice.to_string());
             }
@@ -111,16 +113,15 @@ impl DependencyData {
             return;
         };
 
-        let expression = match Expression::parse(license_metadata) {
-            Ok(spdx) => spdx,
-            Err(_) => {
-                let license = license_metadata
-                    .split('/')
-                    .map(|s| s.trim())
-                    .collect::<Vec<_>>()
-                    .join(" OR ");
-                Expression::parse(&license).unwrap()
-            }
+        let expression = if let Ok(spdx) = Expression::parse(license_metadata) {
+            spdx
+        } else {
+            let license = license_metadata
+                .split('/')
+                .map(str::trim)
+                .collect::<Vec<_>>()
+                .join(" OR ");
+            Expression::parse(&license).unwrap()
         };
 
         for license_req in expression.requirements().map(|x| x.req.clone()) {
@@ -139,7 +140,7 @@ impl DependencyData {
 }
 
 pub fn get_data(
-    metadata: Metadata,
+    metadata: &Metadata,
     only_normal_dependencies: bool,
 ) -> Result<(Vec<DependencyData>, Option<DependencyData>)> {
     let mut dependencies = Vec::with_capacity(metadata.packages.len());

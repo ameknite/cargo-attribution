@@ -54,12 +54,13 @@ async fn main() -> Result<()> {
     let metadata = mc.exec()?;
     println!("Extracting Metadata");
     let (mut dependencies_data, crate_data) =
-        metadata::get_data(metadata, only_normal_dependencies)?;
+        metadata::get_data(&metadata, only_normal_dependencies)?;
     println!("Complete Metadata");
 
     cargo_attribution::create_folder(&output_dir)?;
 
-    let dependencies_file = DependencySerialized::new(&dependencies_data, dependencies_name);
+    let dependencies_file =
+        DependencySerialized::new(&dependencies_data, dependencies_name);
     dependencies_file.create_toml(&output_dir)?;
 
     if let Some(crate_data) = crate_data {
@@ -68,7 +69,7 @@ async fn main() -> Result<()> {
         dependencies_data.push(crate_data);
     }
 
-    licenses::generate_licenses(&dependencies_data, output_dir).await?;
+    licenses::generate(&dependencies_data, output_dir).await?;
     Ok(())
 }
 
