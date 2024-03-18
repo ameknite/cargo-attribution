@@ -5,14 +5,6 @@
 ![Minimum Supported Rust Version](https://img.shields.io/badge/rustc-1.74.1+-red)
 [![CI](https://github.com/ameknite/cargo-attribution/workflows/CI/badge.svg)](https://github.com/ameknite/cargo-attribution/actions?workflow=CI)
 
-A cargo subcommand to give credit to your dependencies
-
-## Install and Usage
-
-Install cargo-attribution with: `cargo install cargo-attribution`.
-
-Run it in your project directory with: `cargo attribution`.
-
 ```sh
 A cargo subcommand to give credit to your dependencies
 
@@ -43,6 +35,24 @@ Options:
           Print help
   -V, --version
           Print version
+```
+
+## Installation
+
+### Cargo [install](https://doc.rust-lang.org/cargo/commands/cargo-install.html)
+
+Compile the crate yourself with:
+
+```rust
+cargo install cargo-attribution
+```
+
+### Cargo [binstall](https://github.com/cargo-bins/cargo-binstall)
+
+Install a binary version:
+
+```rust
+cargo binstall cargo-attribution
 ```
 
 ## Main Features
