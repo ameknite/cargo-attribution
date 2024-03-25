@@ -13,11 +13,11 @@ keywords = ["cli", "attribution", "credits", "license"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-bytes = "1.5.0"
+bytes = "1.6.0"
 cargo_metadata = "0.18.1"
 clap = { version = "4.5.3", features = ["derive"] }
 color-eyre = { version = "0.6.3", default-features = false }
-reqwest = { version = "0.11.26", default-features = false, features = [
+reqwest = { version = "0.12.1", default-features = false, features = [
   "rustls-tls",
 ] }
 serde = { version = "1.0.197", features = ["derive"] }
