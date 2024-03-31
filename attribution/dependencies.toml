@@ -26,7 +26,7 @@ repository = "https://github.com/tkaitchuck/ahash"
 
 [[dependencies]]
 name = "aho-corasick"
-version = "1.1.2"
+version = "1.1.3"
 description = "Fast multiple substring searching."
 license = "Unlicense OR MIT"
 notices = ["Copyright (c) 2015 Andrew Gallant"]
@@ -79,7 +79,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "arc-swap"
-version = "1.7.0"
+version = "1.7.1"
 description = "Atomically swappable Arc"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2017 arc-swap developers"]
@@ -97,7 +97,7 @@ repository = "https://github.com/cuviper/autocfg"
 
 [[dependencies]]
 name = "backtrace"
-version = "0.3.69"
+version = "0.3.71"
 description = """
 A library to acquire a stack trace (backtrace) at runtime in a Rust program.
 """
@@ -161,7 +161,7 @@ repository = "https://github.com/fitzgen/bumpalo"
 
 [[dependencies]]
 name = "bytes"
-version = "1.5.0"
+version = "1.6.0"
 description = "Types and traits for working with bytes"
 license = "MIT"
 notices = ["Copyright (c) 2018 Carl Lerche"]
@@ -186,7 +186,7 @@ repository = "https://github.com/camino-rs/camino"
 
 [[dependencies]]
 name = "cargo-platform"
-version = "0.1.7"
+version = "0.1.8"
 description = "Cargo's representation of a target platform."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/rust-lang/cargo"
@@ -274,24 +274,6 @@ notices = ["Copyright (c) Individual contributors"]
 repository = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
-name = "core-foundation"
-version = "0.9.4"
-description = "Bindings to Core Foundation for macOS"
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2012-2013 Mozilla Foundation"]
-authors = ["The Servo Project Developers"]
-repository = "https://github.com/servo/core-foundation-rs"
-
-[[dependencies]]
-name = "core-foundation-sys"
-version = "0.8.6"
-description = "Bindings to Core Foundation for macOS"
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2012-2013 Mozilla Foundation"]
-authors = ["The Servo Project Developers"]
-repository = "https://github.com/servo/core-foundation-rs"
-
-[[dependencies]]
 name = "countme"
 version = "3.0.1"
 description = "Counts the number of live instances of types"
@@ -321,16 +303,6 @@ license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015"]
 authors = ["bluss"]
 repository = "https://github.com/rayon-rs/either"
-
-[[dependencies]]
-name = "encoding_rs"
-version = "0.8.33"
-description = "A Gecko-oriented implementation of the Encoding Standard"
-license = "(Apache-2.0 OR MIT) AND BSD-3-Clause"
-notices = ["Copyright © WHATWG (Apple, Google, Mozilla, Microsoft)."]
-authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
-repository = "https://github.com/hsivonen/encoding_rs"
-homepage = "https://docs.rs/encoding_rs/"
 
 [[dependencies]]
 name = "equivalent"
@@ -388,20 +360,6 @@ name = "futures-core"
 version = "0.3.30"
 description = """
 The core traits and types in for the `futures` library.
-"""
-license = "MIT OR Apache-2.0"
-notices = [
-  "Copyright (c) 2016 Alex Crichton",
-  "Copyright (c) 2017 The Tokio Authors",
-]
-repository = "https://github.com/rust-lang/futures-rs"
-homepage = "https://rust-lang.github.io/futures-rs"
-
-[[dependencies]]
-name = "futures-sink"
-version = "0.3.30"
-description = """
-The asynchronous `Sink` trait for the futures-rs library.
 """
 license = "MIT OR Apache-2.0"
 notices = [
@@ -473,18 +431,6 @@ authors = ["Andrew Gallant <jamslam@gmail.com>"]
 repository = "https://github.com/BurntSushi/ripgrep/tree/master/crates/globset"
 
 [[dependencies]]
-name = "h2"
-version = "0.3.25"
-description = "An HTTP/2 client and server"
-license = "MIT"
-notices = ["Copyright (c) 2017 h2 authors"]
-authors = [
-  "Carl Lerche <me@carllerche.com>",
-  "Sean McArthur <sean@seanmonstar.com>",
-]
-repository = "https://github.com/hyperium/h2"
-
-[[dependencies]]
 name = "hashbrown"
 version = "0.14.3"
 description = "A Rust port of Google's SwissTable hash map"
@@ -511,7 +457,7 @@ repository = "https://github.com/hermit-os/hermit-rs"
 
 [[dependencies]]
 name = "http"
-version = "0.2.12"
+version = "1.1.0"
 description = """
 A set of types for representing HTTP requests and responses.
 """
@@ -529,12 +475,25 @@ repository = "https://github.com/hyperium/http"
 
 [[dependencies]]
 name = "http-body"
-version = "0.4.6"
+version = "1.0.0"
 description = """
 Trait representing an asynchronous, streaming, HTTP request or response body.
 """
 license = "MIT"
-notices = ["Copyright (c) 2019 Hyper Contributors"]
+authors = [
+  "Carl Lerche <me@carllerche.com>",
+  "Lucio Franco <luciofranco14@gmail.com>",
+  "Sean McArthur <sean@seanmonstar.com>",
+]
+repository = "https://github.com/hyperium/http-body"
+
+[[dependencies]]
+name = "http-body-util"
+version = "0.1.1"
+description = """
+Combinators and adapters for HTTP request or response bodies.
+"""
+license = "MIT"
 authors = [
   "Carl Lerche <me@carllerche.com>",
   "Lucio Franco <luciofranco14@gmail.com>",
@@ -552,17 +511,8 @@ authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/httparse"
 
 [[dependencies]]
-name = "httpdate"
-version = "1.0.3"
-description = "HTTP date parsing and formatting"
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2016 Pyfisch"]
-authors = ["Pyfisch <pyfisch@posteo.org>"]
-repository = "https://github.com/pyfisch/httpdate"
-
-[[dependencies]]
 name = "hyper"
-version = "0.14.28"
+version = "1.2.0"
 description = "A fast and correct HTTP library."
 license = "MIT"
 notices = ["Copyright (c) 2014-2021 Sean McArthur"]
@@ -572,7 +522,7 @@ homepage = "https://hyper.rs"
 
 [[dependencies]]
 name = "hyper-rustls"
-version = "0.24.2"
+version = "0.26.0"
 description = "Rustls+hyper integration for pure rust HTTPS"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -580,6 +530,16 @@ notices = [
   "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
 ]
 repository = "https://github.com/rustls/hyper-rustls"
+
+[[dependencies]]
+name = "hyper-util"
+version = "0.1.3"
+description = "hyper utilities"
+license = "MIT"
+notices = ["Copyright (c) 2023 Sean McArthur"]
+authors = ["Sean McArthur <sean@seanmonstar.com>"]
+repository = "https://github.com/hyperium/hyper-util"
+homepage = "https://hyper.rs"
 
 [[dependencies]]
 name = "idna"
@@ -602,7 +562,7 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "2.2.5"
+version = "2.2.6"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
@@ -824,6 +784,24 @@ authors = ["The rust-url developers"]
 repository = "https://github.com/servo/rust-url/"
 
 [[dependencies]]
+name = "pin-project"
+version = "1.1.5"
+description = """
+A crate for safe and ergonomic pin-projection.
+"""
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/taiki-e/pin-project"
+
+[[dependencies]]
+name = "pin-project-internal"
+version = "1.1.5"
+description = """
+Implementation detail of the `pin-project` crate.
+"""
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/taiki-e/pin-project"
+
+[[dependencies]]
 name = "pin-project-lite"
 version = "0.2.13"
 description = """
@@ -892,7 +870,7 @@ repository = "https://gitlab.redox-os.org/redox-os/syscall"
 
 [[dependencies]]
 name = "regex"
-version = "1.10.3"
+version = "1.10.4"
 description = """
 An implementation of regular expressions for Rust. This implementation uses
 finite automata and guarantees linear time matching on all inputs.
@@ -931,7 +909,7 @@ repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.11.26"
+version = "0.12.1"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
@@ -981,7 +959,7 @@ repository = "https://github.com/rust-lang-nursery/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.21.10"
+version = "0.22.2"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1002,8 +980,19 @@ notices = [
 repository = "https://github.com/rustls/pemfile"
 
 [[dependencies]]
+name = "rustls-pki-types"
+version = "1.4.0"
+description = "Shared types for the rustls PKI ecosystem"
+license = "MIT OR Apache-2.0"
+notices = [
+  "Copyright (c) 2023 Dirkjan Ochtman <dirkjan@ochtman.nl>",
+  "Copyright 2023 Dirkjan Ochtman",
+]
+repository = "https://github.com/rustls/pki-types"
+
+[[dependencies]]
 name = "rustls-webpki"
-version = "0.101.7"
+version = "0.102.2"
 description = "Web PKI X.509 Certificate Verification."
 license = "ISC"
 notices = ["Copyright 2015 Brian Smith."]
@@ -1033,18 +1022,6 @@ notices = [
 ]
 authors = ["bluss"]
 repository = "https://github.com/bluss/scopeguard"
-
-[[dependencies]]
-name = "sct"
-version = "0.7.1"
-description = "Certificate transparency SCT verification library"
-license = "Apache-2.0 OR ISC OR MIT"
-notices = [
-  "Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>",
-  "Copyright (c) 2016, Joseph Birr-Pixton <jpixton@gmail.com>",
-]
-authors = ["Joseph Birr-Pixton <jpixton@gmail.com>"]
-repository = "https://github.com/rustls/sct.rs"
 
 [[dependencies]]
 name = "semver"
@@ -1119,17 +1096,8 @@ authors = [
 repository = "https://github.com/vorner/signal-hook"
 
 [[dependencies]]
-name = "slab"
-version = "0.4.9"
-description = "Pre-allocated storage for a uniform data type"
-license = "MIT"
-notices = ["Copyright (c) 2019 Carl Lerche"]
-authors = ["Carl Lerche <me@carllerche.com>"]
-repository = "https://github.com/tokio-rs/slab"
-
-[[dependencies]]
 name = "smallvec"
-version = "1.13.1"
+version = "1.13.2"
 description = "'Small vector' optimization: store up to a small number of items on the stack"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The Servo Project Developers"]
@@ -1193,6 +1161,21 @@ authors = ["Danny Guo <danny@dannyguo.com>", "maxbachmann <oss@maxbachmann.de>"]
 repository = "https://github.com/rapidfuzz/strsim-rs"
 
 [[dependencies]]
+name = "subtle"
+version = "2.5.0"
+description = "Pure-Rust traits and utilities for constant-time cryptographic implementations."
+license = "BSD-3-Clause"
+notices = [
+  "Copyright (c) 2016-2017 Isis Agora Lovecruft, Henry de Valence. All rights reserved.",
+]
+authors = [
+  "Isis Lovecruft <isis@patternsinthevoid.net>",
+  "Henry de Valence <hdevalence@hdevalence.ca>",
+]
+repository = "https://github.com/dalek-cryptography/subtle"
+homepage = "https://dalek.rs/"
+
+[[dependencies]]
 name = "syn"
 version = "1.0.109"
 description = "Parser for Rust source code"
@@ -1216,22 +1199,6 @@ license = "Apache-2.0"
 authors = ["Actyx AG <developer@actyx.io>"]
 repository = "https://github.com/Actyx/sync_wrapper"
 homepage = "https://docs.rs/sync_wrapper"
-
-[[dependencies]]
-name = "system-configuration"
-version = "0.5.1"
-description = "Bindings to SystemConfiguration framework for macOS"
-license = "MIT OR Apache-2.0"
-authors = ["Mullvad VPN"]
-repository = "https://github.com/mullvad/system-configuration-rs"
-
-[[dependencies]]
-name = "system-configuration-sys"
-version = "0.5.0"
-description = "Low level bindings to SystemConfiguration framework for macOS"
-license = "MIT OR Apache-2.0"
-authors = ["Mullvad VPN"]
-repository = "https://github.com/mullvad/system-configuration-rs"
 
 [[dependencies]]
 name = "taplo"
@@ -1357,27 +1324,15 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-rustls"
-version = "0.24.1"
+version = "0.25.0"
 description = "Asynchronous TLS/SSL streams for Tokio using Rustls."
 license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2017 quininer kel", "Copyright 2017 quininer kel"]
 repository = "https://github.com/rustls/tokio-rustls"
 
 [[dependencies]]
-name = "tokio-util"
-version = "0.7.10"
-description = """
-Additional utilities for working with Tokio.
-"""
-license = "MIT"
-notices = ["Copyright (c) 2023 Tokio Contributors"]
-authors = ["Tokio Contributors <team@tokio.rs>"]
-repository = "https://github.com/tokio-rs/tokio"
-homepage = "https://tokio.rs"
-
-[[dependencies]]
 name = "toml"
-version = "0.8.11"
+version = "0.8.12"
 description = """
 A native Rust encoder and decoder of TOML-formatted files and streams. Provides
 implementations of the standard Serialize/Deserialize traits for TOML data to
@@ -1399,7 +1354,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_edit"
-version = "0.22.7"
+version = "0.22.9"
 description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1408,6 +1363,29 @@ authors = [
   "Ed Page <eopage@gmail.com>",
 ]
 repository = "https://github.com/toml-rs/toml"
+
+[[dependencies]]
+name = "tower"
+version = "0.4.13"
+description = """
+Tower is a library of modular and reusable components for building robust
+clients and servers.
+"""
+license = "MIT"
+notices = ["Copyright (c) 2019 Tower Contributors"]
+authors = ["Tower Maintainers <team@tower-rs.com>"]
+repository = "https://github.com/tower-rs/tower"
+
+[[dependencies]]
+name = "tower-layer"
+version = "0.3.2"
+description = """
+Decorates a `Service` to allow easy composition between `Service`s.
+"""
+license = "MIT"
+notices = ["Copyright (c) 2019 Tower Contributors"]
+authors = ["Tower Maintainers <team@tower-rs.com>"]
+repository = "https://github.com/tower-rs/tower"
 
 [[dependencies]]
 name = "tower-service"
@@ -1651,7 +1629,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/web-sys/index.html"
 
 [[dependencies]]
 name = "webpki-roots"
-version = "0.25.4"
+version = "0.26.1"
 description = "Mozilla's CA root certificates for use with webpki"
 license = "MPL-2.0"
 repository = "https://github.com/rustls/webpki-roots"
@@ -1857,3 +1835,18 @@ notices = [
 ]
 authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
 repository = "https://github.com/google/zerocopy"
+
+[[dependencies]]
+name = "zeroize"
+version = "1.7.0"
+description = """
+Securely clear secrets from memory with a simple trait built on
+stable Rust primitives which guarantee memory is zeroed using an
+operation will not be 'optimized away' by the compiler.
+Uses a portable pure Rust implementation that works everywhere,
+even WASM!
+"""
+license = "Apache-2.0 OR MIT"
+notices = ["Copyright (c) 2018-2021 The RustCrypto Project Developers"]
+authors = ["The RustCrypto Project Developers"]
+repository = "https://github.com/RustCrypto/utils/tree/master/zeroize"
