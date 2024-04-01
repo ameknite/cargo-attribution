@@ -15,9 +15,9 @@ categories = ["command-line-utilities"]
 [dependencies]
 bytes = "1.6.0"
 cargo_metadata = "0.18.1"
-clap = { version = "4.5.3", features = ["derive"] }
+clap = { version = "4.5.4", features = ["derive"] }
 color-eyre = { version = "0.6.3", default-features = false }
-reqwest = { version = "0.12.1", default-features = false, features = [
+reqwest = { version = "0.12.2", default-features = false, features = [
   "rustls-tls",
 ] }
 serde = { version = "1.0.197", features = ["derive"] }
@@ -25,7 +25,7 @@ spdx = "0.10.4"
 tokio = { version = "1.36.0", features = ["full"] }
 toml = "0.8.12"
 toml_edit = "0.22.6"
-memchr = "2.7.1"
+memchr = "2.7.2"
 regex = "1.10.4"
 adler = "1.0.2"
 taplo = "0.13.0"
