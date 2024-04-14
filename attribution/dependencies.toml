@@ -108,7 +108,7 @@ repository = "https://github.com/rust-lang/backtrace-rs"
 
 [[dependencies]]
 name = "base64"
-version = "0.21.7"
+version = "0.22.0"
 description = "encodes and decodes base64 as bytes or utf8"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Alice Maz"]
@@ -201,7 +201,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.90"
+version = "1.0.91"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -399,7 +399,7 @@ homepage = "https://rust-lang.github.io/futures-rs"
 
 [[dependencies]]
 name = "getrandom"
-version = "0.2.12"
+version = "0.2.14"
 description = "A small cross-platform library for retrieving random data from system source"
 license = "MIT OR Apache-2.0"
 notices = [
@@ -909,7 +909,7 @@ repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.12.2"
+version = "0.12.3"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
@@ -970,7 +970,7 @@ repository = "https://github.com/rustls/rustls"
 
 [[dependencies]]
 name = "rustls-pemfile"
-version = "1.0.4"
+version = "2.1.2"
 description = "Basic .pem file parser for keys and certificates"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1146,7 +1146,7 @@ repository = "https://github.com/mvdnes/spin-rs.git"
 
 [[dependencies]]
 name = "strsim"
-version = "0.11.0"
+version = "0.11.1"
 description = """
 Implementations of string similarity metrics. Includes Hamming, Levenshtein,
 OSA, Damerau-Levenshtein, Jaro, Jaro-Winkler, and Sørensen-Dice.
@@ -1805,7 +1805,7 @@ repository = "https://github.com/winnow-rs/winnow"
 
 [[dependencies]]
 name = "winreg"
-version = "0.50.0"
+version = "0.52.0"
 description = "Rust bindings to MS Windows Registry API"
 license = "MIT"
 notices = ["Copyright (c) 2015 Igor Shaula"]
