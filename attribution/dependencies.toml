@@ -152,7 +152,7 @@ repository = "https://github.com/BurntSushi/bstr"
 
 [[dependencies]]
 name = "bumpalo"
-version = "3.15.4"
+version = "3.16.0"
 description = "A fast bump allocation arena for Rust."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Nick Fitzgerald"]
@@ -201,7 +201,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.91"
+version = "1.0.94"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -295,7 +295,7 @@ repository = "https://github.com/jhpratt/deranged"
 
 [[dependencies]]
 name = "either"
-version = "1.10.0"
+version = "1.11.0"
 description = """
 The enum `Either` with variants `Left` and `Right` is a general purpose sum type with two cases.
 """
@@ -842,7 +842,7 @@ repository = "https://github.com/jhpratt/powerfmt"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.79"
+version = "1.0.80"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -853,7 +853,7 @@ repository = "https://github.com/dtolnay/proc-macro2"
 
 [[dependencies]]
 name = "quote"
-version = "1.0.35"
+version = "1.0.36"
 description = "Quasi-quoting macro quote!(...)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1238,7 +1238,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "time"
-version = "0.3.34"
+version = "0.3.36"
 description = "Date and time library. Fully interoperable with the standard library. Mostly compatible with #![no_std]."
 license = "MIT OR Apache-2.0"
 notices = [
@@ -1263,7 +1263,7 @@ repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
 name = "time-macros"
-version = "0.2.17"
+version = "0.2.18"
 description = """
     Procedural macros for the time crate.
     This crate is an implementation detail and should not be relied upon directly.
@@ -1798,7 +1798,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.6.5"
+version = "0.6.6"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
