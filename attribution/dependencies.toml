@@ -132,11 +132,11 @@ repository = "https://github.com/maciejhirsz/beef"
 
 [[dependencies]]
 name = "bitflags"
-version = "1.3.2"
+version = "2.5.0"
 description = """
 A macro to generate structures which behave like bitflags.
 """
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
 authors = ["The Rust Project Developers"]
 repository = "https://github.com/bitflags/bitflags"
@@ -620,7 +620,7 @@ repository = "https://github.com/rust-lang/libc"
 
 [[dependencies]]
 name = "lock_api"
-version = "0.4.11"
+version = "0.4.12"
 description = "Wrappers to create fully-featured Mutex and RwLock types. Compatible with no_std."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 The Rust Project Developers"]
@@ -758,7 +758,7 @@ repository = "https://github.com/jam1garner/owo-colors"
 
 [[dependencies]]
 name = "parking_lot"
-version = "0.12.1"
+version = "0.12.2"
 description = "More compact and efficient implementations of the standard synchronization primitives."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 The Rust Project Developers"]
@@ -767,7 +767,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "parking_lot_core"
-version = "0.9.9"
+version = "0.9.10"
 description = "An advanced API for creating custom synchronization primitives."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 The Rust Project Developers"]
@@ -861,7 +861,7 @@ repository = "https://github.com/dtolnay/quote"
 
 [[dependencies]]
 name = "redox_syscall"
-version = "0.4.1"
+version = "0.5.1"
 description = "A Rust library to access raw Redox system calls"
 license = "MIT"
 notices = ["Copyright (c) 2017 Redox OS Developers"]
@@ -981,7 +981,7 @@ repository = "https://github.com/rustls/pemfile"
 
 [[dependencies]]
 name = "rustls-pki-types"
-version = "1.4.1"
+version = "1.5.0"
 description = "Shared types for the rustls PKI ecosystem"
 license = "MIT OR Apache-2.0"
 notices = [
@@ -992,7 +992,7 @@ repository = "https://github.com/rustls/pki-types"
 
 [[dependencies]]
 name = "rustls-webpki"
-version = "0.102.2"
+version = "0.102.3"
 description = "Web PKI X.509 Certificate Verification."
 license = "ISC"
 notices = ["Copyright 2015 Brian Smith."]
@@ -1085,7 +1085,7 @@ repository = "https://github.com/nox/serde_urlencoded"
 
 [[dependencies]]
 name = "signal-hook-registry"
-version = "1.4.1"
+version = "1.4.2"
 description = "Backend crate for signal-hook"
 license = "Apache-2.0/MIT"
 notices = ["Copyright (c) 2017 tokio-jsonrpc developers"]
