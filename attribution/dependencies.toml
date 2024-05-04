@@ -35,7 +35,7 @@ repository = "https://github.com/BurntSushi/aho-corasick"
 
 [[dependencies]]
 name = "anstream"
-version = "0.6.13"
+version = "0.6.14"
 description = "A simple cross platform library for writing colored text to a terminal."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -44,7 +44,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle"
-version = "1.0.6"
+version = "1.0.7"
 description = "ANSI text styling"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2022 The rust-cli Developers"]
@@ -53,7 +53,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-parse"
-version = "0.2.3"
+version = "0.2.4"
 description = "Parse ANSI Style Escapes"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Joe Wilm and individual contributors"]
@@ -62,7 +62,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-query"
-version = "1.0.2"
+version = "1.0.3"
 description = "Look up colored console capabilities"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -70,7 +70,7 @@ repository = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-wincon"
-version = "3.0.2"
+version = "3.0.3"
 description = "Styling legacy Windows terminals"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Josh Triplett, 2022 The rust-cli Developers"]
@@ -108,14 +108,11 @@ repository = "https://github.com/rust-lang/backtrace-rs"
 
 [[dependencies]]
 name = "base64"
-version = "0.22.0"
+version = "0.22.1"
 description = "encodes and decodes base64 as bytes or utf8"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Alice Maz"]
-authors = [
-  "Alice Maz <alice@alicemaz.com>",
-  "Marshall Pierce <marshall@mpierce.org>",
-]
+authors = ["Marshall Pierce <marshall@mpierce.org>"]
 repository = "https://github.com/marshallpierce/rust-base64"
 
 [[dependencies]]
@@ -201,7 +198,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.95"
+version = "1.0.96"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -267,7 +264,7 @@ repository = "https://github.com/eyre-rs/eyre"
 
 [[dependencies]]
 name = "colorchoice"
-version = "1.0.0"
+version = "1.0.1"
 description = "Global override of color control"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -432,7 +429,7 @@ repository = "https://github.com/BurntSushi/ripgrep/tree/master/crates/globset"
 
 [[dependencies]]
 name = "hashbrown"
-version = "0.14.3"
+version = "0.14.5"
 description = "A Rust port of Google's SwissTable hash map"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Amanieu d'Antras"]
@@ -578,6 +575,14 @@ authors = ["Kris Price <kris@krisprice.nz>"]
 repository = "https://github.com/krisprice/ipnet"
 
 [[dependencies]]
+name = "is_terminal_polyfill"
+version = "1.70.0"
+description = "Polyfill for `is_terminal` stdlib feature for use with older MSRVs"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Individual contributors"]
+repository = "https://github.com/polyfill-rs/is_terminal_polyfill"
+
+[[dependencies]]
 name = "itertools"
 version = "0.10.5"
 description = "Extra iterator adaptors, iterator methods, free functions, and macros."
@@ -609,7 +614,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.153"
+version = "0.2.154"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -1033,7 +1038,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.198"
+version = "1.0.200"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1045,7 +1050,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.198"
+version = "1.0.200"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1106,7 +1111,7 @@ repository = "https://github.com/servo/rust-smallvec"
 
 [[dependencies]]
 name = "socket2"
-version = "0.5.6"
+version = "0.5.7"
 description = """
 Utilities for handling networking sockets with a maximal amount of configuration
 possible intended.
@@ -1807,7 +1812,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.6.6"
+version = "0.6.7"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
