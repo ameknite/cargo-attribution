@@ -170,7 +170,7 @@ repository = "https://github.com/tokio-rs/bytes"
 
 [[dependencies]]
 name = "camino"
-version = "1.1.6"
+version = "1.1.7"
 description = "UTF-8 paths"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -292,7 +292,7 @@ repository = "https://github.com/jhpratt/deranged"
 
 [[dependencies]]
 name = "either"
-version = "1.11.0"
+version = "1.12.0"
 description = """
 The enum `Either` with variants `Left` and `Right` is a general purpose sum type with two cases.
 """
@@ -997,7 +997,7 @@ repository = "https://github.com/rustls/pki-types"
 
 [[dependencies]]
 name = "rustls-webpki"
-version = "0.102.3"
+version = "0.102.4"
 description = "Web PKI X.509 Certificate Verification."
 license = "ISC"
 notices = ["Copyright 2015 Brian Smith."]
@@ -1038,7 +1038,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.201"
+version = "1.0.202"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1050,7 +1050,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.201"
+version = "1.0.202"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1073,7 +1073,7 @@ repository = "https://github.com/serde-rs/json"
 
 [[dependencies]]
 name = "serde_spanned"
-version = "0.6.5"
+version = "0.6.6"
 description = "Serde-compatible spanned Value"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1337,7 +1337,7 @@ repository = "https://github.com/rustls/tokio-rustls"
 
 [[dependencies]]
 name = "toml"
-version = "0.8.12"
+version = "0.8.13"
 description = """
 A native Rust encoder and decoder of TOML-formatted files and streams. Provides
 implementations of the standard Serialize/Deserialize traits for TOML data to
@@ -1350,7 +1350,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_datetime"
-version = "0.6.5"
+version = "0.6.6"
 description = "A TOML-compatible datetime type"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1359,7 +1359,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_edit"
-version = "0.22.12"
+version = "0.22.13"
 description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
