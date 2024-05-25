@@ -198,7 +198,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.97"
+version = "1.0.98"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -614,7 +614,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.154"
+version = "0.2.155"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -691,7 +691,7 @@ repository = "https://github.com/hyperium/mime"
 
 [[dependencies]]
 name = "miniz_oxide"
-version = "0.7.2"
+version = "0.7.3"
 description = "DEFLATE compression and decompression library rewritten in Rust based on miniz"
 license = "MIT OR Zlib OR Apache-2.0"
 notices = ["Copyright (c) 2017 Frommi", "Copyright (c) 2020 Frommi"]
@@ -847,7 +847,7 @@ repository = "https://github.com/jhpratt/powerfmt"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.82"
+version = "1.0.83"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1227,7 +1227,7 @@ repository = "https://github.com/rust-analyzer/text-size"
 
 [[dependencies]]
 name = "thiserror"
-version = "1.0.60"
+version = "1.0.61"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1235,7 +1235,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "1.0.60"
+version = "1.0.61"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
