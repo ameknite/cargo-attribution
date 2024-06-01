@@ -530,7 +530,7 @@ repository = "https://github.com/rustls/hyper-rustls"
 
 [[dependencies]]
 name = "hyper-util"
-version = "0.1.3"
+version = "0.1.5"
 description = "hyper utilities"
 license = "MIT"
 notices = ["Copyright (c) 2023 Sean McArthur"]
@@ -763,7 +763,7 @@ repository = "https://github.com/jam1garner/owo-colors"
 
 [[dependencies]]
 name = "parking_lot"
-version = "0.12.2"
+version = "0.12.3"
 description = "More compact and efficient implementations of the standard synchronization primitives."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 The Rust Project Developers"]
@@ -847,7 +847,7 @@ repository = "https://github.com/jhpratt/powerfmt"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.83"
+version = "1.0.84"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1038,7 +1038,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.202"
+version = "1.0.203"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1050,7 +1050,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.202"
+version = "1.0.203"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1126,7 +1126,7 @@ repository = "https://github.com/rust-lang/socket2"
 
 [[dependencies]]
 name = "spdx"
-version = "0.10.4"
+version = "0.10.6"
 description = "Helper crate for SPDX expressions"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Embark Studios"]
@@ -1301,27 +1301,27 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.37.0"
+version = "1.38.0"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
 """
 license = "MIT"
-notices = ["Copyright (c) 2023 Tokio Contributors"]
+notices = ["Copyright (c) Tokio Contributors"]
 authors = ["Tokio Contributors <team@tokio.rs>"]
 repository = "https://github.com/tokio-rs/tokio"
 homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-macros"
-version = "2.2.0"
+version = "2.3.0"
 description = """
 Tokio's proc macros.
 """
 license = "MIT"
 notices = [
   "Copyright (c) 2019 Yoshua Wuyts",
-  "Copyright (c) 2023 Tokio Contributors",
+  "Copyright (c) Tokio Contributors",
 ]
 authors = ["Tokio Contributors <team@tokio.rs>"]
 repository = "https://github.com/tokio-rs/tokio"
@@ -1812,7 +1812,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.6.8"
+version = "0.6.9"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
@@ -1852,7 +1852,7 @@ repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
 name = "zeroize"
-version = "1.7.0"
+version = "1.8.1"
 description = """
 Securely clear secrets from memory with a simple trait built on
 stable Rust primitives which guarantee memory is zeroed using an
