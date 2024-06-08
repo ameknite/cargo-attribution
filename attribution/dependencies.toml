@@ -62,7 +62,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-query"
-version = "1.0.3"
+version = "1.1.0"
 description = "Look up colored console capabilities"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -198,7 +198,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.98"
+version = "1.0.99"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -224,7 +224,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.4"
+version = "4.5.6"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -232,7 +232,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.2"
+version = "4.5.6"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -240,19 +240,19 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.5.4"
+version = "4.5.5"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
-repository = "https://github.com/clap-rs/clap/tree/master/clap_derive"
+repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_lex"
-version = "0.7.0"
+version = "0.7.1"
 description = "Minimal, flexible command line parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
-repository = "https://github.com/clap-rs/clap/tree/master/clap_lex"
+repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "color-eyre"
@@ -847,7 +847,7 @@ repository = "https://github.com/jhpratt/powerfmt"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.84"
+version = "1.0.85"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1337,7 +1337,7 @@ repository = "https://github.com/rustls/tokio-rustls"
 
 [[dependencies]]
 name = "toml"
-version = "0.8.13"
+version = "0.8.14"
 description = """
 A native Rust encoder and decoder of TOML-formatted files and streams. Provides
 implementations of the standard Serialize/Deserialize traits for TOML data to
@@ -1359,7 +1359,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_edit"
-version = "0.22.13"
+version = "0.22.14"
 description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1634,7 +1634,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/web-sys/index.html"
 
 [[dependencies]]
 name = "webpki-roots"
-version = "0.26.1"
+version = "0.26.2"
 description = "Mozilla's CA root certificates for use with webpki"
 license = "MPL-2.0"
 repository = "https://github.com/rustls/webpki-roots"
@@ -1812,7 +1812,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.6.9"
+version = "0.6.13"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
