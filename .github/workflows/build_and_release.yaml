@@ -22,6 +22,17 @@ on:
         type: boolean
       update-msrv:
         type: boolean
+  workflow_call:
+    inputs:
+      version:
+        type: string
+        description: "Version: (e.g. -> v3.1.4-alpha+159)"
+      release_type:
+        type: string
+      check-to-publish:
+        type: boolean
+      update-msrv:
+        type: boolean    
 
 jobs:
   validate-input:

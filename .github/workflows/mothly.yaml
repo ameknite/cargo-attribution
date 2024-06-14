@@ -1,0 +1,17 @@
+name: Monthly Releases
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_call:
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_release:
+    uses: ./.github/workflows/build_and_release.yaml
+    with: 
+      release_type: patch
+      check-to-publish: true
+    
