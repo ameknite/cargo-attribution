@@ -6,10 +6,6 @@ permissions:
 on:
   workflow_dispatch:
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
-  cancel-in-progress: true   
-
 jobs:
   clean-cache:
     runs-on: ubuntu-latest

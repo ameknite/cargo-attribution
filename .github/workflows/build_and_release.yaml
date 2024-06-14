@@ -4,10 +4,6 @@ permissions:
   # To upload files to GitHub Releases
   contents: write
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true   
-
 on:
   workflow_dispatch:
     inputs:
