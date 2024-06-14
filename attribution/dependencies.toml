@@ -224,7 +224,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.6"
+version = "4.5.7"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -232,7 +232,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.6"
+version = "4.5.7"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -289,6 +289,16 @@ notices = [
 ]
 authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/deranged"
+
+[[dependencies]]
+name = "displaydoc"
+version = "0.2.4"
+description = """
+A derive macro for implementing the display Trait via a doc comment and string interpolation
+"""
+license = "MIT OR Apache-2.0"
+authors = ["Jane Lusby <jlusby@yaah.dev>"]
+repository = "https://github.com/yaahc/displaydoc"
 
 [[dependencies]]
 name = "either"
@@ -486,11 +496,12 @@ repository = "https://github.com/hyperium/http-body"
 
 [[dependencies]]
 name = "http-body-util"
-version = "0.1.1"
+version = "0.1.2"
 description = """
 Combinators and adapters for HTTP request or response bodies.
 """
 license = "MIT"
+notices = ["Copyright (c) 2019 Hyper Contributors"]
 authors = [
   "Carl Lerche <me@carllerche.com>",
   "Lucio Franco <luciofranco14@gmail.com>",
@@ -500,10 +511,10 @@ repository = "https://github.com/hyperium/http-body"
 
 [[dependencies]]
 name = "httparse"
-version = "1.8.0"
+version = "1.9.3"
 description = "A tiny, safe, speedy, zero-copy HTTP/1.x parser."
-license = "MIT/Apache-2.0"
-notices = ["Copyright (c) 2015-2021 Sean McArthur"]
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015-2024 Sean McArthur"]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/httparse"
 
@@ -539,8 +550,108 @@ repository = "https://github.com/hyperium/hyper-util"
 homepage = "https://hyper.rs"
 
 [[dependencies]]
+name = "icu_collections"
+version = "1.5.0"
+description = "Collection of API for use in ICU libraries."
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_locid"
+version = "1.5.0"
+description = "API for managing Unicode Language and Locale Identifiers"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_locid_transform"
+version = "1.5.0"
+description = "API for Unicode Language and Locale Identifiers canonicalization"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_locid_transform_data"
+version = "1.5.0"
+description = "Data for the icu_locid_transform crate"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_normalizer"
+version = "1.5.0"
+description = "API for normalizing text into Unicode Normalization Forms"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_normalizer_data"
+version = "1.5.0"
+description = "Data for the icu_normalizer crate"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_properties"
+version = "1.5.0"
+description = "Definitions for Unicode properties"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_properties_data"
+version = "1.5.0"
+description = "Data for the icu_properties crate"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_provider"
+version = "1.5.0"
+description = "Trait and struct definitions for the ICU data provider"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
+name = "icu_provider_macros"
+version = "1.5.0"
+description = "Proc macros for ICU data providers"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+homepage = "https://icu4x.unicode.org"
+
+[[dependencies]]
 name = "idna"
-version = "0.5.0"
+version = "1.0.0"
 description = "IDNA (Internationalizing Domain Names in Applications) and Punycode."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -624,6 +735,15 @@ authors = ["The Rust Project Developers"]
 repository = "https://github.com/rust-lang/libc"
 
 [[dependencies]]
+name = "litemap"
+version = "0.7.3"
+description = "A key-value Map implementation based on a flat, sorted Vec."
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
 name = "lock_api"
 version = "0.4.12"
 description = "Wrappers to create fully-featured Mutex and RwLock types. Compatible with no_std."
@@ -661,7 +781,7 @@ repository = "https://github.com/maciejhirsz/logos"
 
 [[dependencies]]
 name = "memchr"
-version = "2.7.2"
+version = "2.7.4"
 description = """
 Provides extremely fast (uses SIMD on x86_64, aarch64 and wasm32) routines for
 1, 2 or 3 byte search and single substring search.
@@ -866,7 +986,7 @@ repository = "https://github.com/dtolnay/quote"
 
 [[dependencies]]
 name = "redox_syscall"
-version = "0.5.1"
+version = "0.5.2"
 description = "A Rust library to access raw Redox system calls"
 license = "MIT"
 notices = ["Copyright (c) 2017 Redox OS Developers"]
@@ -875,7 +995,7 @@ repository = "https://gitlab.redox-os.org/redox-os/syscall"
 
 [[dependencies]]
 name = "regex"
-version = "1.10.4"
+version = "1.10.5"
 description = """
 An implementation of regular expressions for Rust. This implementation uses
 finite automata and guarantees linear time matching on all inputs.
@@ -887,7 +1007,7 @@ repository = "https://github.com/rust-lang/regex"
 
 [[dependencies]]
 name = "regex-automata"
-version = "0.4.6"
+version = "0.4.7"
 description = "Automata construction and matching using regular expressions."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
@@ -905,7 +1025,7 @@ repository = "https://github.com/rust-lang/regex"
 
 [[dependencies]]
 name = "regex-syntax"
-version = "0.8.3"
+version = "0.8.4"
 description = "A regular expression parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
@@ -1150,6 +1270,17 @@ authors = [
 repository = "https://github.com/mvdnes/spin-rs.git"
 
 [[dependencies]]
+name = "stable_deref_trait"
+version = "1.2.0"
+description = """
+An unsafe marker trait for types like Box and Rc that dereference to a stable address even when moved, and hence can be used with libraries such as owning_ref and rental.
+"""
+license = "MIT/Apache-2.0"
+notices = ["Copyright (c) 2017 Robert Grosse"]
+authors = ["Robert Grosse <n210241048576@gmail.com>"]
+repository = "https://github.com/storyyeller/stable_deref_trait"
+
+[[dependencies]]
 name = "strsim"
 version = "0.11.1"
 description = """
@@ -1190,7 +1321,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.60"
+version = "2.0.66"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1204,6 +1335,15 @@ license = "Apache-2.0"
 authors = ["Actyx AG <developer@actyx.io>"]
 repository = "https://github.com/Actyx/sync_wrapper"
 homepage = "https://docs.rs/sync_wrapper"
+
+[[dependencies]]
+name = "synstructure"
+version = "0.13.1"
+description = "Helper methods and macros for custom derives"
+license = "MIT"
+notices = ["Copyright 2016 Nika Layzell"]
+authors = ["Nika Layzell <nika@thelayzells.com>"]
+repository = "https://github.com/mystor/synstructure"
 
 [[dependencies]]
 name = "taplo"
@@ -1282,22 +1422,13 @@ authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
 repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
-name = "tinyvec"
-version = "1.6.0"
-description = "`tinyvec` provides 100% safe vec-like data structures."
-license = "Zlib OR Apache-2.0 OR MIT"
-notices = ["Copyright (c) 2019 Daniel \"Lokathor\" Gee."]
-authors = ["Lokathor <zefria@gmail.com>"]
-repository = "https://github.com/Lokathor/tinyvec"
-
-[[dependencies]]
-name = "tinyvec_macros"
-version = "0.1.1"
-description = "Some macros for tiny containers"
-license = "MIT OR Apache-2.0 OR Zlib"
-notices = ["Copyright (c) 2020 Soveu", "Copyright 2020 Tomasz \"Soveu\" Marx"]
-authors = ["Soveu <marx.tomasz@gmail.com>"]
-repository = "https://github.com/Soveu/tinyvec_macros"
+name = "tinystr"
+version = "0.7.6"
+description = "A small ASCII-only bounded length string representation."
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "tokio"
@@ -1459,15 +1590,6 @@ authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
-name = "unicode-bidi"
-version = "0.3.15"
-description = "Implementation of the Unicode Bidirectional Algorithm"
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2015 The Rust Project Developers"]
-authors = ["The Servo Project Developers"]
-repository = "https://github.com/servo/unicode-bidi"
-
-[[dependencies]]
 name = "unicode-ident"
 version = "1.0.12"
 description = "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31"
@@ -1475,23 +1597,6 @@ license = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
 notices = ["Copyright © 1991-2022 Unicode, Inc. All rights reserved."]
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 repository = "https://github.com/dtolnay/unicode-ident"
-
-[[dependencies]]
-name = "unicode-normalization"
-version = "0.1.23"
-description = """
-This crate provides functions for normalization of
-Unicode strings, including Canonical and Compatible
-Decomposition and Recomposition, as described in
-Unicode Standard Annex #15.
-"""
-license = "MIT/Apache-2.0"
-notices = ["Copyright (c) 2015 The Rust Project Developers"]
-authors = [
-  "kwantam <kwantam@gmail.com>",
-  "Manish Goregaokar <manishsmail@gmail.com>",
-]
-repository = "https://github.com/unicode-rs/unicode-normalization"
 
 [[dependencies]]
 name = "untrusted"
@@ -1504,7 +1609,7 @@ repository = "https://github.com/briansmith/untrusted"
 
 [[dependencies]]
 name = "url"
-version = "2.5.0"
+version = "2.5.1"
 description = "URL library for Rust, based on the WHATWG URL Standard"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -1512,8 +1617,26 @@ authors = ["The rust-url developers"]
 repository = "https://github.com/servo/rust-url"
 
 [[dependencies]]
+name = "utf16_iter"
+version = "1.0.5"
+description = "Iterator by char over potentially-invalid UTF-16 in &[u16]"
+license = "Apache-2.0 OR MIT"
+authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
+repository = "https://github.com/hsivonen/utf16_iter"
+homepage = "https://docs.rs/utf16_iter/"
+
+[[dependencies]]
+name = "utf8_iter"
+version = "1.0.4"
+description = "Iterator by char over potentially-invalid UTF-8 in &[u8]"
+license = "Apache-2.0 OR MIT"
+authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
+repository = "https://github.com/hsivonen/utf8_iter"
+homepage = "https://docs.rs/utf8_iter/"
+
+[[dependencies]]
 name = "utf8parse"
-version = "0.2.1"
+version = "0.2.2"
 description = "Table-driven UTF-8 parser"
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016 Joe Wilm"]
@@ -1827,6 +1950,41 @@ authors = ["Igor Shaula <gentoo90@gmail.com>"]
 repository = "https://github.com/gentoo90/winreg-rs"
 
 [[dependencies]]
+name = "write16"
+version = "1.0.0"
+description = "A UTF-16 analog of the Write trait"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/hsivonen/write16"
+homepage = "https://docs.rs/write16/"
+
+[[dependencies]]
+name = "writeable"
+version = "0.5.5"
+description = "A more efficient alternative to fmt::Display"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
+name = "yoke"
+version = "0.7.4"
+description = "Abstraction allowing borrowed data to be carried along with the backing data it borrows from"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
+name = "yoke-derive"
+version = "0.7.4"
+description = "Custom derive for the yoke crate"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
 name = "zerocopy"
 version = "0.7.34"
 description = "Utilities for zero-copy parsing and serialization"
@@ -1851,6 +2009,24 @@ authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
 repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
+name = "zerofrom"
+version = "0.1.4"
+description = "ZeroFrom trait for constructing"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
+name = "zerofrom-derive"
+version = "0.1.4"
+description = "Custom derive for the zerofrom crate"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
 name = "zeroize"
 version = "1.8.1"
 description = """
@@ -1864,3 +2040,21 @@ license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2018-2021 The RustCrypto Project Developers"]
 authors = ["The RustCrypto Project Developers"]
 repository = "https://github.com/RustCrypto/utils/tree/master/zeroize"
+
+[[dependencies]]
+name = "zerovec"
+version = "0.10.2"
+description = "Zero-copy vector backed by a byte array"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["The ICU4X Project Developers"]
+repository = "https://github.com/unicode-org/icu4x"
+
+[[dependencies]]
+name = "zerovec-derive"
+version = "0.10.2"
+description = "Custom derive for the zerovec crate"
+license = "Unicode-3.0"
+notices = ["Copyright © 2020-2024 Unicode, Inc."]
+authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
+repository = "https://github.com/unicode-org/icu4x"
