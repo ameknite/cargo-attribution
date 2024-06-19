@@ -1,4 +1,4 @@
-name: MSRV
+name: Update MSRV
 
 permissions:
   contents: write

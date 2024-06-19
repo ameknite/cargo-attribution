@@ -1,7 +1,4 @@
-name: MSRV
-
-permissions:
-  contents: write
+name: Check MSRV
 
 on:
   workflow_call:
