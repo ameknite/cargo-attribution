@@ -291,16 +291,6 @@ authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/deranged"
 
 [[dependencies]]
-name = "displaydoc"
-version = "0.2.4"
-description = """
-A derive macro for implementing the display Trait via a doc comment and string interpolation
-"""
-license = "MIT OR Apache-2.0"
-authors = ["Jane Lusby <jlusby@yaah.dev>"]
-repository = "https://github.com/yaahc/displaydoc"
-
-[[dependencies]]
 name = "either"
 version = "1.12.0"
 description = """
@@ -511,7 +501,7 @@ repository = "https://github.com/hyperium/http-body"
 
 [[dependencies]]
 name = "httparse"
-version = "1.9.3"
+version = "1.9.4"
 description = "A tiny, safe, speedy, zero-copy HTTP/1.x parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2024 Sean McArthur"]
@@ -530,7 +520,7 @@ homepage = "https://hyper.rs"
 
 [[dependencies]]
 name = "hyper-rustls"
-version = "0.26.0"
+version = "0.27.2"
 description = "Rustls+hyper integration for pure rust HTTPS"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -550,108 +540,8 @@ repository = "https://github.com/hyperium/hyper-util"
 homepage = "https://hyper.rs"
 
 [[dependencies]]
-name = "icu_collections"
-version = "1.5.0"
-description = "Collection of API for use in ICU libraries."
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_locid"
-version = "1.5.0"
-description = "API for managing Unicode Language and Locale Identifiers"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_locid_transform"
-version = "1.5.0"
-description = "API for Unicode Language and Locale Identifiers canonicalization"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_locid_transform_data"
-version = "1.5.0"
-description = "Data for the icu_locid_transform crate"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_normalizer"
-version = "1.5.0"
-description = "API for normalizing text into Unicode Normalization Forms"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_normalizer_data"
-version = "1.5.0"
-description = "Data for the icu_normalizer crate"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_properties"
-version = "1.5.0"
-description = "Definitions for Unicode properties"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_properties_data"
-version = "1.5.0"
-description = "Data for the icu_properties crate"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_provider"
-version = "1.5.0"
-description = "Trait and struct definitions for the ICU data provider"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
-name = "icu_provider_macros"
-version = "1.5.0"
-description = "Proc macros for ICU data providers"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-homepage = "https://icu4x.unicode.org"
-
-[[dependencies]]
 name = "idna"
-version = "1.0.0"
+version = "0.5.0"
 description = "IDNA (Internationalizing Domain Names in Applications) and Punycode."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -735,15 +625,6 @@ authors = ["The Rust Project Developers"]
 repository = "https://github.com/rust-lang/libc"
 
 [[dependencies]]
-name = "litemap"
-version = "0.7.3"
-description = "A key-value Map implementation based on a flat, sorted Vec."
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
 name = "lock_api"
 version = "0.4.12"
 description = "Wrappers to create fully-featured Mutex and RwLock types. Compatible with no_std."
@@ -811,7 +692,7 @@ repository = "https://github.com/hyperium/mime"
 
 [[dependencies]]
 name = "miniz_oxide"
-version = "0.7.3"
+version = "0.7.4"
 description = "DEFLATE compression and decompression library rewritten in Rust based on miniz"
 license = "MIT OR Zlib OR Apache-2.0"
 notices = ["Copyright (c) 2017 Frommi", "Copyright (c) 2020 Frommi"]
@@ -966,6 +847,18 @@ authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/powerfmt"
 
 [[dependencies]]
+name = "ppv-lite86"
+version = "0.2.17"
+description = "Implementation of the crypto-simd API for x86"
+license = "MIT/Apache-2.0"
+notices = [
+  "Copyright (c) 2019 The CryptoCorrosion Contributors",
+  "Copyright 2019 The CryptoCorrosion Contributors",
+]
+authors = ["The CryptoCorrosion Contributors"]
+repository = "https://github.com/cryptocorrosion/cryptocorrosion"
+
+[[dependencies]]
 name = "proc-macro2"
 version = "1.0.85"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
@@ -977,12 +870,85 @@ authors = [
 repository = "https://github.com/dtolnay/proc-macro2"
 
 [[dependencies]]
+name = "quinn"
+version = "0.11.2"
+description = "Versatile QUIC transport protocol implementation"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2018 The quinn Developers"]
+repository = "https://github.com/quinn-rs/quinn"
+
+[[dependencies]]
+name = "quinn-proto"
+version = "0.11.3"
+description = "State machine for the QUIC transport protocol"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2018 The quinn Developers"]
+repository = "https://github.com/quinn-rs/quinn"
+
+[[dependencies]]
+name = "quinn-udp"
+version = "0.5.2"
+description = "UDP sockets with ECN information for the QUIC transport protocol"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2018 The quinn Developers"]
+repository = "https://github.com/quinn-rs/quinn"
+
+[[dependencies]]
 name = "quote"
 version = "1.0.36"
 description = "Quasi-quoting macro quote!(...)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 repository = "https://github.com/dtolnay/quote"
+
+[[dependencies]]
+name = "rand"
+version = "0.8.5"
+description = """
+Random number generators and other randomness functionality.
+"""
+license = "MIT OR Apache-2.0"
+notices = [
+  "Copyright (c) 2014 The Rust Project Developers",
+  "Copyright 2018 Developers of the Rand project",
+]
+authors = ["The Rand Project Developers", "The Rust Project Developers"]
+repository = "https://github.com/rust-random/rand"
+homepage = "https://rust-random.github.io/book"
+
+[[dependencies]]
+name = "rand_chacha"
+version = "0.3.1"
+description = """
+ChaCha random number generator
+"""
+license = "MIT OR Apache-2.0"
+notices = [
+  "Copyright (c) 2014 The Rust Project Developers",
+  "Copyright 2018 Developers of the Rand project",
+]
+authors = [
+  "The Rand Project Developers",
+  "The Rust Project Developers",
+  "The CryptoCorrosion Contributors",
+]
+repository = "https://github.com/rust-random/rand"
+homepage = "https://rust-random.github.io/book"
+
+[[dependencies]]
+name = "rand_core"
+version = "0.6.4"
+description = """
+Core random number generator traits and tools for implementation.
+"""
+license = "MIT OR Apache-2.0"
+notices = [
+  "Copyright (c) 2014 The Rust Project Developers",
+  "Copyright 2018 Developers of the Rand project",
+]
+authors = ["The Rand Project Developers", "The Rust Project Developers"]
+repository = "https://github.com/rust-random/rand"
+homepage = "https://rust-random.github.io/book"
 
 [[dependencies]]
 name = "redox_syscall"
@@ -1034,7 +1000,7 @@ repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.12.4"
+version = "0.12.5"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
@@ -1084,7 +1050,7 @@ repository = "https://github.com/rust-lang-nursery/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.22.4"
+version = "0.23.10"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1143,7 +1109,7 @@ shorthands for guards with one of the implemented strategies.
 """
 license = "MIT OR Apache-2.0"
 notices = [
-  "Copyright (c) 2016-2019 Ulrik Sverdrup \"bluss\" and scopeguard developers",
+  'Copyright (c) 2016-2019 Ulrik Sverdrup "bluss" and scopeguard developers',
 ]
 authors = ["bluss"]
 repository = "https://github.com/bluss/scopeguard"
@@ -1221,6 +1187,15 @@ authors = [
 repository = "https://github.com/vorner/signal-hook"
 
 [[dependencies]]
+name = "slab"
+version = "0.4.9"
+description = "Pre-allocated storage for a uniform data type"
+license = "MIT"
+notices = ["Copyright (c) 2019 Carl Lerche"]
+authors = ["Carl Lerche <me@carllerche.com>"]
+repository = "https://github.com/tokio-rs/slab"
+
+[[dependencies]]
 name = "smallvec"
 version = "1.13.2"
 description = "'Small vector' optimization: store up to a small number of items on the stack"
@@ -1268,17 +1243,6 @@ authors = [
   "Joshua Barretto <joshua.s.barretto@gmail.com>",
 ]
 repository = "https://github.com/mvdnes/spin-rs.git"
-
-[[dependencies]]
-name = "stable_deref_trait"
-version = "1.2.0"
-description = """
-An unsafe marker trait for types like Box and Rc that dereference to a stable address even when moved, and hence can be used with libraries such as owning_ref and rental.
-"""
-license = "MIT/Apache-2.0"
-notices = ["Copyright (c) 2017 Robert Grosse"]
-authors = ["Robert Grosse <n210241048576@gmail.com>"]
-repository = "https://github.com/storyyeller/stable_deref_trait"
 
 [[dependencies]]
 name = "strsim"
@@ -1329,21 +1293,12 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "sync_wrapper"
-version = "0.1.2"
-description = "A tool for enlisting the compiler’s help in proving the absence of concurrency"
+version = "1.0.1"
+description = "A tool for enlisting the compiler's help in proving the absence of concurrency"
 license = "Apache-2.0"
 authors = ["Actyx AG <developer@actyx.io>"]
 repository = "https://github.com/Actyx/sync_wrapper"
 homepage = "https://docs.rs/sync_wrapper"
-
-[[dependencies]]
-name = "synstructure"
-version = "0.13.1"
-description = "Helper methods and macros for custom derives"
-license = "MIT"
-notices = ["Copyright 2016 Nika Layzell"]
-authors = ["Nika Layzell <nika@thelayzells.com>"]
-repository = "https://github.com/mystor/synstructure"
 
 [[dependencies]]
 name = "taplo"
@@ -1422,13 +1377,22 @@ authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
 repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
-name = "tinystr"
-version = "0.7.6"
-description = "A small ASCII-only bounded length string representation."
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
+name = "tinyvec"
+version = "1.6.0"
+description = "`tinyvec` provides 100% safe vec-like data structures."
+license = "Zlib OR Apache-2.0 OR MIT"
+notices = ['Copyright (c) 2019 Daniel "Lokathor" Gee.']
+authors = ["Lokathor <zefria@gmail.com>"]
+repository = "https://github.com/Lokathor/tinyvec"
+
+[[dependencies]]
+name = "tinyvec_macros"
+version = "0.1.1"
+description = "Some macros for tiny containers"
+license = "MIT OR Apache-2.0 OR Zlib"
+notices = ["Copyright (c) 2020 Soveu", 'Copyright 2020 Tomasz "Soveu" Marx']
+authors = ["Soveu <marx.tomasz@gmail.com>"]
+repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
@@ -1460,7 +1424,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-rustls"
-version = "0.25.0"
+version = "0.26.0"
 description = "Asynchronous TLS/SSL streams for Tokio using Rustls."
 license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2017 quininer kel", "Copyright 2017 quininer kel"]
@@ -1590,6 +1554,15 @@ authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
+name = "unicode-bidi"
+version = "0.3.15"
+description = "Implementation of the Unicode Bidirectional Algorithm"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2015 The Rust Project Developers"]
+authors = ["The Servo Project Developers"]
+repository = "https://github.com/servo/unicode-bidi"
+
+[[dependencies]]
 name = "unicode-ident"
 version = "1.0.12"
 description = "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31"
@@ -1597,6 +1570,23 @@ license = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
 notices = ["Copyright © 1991-2022 Unicode, Inc. All rights reserved."]
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 repository = "https://github.com/dtolnay/unicode-ident"
+
+[[dependencies]]
+name = "unicode-normalization"
+version = "0.1.23"
+description = """
+This crate provides functions for normalization of
+Unicode strings, including Canonical and Compatible
+Decomposition and Recomposition, as described in
+Unicode Standard Annex #15.
+"""
+license = "MIT/Apache-2.0"
+notices = ["Copyright (c) 2015 The Rust Project Developers"]
+authors = [
+  "kwantam <kwantam@gmail.com>",
+  "Manish Goregaokar <manishsmail@gmail.com>",
+]
+repository = "https://github.com/unicode-rs/unicode-normalization"
 
 [[dependencies]]
 name = "untrusted"
@@ -1609,30 +1599,12 @@ repository = "https://github.com/briansmith/untrusted"
 
 [[dependencies]]
 name = "url"
-version = "2.5.1"
+version = "2.5.2"
 description = "URL library for Rust, based on the WHATWG URL Standard"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
 authors = ["The rust-url developers"]
 repository = "https://github.com/servo/rust-url"
-
-[[dependencies]]
-name = "utf16_iter"
-version = "1.0.5"
-description = "Iterator by char over potentially-invalid UTF-16 in &[u16]"
-license = "Apache-2.0 OR MIT"
-authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
-repository = "https://github.com/hsivonen/utf16_iter"
-homepage = "https://docs.rs/utf16_iter/"
-
-[[dependencies]]
-name = "utf8_iter"
-version = "1.0.4"
-description = "Iterator by char over potentially-invalid UTF-8 in &[u8]"
-license = "Apache-2.0 OR MIT"
-authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
-repository = "https://github.com/hsivonen/utf8_iter"
-homepage = "https://docs.rs/utf8_iter/"
 
 [[dependencies]]
 name = "utf8parse"
@@ -1757,7 +1729,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/web-sys/index.html"
 
 [[dependencies]]
 name = "webpki-roots"
-version = "0.26.2"
+version = "0.26.3"
 description = "Mozilla's CA root certificates for use with webpki"
 license = "MPL-2.0"
 repository = "https://github.com/rustls/webpki-roots"
@@ -1950,41 +1922,6 @@ authors = ["Igor Shaula <gentoo90@gmail.com>"]
 repository = "https://github.com/gentoo90/winreg-rs"
 
 [[dependencies]]
-name = "write16"
-version = "1.0.0"
-description = "A UTF-16 analog of the Write trait"
-license = "Apache-2.0 OR MIT"
-repository = "https://github.com/hsivonen/write16"
-homepage = "https://docs.rs/write16/"
-
-[[dependencies]]
-name = "writeable"
-version = "0.5.5"
-description = "A more efficient alternative to fmt::Display"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
-name = "yoke"
-version = "0.7.4"
-description = "Abstraction allowing borrowed data to be carried along with the backing data it borrows from"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
-name = "yoke-derive"
-version = "0.7.4"
-description = "Custom derive for the yoke crate"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
 name = "zerocopy"
 version = "0.7.34"
 description = "Utilities for zero-copy parsing and serialization"
@@ -2009,24 +1946,6 @@ authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
 repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
-name = "zerofrom"
-version = "0.1.4"
-description = "ZeroFrom trait for constructing"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
-name = "zerofrom-derive"
-version = "0.1.4"
-description = "Custom derive for the zerofrom crate"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
 name = "zeroize"
 version = "1.8.1"
 description = """
@@ -2040,21 +1959,3 @@ license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2018-2021 The RustCrypto Project Developers"]
 authors = ["The RustCrypto Project Developers"]
 repository = "https://github.com/RustCrypto/utils/tree/master/zeroize"
-
-[[dependencies]]
-name = "zerovec"
-version = "0.10.2"
-description = "Zero-copy vector backed by a byte array"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["The ICU4X Project Developers"]
-repository = "https://github.com/unicode-org/icu4x"
-
-[[dependencies]]
-name = "zerovec-derive"
-version = "0.10.2"
-description = "Custom derive for the zerovec crate"
-license = "Unicode-3.0"
-notices = ["Copyright © 2020-2024 Unicode, Inc."]
-authors = ["Manish Goregaokar <manishsmail@gmail.com>"]
-repository = "https://github.com/unicode-org/icu4x"
