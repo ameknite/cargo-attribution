@@ -860,7 +860,7 @@ repository = "https://github.com/cryptocorrosion/cryptocorrosion"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.85"
+version = "1.0.86"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1262,11 +1262,12 @@ repository = "https://github.com/rapidfuzz/strsim-rs"
 
 [[dependencies]]
 name = "subtle"
-version = "2.5.0"
+version = "2.6.0"
 description = "Pure-Rust traits and utilities for constant-time cryptographic implementations."
 license = "BSD-3-Clause"
 notices = [
   "Copyright (c) 2016-2017 Isis Agora Lovecruft, Henry de Valence. All rights reserved.",
+  "Copyright (c) 2016-2024 Isis Agora Lovecruft. All rights reserved.",
 ]
 authors = [
   "Isis Lovecruft <isis@patternsinthevoid.net>",
@@ -1285,7 +1286,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.66"
+version = "2.0.67"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
