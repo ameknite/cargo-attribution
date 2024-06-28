@@ -3,6 +3,8 @@ name: "Mirror commits"
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
 
 jobs:
   push:
