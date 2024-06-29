@@ -129,7 +129,7 @@ repository = "https://github.com/maciejhirsz/beef"
 
 [[dependencies]]
 name = "bitflags"
-version = "2.5.0"
+version = "2.6.0"
 description = """
 A macro to generate structures which behave like bitflags.
 """
@@ -198,7 +198,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.99"
+version = "1.0.101"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -224,7 +224,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.7"
+version = "4.5.8"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -232,7 +232,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.7"
+version = "4.5.8"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -240,7 +240,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.5.5"
+version = "4.5.8"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -292,7 +292,7 @@ repository = "https://github.com/jhpratt/deranged"
 
 [[dependencies]]
 name = "either"
-version = "1.12.0"
+version = "1.13.0"
 description = """
 The enum `Either` with variants `Left` and `Right` is a general purpose sum type with two cases.
 """
@@ -635,7 +635,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "log"
-version = "0.4.21"
+version = "0.4.22"
 description = """
 A lightweight logging facade for Rust
 """
@@ -1148,7 +1148,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.117"
+version = "1.0.118"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1262,7 +1262,7 @@ repository = "https://github.com/rapidfuzz/strsim-rs"
 
 [[dependencies]]
 name = "subtle"
-version = "2.6.0"
+version = "2.6.1"
 description = "Pure-Rust traits and utilities for constant-time cryptographic implementations."
 license = "BSD-3-Clause"
 notices = [
@@ -1286,7 +1286,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.67"
+version = "2.0.68"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1379,7 +1379,7 @@ repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
 name = "tinyvec"
-version = "1.6.0"
+version = "1.6.1"
 description = "`tinyvec` provides 100% safe vec-like data structures."
 license = "Zlib OR Apache-2.0 OR MIT"
 notices = ['Copyright (c) 2019 Daniel "Lokathor" Gee.']
