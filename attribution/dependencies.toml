@@ -198,7 +198,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.0.104"
+version = "1.1.2"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -224,7 +224,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.8"
+version = "4.5.9"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -232,7 +232,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.8"
+version = "4.5.9"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -472,11 +472,12 @@ repository = "https://github.com/hyperium/http"
 
 [[dependencies]]
 name = "http-body"
-version = "1.0.0"
+version = "1.0.1"
 description = """
 Trait representing an asynchronous, streaming, HTTP request or response body.
 """
 license = "MIT"
+notices = ["Copyright (c) 2019-2024 Sean McArthur & Hyper Contributors"]
 authors = [
   "Carl Lerche <me@carllerche.com>",
   "Lucio Franco <luciofranco14@gmail.com>",
@@ -510,7 +511,7 @@ repository = "https://github.com/seanmonstar/httparse"
 
 [[dependencies]]
 name = "hyper"
-version = "1.4.0"
+version = "1.4.1"
 description = "A fast and correct HTTP library."
 license = "MIT"
 notices = ["Copyright (c) 2014-2021 Sean McArthur"]
@@ -1050,7 +1051,7 @@ repository = "https://github.com/rust-lang-nursery/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.23.10"
+version = "0.23.11"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1124,7 +1125,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.203"
+version = "1.0.204"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1136,7 +1137,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.203"
+version = "1.0.204"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1286,7 +1287,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.68"
+version = "2.0.71"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1323,7 +1324,7 @@ repository = "https://github.com/rust-analyzer/text-size"
 
 [[dependencies]]
 name = "thiserror"
-version = "1.0.61"
+version = "1.0.62"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1331,7 +1332,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "1.0.61"
+version = "1.0.62"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1379,7 +1380,7 @@ repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
 name = "tinyvec"
-version = "1.7.0"
+version = "1.8.0"
 description = "`tinyvec` provides 100% safe vec-like data structures."
 license = "Zlib OR Apache-2.0 OR MIT"
 notices = ['Copyright (c) 2019 Daniel "Lokathor" Gee.']
@@ -1455,7 +1456,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_edit"
-version = "0.22.14"
+version = "0.22.15"
 description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
