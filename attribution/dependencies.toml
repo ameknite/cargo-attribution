@@ -35,7 +35,7 @@ repository = "https://github.com/BurntSushi/aho-corasick"
 
 [[dependencies]]
 name = "anstream"
-version = "0.6.14"
+version = "0.6.15"
 description = "A simple cross platform library for writing colored text to a terminal."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -44,7 +44,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle"
-version = "1.0.7"
+version = "1.0.8"
 description = "ANSI text styling"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2022 The rust-cli Developers"]
@@ -53,7 +53,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-parse"
-version = "0.2.4"
+version = "0.2.5"
 description = "Parse ANSI Style Escapes"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Joe Wilm and individual contributors"]
@@ -62,7 +62,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-query"
-version = "1.1.0"
+version = "1.1.1"
 description = "Look up colored console capabilities"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -70,7 +70,7 @@ repository = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-wincon"
-version = "3.0.3"
+version = "3.0.4"
 description = "Styling legacy Windows terminals"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Josh Triplett, 2022 The rust-cli Developers"]
@@ -140,7 +140,7 @@ repository = "https://github.com/bitflags/bitflags"
 
 [[dependencies]]
 name = "bstr"
-version = "1.9.1"
+version = "1.10.0"
 description = "A string type that is not required to be valid UTF-8."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018-2019 Andrew Gallant"]
@@ -224,7 +224,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.9"
+version = "4.5.11"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -232,7 +232,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.9"
+version = "4.5.11"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -240,7 +240,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.5.8"
+version = "4.5.11"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -248,7 +248,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_lex"
-version = "0.7.1"
+version = "0.7.2"
 description = "Minimal, flexible command line parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -264,7 +264,7 @@ repository = "https://github.com/eyre-rs/eyre"
 
 [[dependencies]]
 name = "colorchoice"
-version = "1.0.1"
+version = "1.0.2"
 description = "Global override of color control"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -578,7 +578,7 @@ repository = "https://github.com/krisprice/ipnet"
 
 [[dependencies]]
 name = "is_terminal_polyfill"
-version = "1.70.0"
+version = "1.70.1"
 description = "Polyfill for `is_terminal` stdlib feature for use with older MSRVs"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -705,7 +705,7 @@ repository = "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
 
 [[dependencies]]
 name = "mio"
-version = "0.8.11"
+version = "1.0.1"
 description = "Lightweight non-blocking I/O."
 license = "MIT"
 notices = ["Copyright (c) 2014 Carl Lerche and other MIO contributors"]
@@ -728,15 +728,6 @@ license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2023 Jacob Pratt", "Copyright 2023 Jacob Pratt"]
 authors = ["Jacob Pratt <jacob@jhpratt.dev>"]
 repository = "https://github.com/jhpratt/num-conv"
-
-[[dependencies]]
-name = "num_cpus"
-version = "1.16.0"
-description = "Get the number of CPUs on a machine."
-license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2015"]
-authors = ["Sean McArthur <sean@seanmonstar.com>"]
-repository = "https://github.com/seanmonstar/num_cpus"
 
 [[dependencies]]
 name = "object"
@@ -888,7 +879,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quinn-udp"
-version = "0.5.2"
+version = "0.5.4"
 description = "UDP sockets with ECN information for the QUIC transport protocol"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -1051,7 +1042,7 @@ repository = "https://github.com/rust-lang-nursery/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.23.11"
+version = "0.23.12"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1084,7 +1075,7 @@ repository = "https://github.com/rustls/pki-types"
 
 [[dependencies]]
 name = "rustls-webpki"
-version = "0.102.5"
+version = "0.102.6"
 description = "Web PKI X.509 Certificate Verification."
 license = "ISC"
 notices = ["Copyright 2015 Brian Smith."]
@@ -1160,7 +1151,7 @@ repository = "https://github.com/serde-rs/json"
 
 [[dependencies]]
 name = "serde_spanned"
-version = "0.6.6"
+version = "0.6.7"
 description = "Serde-compatible spanned Value"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1287,7 +1278,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.71"
+version = "2.0.72"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1398,7 +1389,7 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.38.1"
+version = "1.39.1"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
@@ -1411,7 +1402,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-macros"
-version = "2.3.0"
+version = "2.4.0"
 description = """
 Tokio's proc macros.
 """
@@ -1434,7 +1425,7 @@ repository = "https://github.com/rustls/tokio-rustls"
 
 [[dependencies]]
 name = "toml"
-version = "0.8.15"
+version = "0.8.16"
 description = """
 A native Rust encoder and decoder of TOML-formatted files and streams. Provides
 implementations of the standard Serialize/Deserialize traits for TOML data to
@@ -1447,7 +1438,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_datetime"
-version = "0.6.6"
+version = "0.6.7"
 description = "A TOML-compatible datetime type"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1456,7 +1447,7 @@ repository = "https://github.com/toml-rs/toml"
 
 [[dependencies]]
 name = "toml_edit"
-version = "0.22.16"
+version = "0.22.17"
 description = "Yet another format-preserving TOML parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -1622,7 +1613,7 @@ repository = "https://github.com/alacritty/vte"
 
 [[dependencies]]
 name = "version_check"
-version = "0.9.4"
+version = "0.9.5"
 description = "Tiny crate to check the version of the installed/running rustc."
 license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2017-2018 Sergio Benitez"]
@@ -1909,7 +1900,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.6.14"
+version = "0.6.16"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
