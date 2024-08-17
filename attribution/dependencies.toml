@@ -179,7 +179,7 @@ repository = "https://github.com/tokio-rs/bytes"
 
 [[dependencies]]
 name = "camino"
-version = "1.1.7"
+version = "1.1.8"
 description = "UTF-8 paths"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.1.8"
+version = "1.1.13"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -233,7 +233,7 @@ repository = "https://github.com/alexcrichton/cfg-if"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.15"
+version = "4.5.16"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -570,7 +570,7 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "2.3.0"
+version = "2.4.0"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
@@ -612,7 +612,7 @@ repository = "https://github.com/dtolnay/itoa"
 
 [[dependencies]]
 name = "js-sys"
-version = "0.3.69"
+version = "0.3.70"
 description = """
 Bindings for all JS global objects and functions in all JS environments like
 Node.js and browsers, built on `#[wasm_bindgen]` using the `wasm-bindgen` crate.
@@ -625,7 +625,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.155"
+version = "0.2.156"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -683,15 +683,6 @@ authors = ["Andrew Gallant <jamslam@gmail.com>", "bluss"]
 repository = "https://github.com/BurntSushi/memchr"
 
 [[dependencies]]
-name = "memoffset"
-version = "0.9.1"
-description = "offset_of functionality for Rust structs."
-license = "MIT"
-notices = ["Copyright (c) 2017 Gilad Naaman"]
-authors = ["Gilad Naaman <gilad.naaman@gmail.com>"]
-repository = "https://github.com/Gilnaa/memoffset"
-
-[[dependencies]]
 name = "mime"
 version = "0.3.17"
 description = "Strongly Typed Mimes"
@@ -714,7 +705,7 @@ repository = "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
 
 [[dependencies]]
 name = "mio"
-version = "1.0.1"
+version = "1.0.2"
 description = "Lightweight non-blocking I/O."
 license = "MIT"
 notices = ["Copyright (c) 2014 Carl Lerche and other MIO contributors"]
@@ -1024,7 +1015,7 @@ repository = "https://github.com/briansmith/ring"
 
 [[dependencies]]
 name = "rowan"
-version = "0.15.15"
+version = "0.15.16"
 description = "Library for generic lossless syntax trees"
 license = "MIT OR Apache-2.0"
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
@@ -1133,7 +1124,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.205"
+version = "1.0.208"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1145,7 +1136,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.205"
+version = "1.0.208"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1157,7 +1148,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.122"
+version = "1.0.125"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1182,6 +1173,25 @@ license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2016 Anthony Ramine"]
 authors = ["Anthony Ramine <n.oxyde@gmail.com>"]
 repository = "https://github.com/nox/serde_urlencoded"
+
+[[dependencies]]
+name = "shlex"
+version = "1.3.0"
+description = "Split a string into shell words, like Python's shlex."
+license = "MIT OR Apache-2.0"
+notices = [
+  "Copyright (c) 2015 Nicholas Allegra (comex).",
+  "Copyright 2015 Nicholas Allegra (comex).",
+]
+authors = [
+  "comex <comexk@gmail.com>",
+  "Fenhl <fenhl@fenhl.net>",
+  "Adrian Taylor <adetaylor@chromium.org>",
+  "Alex Touchet <alextouchet@outlook.com>",
+  "Daniel Parks <dp+git@oxidized.org>",
+  "Garrett Berg <googberg@gmail.com>",
+]
+repository = "https://github.com/comex/rust-shlex"
 
 [[dependencies]]
 name = "signal-hook-registry"
@@ -1295,7 +1305,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.72"
+version = "2.0.74"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1488,7 +1498,7 @@ repository = "https://github.com/tower-rs/tower"
 
 [[dependencies]]
 name = "tower-layer"
-version = "0.3.2"
+version = "0.3.3"
 description = """
 Decorates a `Service` to allow easy composition between `Service`s.
 """
@@ -1499,7 +1509,7 @@ repository = "https://github.com/tower-rs/tower"
 
 [[dependencies]]
 name = "tower-service"
-version = "0.3.2"
+version = "0.3.3"
 description = """
 Trait representing an asynchronous, request / response based, client or server.
 """
@@ -1656,7 +1666,7 @@ repository = "https://github.com/bytecodealliance/wasi"
 
 [[dependencies]]
 name = "wasm-bindgen"
-version = "0.2.92"
+version = "0.2.93"
 description = """
 Easy support for interacting between JS and Rust.
 """
@@ -1668,7 +1678,7 @@ homepage = "https://rustwasm.github.io/"
 
 [[dependencies]]
 name = "wasm-bindgen-backend"
-version = "0.2.92"
+version = "0.2.93"
 description = """
 Backend code generation of the wasm-bindgen tool
 """
@@ -1680,7 +1690,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-futures"
-version = "0.4.42"
+version = "0.4.43"
 description = "Bridging the gap between Rust Futures and JavaScript Promises"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
@@ -1690,7 +1700,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro"
-version = "0.2.92"
+version = "0.2.93"
 description = """
 Definition of the `#[wasm_bindgen]` attribute, an internal dependency
 """
@@ -1702,7 +1712,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.92"
+version = "0.2.93"
 description = """
 The part of the implementation of the `#[wasm_bindgen]` attribute that is not in the shared backend crate
 """
@@ -1714,7 +1724,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-shared"
-version = "0.2.92"
+version = "0.2.93"
 description = """
 Shared support between wasm-bindgen and wasm-bindgen cli, an internal
 dependency.
@@ -1727,7 +1737,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "web-sys"
-version = "0.3.69"
+version = "0.3.70"
 description = """
 Bindings for all Web APIs, a procedurally generated crate from WebIDL
 """
