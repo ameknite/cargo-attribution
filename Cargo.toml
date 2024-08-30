@@ -3,7 +3,6 @@ name = "cargo-attribution"
 version = "0.8.2"
 authors = ["AmeKnite"]
 edition = "2021"
-rust-version = "1.74.1"
 description = "A cargo subcommand to give credit to your dependencies"
 documentation = "https://docs.rs/cargo-attribution"
 readme = "README.md"
@@ -11,6 +10,7 @@ repository = "https://github.com/ameknite/cargo-attribution"
 license = "MPL-2.0"
 keywords = ["cli", "attribution", "credits", "license"]
 categories = ["command-line-utilities"]
+rust-version = "1.77.2"
 
 [dependencies]
 bytes = "1.7.1"

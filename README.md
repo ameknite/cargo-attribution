@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MPL2.0-blue.svg)](https://www.mozilla.org/en-US/MPL/2.0/)
 [![Crates.io](https://img.shields.io/crates/v/cargo-attribution.svg)](https://crates.io/crates/cargo-attribution)
-![Minimum Supported Rust Version](https://img.shields.io/badge/rustc-1.74.1+-red)
+![Minimum Supported Rust Version](https://img.shields.io/badge/rustc-1.77.2+-red)
 [![CI](https://github.com/ameknite/cargo-attribution/workflows/CI/badge.svg)](https://github.com/ameknite/cargo-attribution/actions?workflow=CI)
 
 ```sh
