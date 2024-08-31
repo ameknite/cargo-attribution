@@ -570,7 +570,7 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "2.4.0"
+version = "2.5.0"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
@@ -1305,7 +1305,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.74"
+version = "2.0.77"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1749,9 +1749,13 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/web-sys/index.html"
 
 [[dependencies]]
 name = "webpki-roots"
-version = "0.26.3"
+version = "0.26.5"
 description = "Mozilla's CA root certificates for use with webpki"
 license = "MPL-2.0"
+notices = [
+  "Copyright (c) 2023 Dirkjan Ochtman <dirkjan@ochtman.nl>",
+  "Copyright 2023 Dirkjan Ochtman",
+]
 repository = "https://github.com/rustls/webpki-roots"
 
 [[dependencies]]
