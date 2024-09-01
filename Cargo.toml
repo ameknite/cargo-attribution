@@ -1,6 +1,6 @@
 [package]
 name = "cargo-attribution"
-version = "0.8.3"
+version = "0.8.4"
 authors = ["AmeKnite"]
 edition = "2021"
 description = "A cargo subcommand to give credit to your dependencies"
