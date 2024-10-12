@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.1.28"
+version = "1.1.30"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -621,7 +621,7 @@ repository = "https://github.com/dtolnay/itoa"
 
 [[dependencies]]
 name = "js-sys"
-version = "0.3.71"
+version = "0.3.72"
 description = """
 Bindings for all JS global objects and functions in all JS environments like
 Node.js and browsers, built on `#[wasm_bindgen]` using the `wasm-bindgen` crate.
@@ -1634,7 +1634,7 @@ repository = "https://github.com/bytecodealliance/wasi"
 
 [[dependencies]]
 name = "wasm-bindgen"
-version = "0.2.94"
+version = "0.2.95"
 description = """
 Easy support for interacting between JS and Rust.
 """
@@ -1646,7 +1646,7 @@ homepage = "https://rustwasm.github.io/"
 
 [[dependencies]]
 name = "wasm-bindgen-backend"
-version = "0.2.94"
+version = "0.2.95"
 description = """
 Backend code generation of the wasm-bindgen tool
 """
@@ -1658,7 +1658,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-futures"
-version = "0.4.44"
+version = "0.4.45"
 description = "Bridging the gap between Rust Futures and JavaScript Promises"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
@@ -1668,7 +1668,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro"
-version = "0.2.94"
+version = "0.2.95"
 description = """
 Definition of the `#[wasm_bindgen]` attribute, an internal dependency
 """
@@ -1680,7 +1680,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.94"
+version = "0.2.95"
 description = """
 The part of the implementation of the `#[wasm_bindgen]` attribute that is not in the shared backend crate
 """
@@ -1692,7 +1692,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-shared"
-version = "0.2.94"
+version = "0.2.95"
 description = """
 Shared support between wasm-bindgen and wasm-bindgen cli, an internal
 dependency.
@@ -1705,7 +1705,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "web-sys"
-version = "0.3.71"
+version = "0.3.72"
 description = """
 Bindings for all Web APIs, a procedurally generated crate from WebIDL
 """
