@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.1.30"
+version = "1.1.31"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -529,7 +529,7 @@ repository = "https://github.com/seanmonstar/httparse"
 
 [[dependencies]]
 name = "hyper"
-version = "1.4.1"
+version = "1.5.0"
 description = "A fast and correct HTTP library."
 license = "MIT"
 notices = ["Copyright (c) 2014-2021 Sean McArthur"]
@@ -634,7 +634,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.159"
+version = "0.2.161"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -843,7 +843,7 @@ repository = "https://github.com/cryptocorrosion/cryptocorrosion"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.87"
+version = "1.0.88"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1041,7 +1041,7 @@ repository = "https://github.com/rust-lang/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.23.14"
+version = "0.23.15"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1063,7 +1063,7 @@ repository = "https://github.com/rustls/pemfile"
 
 [[dependencies]]
 name = "rustls-pki-types"
-version = "1.9.0"
+version = "1.10.0"
 description = "Shared types for the rustls PKI ecosystem"
 license = "MIT OR Apache-2.0"
 notices = [
@@ -1139,7 +1139,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.128"
+version = "1.0.132"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1296,7 +1296,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.79"
+version = "2.0.82"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
