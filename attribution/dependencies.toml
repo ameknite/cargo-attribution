@@ -167,7 +167,7 @@ repository = "https://github.com/BurntSushi/byteorder"
 
 [[dependencies]]
 name = "bytes"
-version = "1.7.2"
+version = "1.8.0"
 description = "Types and traits for working with bytes"
 license = "MIT"
 notices = ["Copyright (c) 2018 Carl Lerche"]

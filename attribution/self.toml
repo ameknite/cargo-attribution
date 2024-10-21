@@ -1,6 +1,6 @@
 [self]
 name = "cargo-attribution"
-version = "0.8.5"
+version = "0.8.6"
 description = "A cargo subcommand to give credit to your dependencies"
 license = "MPL-2.0"
 authors = ["AmeKnite"]
