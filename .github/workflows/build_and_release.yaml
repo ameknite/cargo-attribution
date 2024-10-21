@@ -232,6 +232,10 @@ jobs:
         with:
           target: ${{ matrix.target }}
 
+      - name: Print GLIBC version
+        if: ${{ matrix.target }} == 'ubuntu-latest'
+        run: echo $(ldd --version)
+
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: ${{ github.event.repository.name }}
