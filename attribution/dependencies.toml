@@ -35,7 +35,7 @@ repository = "https://github.com/BurntSushi/aho-corasick"
 
 [[dependencies]]
 name = "anstream"
-version = "0.6.15"
+version = "0.6.17"
 description = "A simple cross platform library for writing colored text to a terminal."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -44,7 +44,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle"
-version = "1.0.8"
+version = "1.0.9"
 description = "ANSI text styling"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2022 The rust-cli Developers"]
@@ -53,7 +53,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-parse"
-version = "0.2.5"
+version = "0.2.6"
 description = "Parse ANSI Style Escapes"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Joe Wilm and individual contributors"]
@@ -62,15 +62,15 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle-query"
-version = "1.1.1"
+version = "1.1.2"
 description = "Look up colored console capabilities"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
-repository = "https://github.com/rust-cli/anstyle"
+repository = "https://github.com/rust-cli/anstyle.git"
 
 [[dependencies]]
 name = "anstyle-wincon"
-version = "3.0.4"
+version = "3.0.6"
 description = "Styling legacy Windows terminals"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Josh Triplett, 2022 The rust-cli Developers"]
@@ -273,11 +273,11 @@ repository = "https://github.com/eyre-rs/eyre"
 
 [[dependencies]]
 name = "colorchoice"
-version = "1.0.2"
+version = "1.0.3"
 description = "Global override of color control"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
-repository = "https://github.com/rust-cli/anstyle"
+repository = "https://github.com/rust-cli/anstyle.git"
 
 [[dependencies]]
 name = "countme"
@@ -792,7 +792,7 @@ repository = "https://github.com/servo/rust-url/"
 
 [[dependencies]]
 name = "pin-project-lite"
-version = "0.2.14"
+version = "0.2.15"
 description = """
 A lightweight version of pin-project written with declarative macros.
 """
@@ -843,7 +843,7 @@ repository = "https://github.com/cryptocorrosion/cryptocorrosion"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.88"
+version = "1.0.89"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -944,7 +944,7 @@ repository = "https://gitlab.redox-os.org/redox-os/syscall"
 
 [[dependencies]]
 name = "regex"
-version = "1.11.0"
+version = "1.11.1"
 description = """
 An implementation of regular expressions for Rust. This implementation uses
 finite automata and guarantees linear time matching on all inputs.
@@ -1115,7 +1115,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.210"
+version = "1.0.213"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1127,7 +1127,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.210"
+version = "1.0.213"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1296,7 +1296,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.82"
+version = "2.0.85"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1333,7 +1333,7 @@ repository = "https://github.com/rust-analyzer/text-size"
 
 [[dependencies]]
 name = "thiserror"
-version = "1.0.64"
+version = "1.0.65"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1341,7 +1341,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "1.0.64"
+version = "1.0.65"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1407,7 +1407,7 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.40.0"
+version = "1.41.0"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
