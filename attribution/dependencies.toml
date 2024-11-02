@@ -44,7 +44,7 @@ homepage = "https://github.com/rust-cli/anstyle"
 
 [[dependencies]]
 name = "anstyle"
-version = "1.0.9"
+version = "1.0.10"
 description = "ANSI text styling"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2022 The rust-cli Developers"]
@@ -230,6 +230,15 @@ license = "MIT/Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
 authors = ["Alex Crichton <alex@alexcrichton.com>"]
 repository = "https://github.com/alexcrichton/cfg-if"
+
+[[dependencies]]
+name = "cfg_aliases"
+version = "0.2.1"
+description = "A tiny utility to help save you a lot of effort with long winded `#[cfg()]` checks."
+license = "MIT"
+notices = ["Copyright (c) 2020 Katharos Technology"]
+authors = ["Zicklag <zicklag@katharostech.com>"]
+repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
@@ -550,7 +559,7 @@ repository = "https://github.com/rustls/hyper-rustls"
 
 [[dependencies]]
 name = "hyper-util"
-version = "0.1.9"
+version = "0.1.10"
 description = "hyper utilities"
 license = "MIT"
 notices = ["Copyright (c) 2023 Sean McArthur"]
@@ -870,7 +879,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quinn-udp"
-version = "0.5.5"
+version = "0.5.6"
 description = "UDP sockets with ECN information for the QUIC transport protocol"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -983,7 +992,7 @@ repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.12.8"
+version = "0.12.9"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
@@ -1041,7 +1050,7 @@ repository = "https://github.com/rust-lang/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.23.15"
+version = "0.23.16"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1115,7 +1124,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.213"
+version = "1.0.214"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1127,7 +1136,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.213"
+version = "1.0.214"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1296,7 +1305,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.85"
+version = "2.0.86"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1333,7 +1342,7 @@ repository = "https://github.com/rust-analyzer/text-size"
 
 [[dependencies]]
 name = "thiserror"
-version = "1.0.65"
+version = "1.0.66"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1341,7 +1350,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "1.0.65"
+version = "1.0.66"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
