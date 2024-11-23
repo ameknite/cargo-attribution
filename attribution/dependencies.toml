@@ -140,7 +140,7 @@ repository = "https://github.com/bitflags/bitflags"
 
 [[dependencies]]
 name = "bstr"
-version = "1.10.0"
+version = "1.11.0"
 description = "A string type that is not required to be valid UTF-8."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018-2019 Andrew Gallant"]
@@ -199,7 +199,7 @@ repository = "https://github.com/rust-lang/cargo"
 
 [[dependencies]]
 name = "cargo_metadata"
-version = "0.18.1"
+version = "0.19.0"
 description = "structured access to the output of `cargo metadata`"
 license = "MIT"
 authors = ["Oliver Schneider <git-spam-no-reply9815368754983@oli-obk.de>"]
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.1.37"
+version = "1.2.1"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -242,7 +242,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.20"
+version = "4.5.21"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -250,7 +250,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.20"
+version = "4.5.21"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -266,7 +266,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_lex"
-version = "0.7.2"
+version = "0.7.3"
 description = "Minimal, flexible command line parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -548,8 +548,8 @@ repository = "https://github.com/seanmonstar/httparse"
 
 [[dependencies]]
 name = "hyper"
-version = "1.5.0"
-description = "A fast and correct HTTP library."
+version = "1.5.1"
+description = "A protective and efficient HTTP library for all."
 license = "MIT"
 notices = ["Copyright (c) 2014-2021 Sean McArthur"]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
@@ -742,7 +742,7 @@ repository = "https://github.com/rust-itertools/itertools"
 
 [[dependencies]]
 name = "itoa"
-version = "1.0.11"
+version = "1.0.13"
 description = "Fast integer primitive to string conversion"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -763,7 +763,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.162"
+version = "0.2.164"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -981,7 +981,7 @@ repository = "https://github.com/cryptocorrosion/cryptocorrosion"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.89"
+version = "1.0.92"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -992,7 +992,7 @@ repository = "https://github.com/dtolnay/proc-macro2"
 
 [[dependencies]]
 name = "quinn"
-version = "0.11.5"
+version = "0.11.6"
 description = "Versatile QUIC transport protocol implementation"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -1000,7 +1000,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quinn-proto"
-version = "0.11.8"
+version = "0.11.9"
 description = "State machine for the QUIC transport protocol"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -1094,7 +1094,7 @@ repository = "https://github.com/rust-lang/regex"
 
 [[dependencies]]
 name = "regex-automata"
-version = "0.4.8"
+version = "0.4.9"
 description = "Automata construction and matching using regular expressions."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 The Rust Project Developers"]
@@ -1179,7 +1179,7 @@ repository = "https://github.com/rust-lang/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.23.16"
+version = "0.23.18"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1253,7 +1253,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.214"
+version = "1.0.215"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1265,7 +1265,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.214"
+version = "1.0.215"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1277,7 +1277,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.132"
+version = "1.0.133"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1369,7 +1369,7 @@ repository = "https://github.com/rust-lang/socket2"
 
 [[dependencies]]
 name = "spdx"
-version = "0.10.6"
+version = "0.10.7"
 description = "Helper crate for SPDX expressions"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Embark Studios"]
@@ -1445,7 +1445,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.87"
+version = "2.0.89"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1453,7 +1453,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "sync_wrapper"
-version = "1.0.1"
+version = "1.0.2"
 description = "A tool for enlisting the compiler's help in proving the absence of concurrency"
 license = "Apache-2.0"
 authors = ["Actyx AG <developer@actyx.io>"]
@@ -1491,7 +1491,15 @@ repository = "https://github.com/rust-analyzer/text-size"
 
 [[dependencies]]
 name = "thiserror"
-version = "1.0.68"
+version = "1.0.69"
+description = "derive(Error)"
+license = "MIT OR Apache-2.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+repository = "https://github.com/dtolnay/thiserror"
+
+[[dependencies]]
+name = "thiserror"
+version = "2.0.3"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1499,7 +1507,15 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "1.0.68"
+version = "1.0.69"
+description = "Implementation detail of the `thiserror` crate"
+license = "MIT OR Apache-2.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+repository = "https://github.com/dtolnay/thiserror"
+
+[[dependencies]]
+name = "thiserror-impl"
+version = "2.0.3"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1710,10 +1726,10 @@ repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
 name = "unicode-ident"
-version = "1.0.13"
+version = "1.0.14"
 description = "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31"
-license = "(MIT OR Apache-2.0) AND Unicode-DFS-2016"
-notices = ["Copyright © 1991-2022 Unicode, Inc. All rights reserved."]
+license = "(MIT OR Apache-2.0) AND Unicode-3.0"
+notices = ["Copyright © 1991-2023 Unicode, Inc."]
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 repository = "https://github.com/dtolnay/unicode-ident"
 
@@ -1728,7 +1744,7 @@ repository = "https://github.com/briansmith/untrusted"
 
 [[dependencies]]
 name = "url"
-version = "2.5.3"
+version = "2.5.4"
 description = "URL library for Rust, based on the WHATWG URL Standard"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2013-2022 The rust-url developers"]
@@ -1875,8 +1891,16 @@ repository = "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/web-sy
 homepage = "https://rustwasm.github.io/wasm-bindgen/web-sys/index.html"
 
 [[dependencies]]
+name = "web-time"
+version = "1.1.0"
+description = "Drop-in replacement for std::time for Wasm in browsers"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) 2023 dAxpeDDa", "Copyright 2023 dAxpeDDa"]
+repository = "https://github.com/daxpedda/web-time"
+
+[[dependencies]]
 name = "webpki-roots"
-version = "0.26.6"
+version = "0.26.7"
 description = "Mozilla's CA root certificates for use with webpki"
 license = "MPL-2.0"
 repository = "https://github.com/rustls/webpki-roots"
@@ -2033,7 +2057,7 @@ repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "yoke"
-version = "0.7.4"
+version = "0.7.5"
 description = "Abstraction allowing borrowed data to be carried along with the backing data it borrows from"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -2042,7 +2066,7 @@ repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "yoke-derive"
-version = "0.7.4"
+version = "0.7.5"
 description = "Custom derive for the yoke crate"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -2075,7 +2099,7 @@ repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
 name = "zerofrom"
-version = "0.1.4"
+version = "0.1.5"
 description = "ZeroFrom trait for constructing"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -2084,7 +2108,7 @@ repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "zerofrom-derive"
-version = "0.1.4"
+version = "0.1.5"
 description = "Custom derive for the zerofrom crate"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
