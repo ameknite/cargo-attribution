@@ -199,7 +199,7 @@ repository = "https://github.com/rust-lang/cargo"
 
 [[dependencies]]
 name = "cargo_metadata"
-version = "0.19.0"
+version = "0.19.1"
 description = "structured access to the output of `cargo metadata`"
 license = "MIT"
 authors = ["Oliver Schneider <git-spam-no-reply9815368754983@oli-obk.de>"]
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.2"
+version = "1.2.3"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -242,7 +242,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.21"
+version = "4.5.23"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -250,7 +250,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.21"
+version = "4.5.23"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -266,7 +266,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_lex"
-version = "0.7.3"
+version = "0.7.4"
 description = "Minimal, flexible command line parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -466,7 +466,7 @@ repository = "https://github.com/rust-lang/hashbrown"
 
 [[dependencies]]
 name = "hashbrown"
-version = "0.15.1"
+version = "0.15.2"
 description = "A Rust port of Google's SwissTable hash map"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Amanieu d'Antras"]
@@ -482,16 +482,8 @@ notices = ["Copyright (c) 2015 The Rust Project Developers"]
 repository = "https://github.com/withoutboats/heck"
 
 [[dependencies]]
-name = "hermit-abi"
-version = "0.3.9"
-description = "Hermit system calls definitions."
-license = "MIT OR Apache-2.0"
-authors = ["Stefan Lankes"]
-repository = "https://github.com/hermit-os/hermit-rs"
-
-[[dependencies]]
 name = "http"
-version = "1.1.0"
+version = "1.2.0"
 description = """
 A set of types for representing HTTP requests and responses.
 """
@@ -708,7 +700,7 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "2.6.0"
+version = "2.7.0"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
@@ -750,7 +742,7 @@ repository = "https://github.com/dtolnay/itoa"
 
 [[dependencies]]
 name = "js-sys"
-version = "0.3.72"
+version = "0.3.76"
 description = """
 Bindings for all JS global objects and functions in all JS environments like
 Node.js and browsers, built on `#[wasm_bindgen]` using the `wasm-bindgen` crate.
@@ -852,7 +844,7 @@ repository = "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
 
 [[dependencies]]
 name = "mio"
-version = "1.0.2"
+version = "1.0.3"
 description = "Lightweight non-blocking I/O."
 license = "MIT"
 notices = ["Copyright (c) 2014 Carl Lerche and other MIO contributors"]
@@ -1171,9 +1163,9 @@ repository = "https://github.com/rust-lang-nursery/rustc-hash"
 
 [[dependencies]]
 name = "rustc-hash"
-version = "2.0.0"
+version = "2.1.0"
 description = "A speedy, non-cryptographic hashing algorithm used by rustc"
-license = "Apache-2.0/MIT"
+license = "Apache-2.0 OR MIT"
 authors = ["The Rust Project Developers"]
 repository = "https://github.com/rust-lang/rustc-hash"
 
@@ -1445,7 +1437,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.89"
+version = "2.0.90"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1499,7 +1491,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror"
-version = "2.0.3"
+version = "2.0.4"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1515,7 +1507,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "2.0.3"
+version = "2.0.4"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1523,7 +1515,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "time"
-version = "0.3.36"
+version = "0.3.37"
 description = "Date and time library. Fully interoperable with the standard library. Mostly compatible with #![no_std]."
 license = "MIT OR Apache-2.0"
 notices = [
@@ -1548,7 +1540,7 @@ repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
 name = "time-macros"
-version = "0.2.18"
+version = "0.2.19"
 description = """
     Procedural macros for the time crate.
     This crate is an implementation detail and should not be relied upon directly.
@@ -1590,7 +1582,7 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.41.1"
+version = "1.42.0"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
@@ -1618,9 +1610,9 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-rustls"
-version = "0.26.0"
+version = "0.26.1"
 description = "Asynchronous TLS/SSL streams for Tokio using Rustls."
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2017 quininer kel", "Copyright 2017 quininer kel"]
 repository = "https://github.com/rustls/tokio-rustls"
 
@@ -1809,7 +1801,7 @@ repository = "https://github.com/bytecodealliance/wasi"
 
 [[dependencies]]
 name = "wasm-bindgen"
-version = "0.2.95"
+version = "0.2.99"
 description = """
 Easy support for interacting between JS and Rust.
 """
@@ -1821,7 +1813,7 @@ homepage = "https://rustwasm.github.io/"
 
 [[dependencies]]
 name = "wasm-bindgen-backend"
-version = "0.2.95"
+version = "0.2.99"
 description = """
 Backend code generation of the wasm-bindgen tool
 """
@@ -1833,7 +1825,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-futures"
-version = "0.4.45"
+version = "0.4.49"
 description = "Bridging the gap between Rust Futures and JavaScript Promises"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
@@ -1843,7 +1835,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro"
-version = "0.2.95"
+version = "0.2.99"
 description = """
 Definition of the `#[wasm_bindgen]` attribute, an internal dependency
 """
@@ -1855,7 +1847,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.95"
+version = "0.2.99"
 description = """
 The part of the implementation of the `#[wasm_bindgen]` attribute that is not in the shared backend crate
 """
@@ -1867,7 +1859,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-shared"
-version = "0.2.95"
+version = "0.2.99"
 description = """
 Shared support between wasm-bindgen and wasm-bindgen cli, an internal
 dependency.
@@ -1880,7 +1872,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "web-sys"
-version = "0.3.72"
+version = "0.3.76"
 description = """
 Bindings for all Web APIs, a procedurally generated crate from WebIDL
 """
