@@ -140,7 +140,7 @@ repository = "https://github.com/bitflags/bitflags"
 
 [[dependencies]]
 name = "bstr"
-version = "1.11.0"
+version = "1.11.1"
 description = "A string type that is not required to be valid UTF-8."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018-2019 Andrew Gallant"]
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.3"
+version = "1.2.4"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -755,7 +755,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.167"
+version = "0.2.168"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -1000,7 +1000,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quinn-udp"
-version = "0.5.7"
+version = "0.5.8"
 description = "UDP sockets with ECN information for the QUIC transport protocol"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -1065,7 +1065,7 @@ homepage = "https://rust-random.github.io/book"
 
 [[dependencies]]
 name = "redox_syscall"
-version = "0.5.7"
+version = "0.5.8"
 description = "A Rust library to access raw Redox system calls"
 license = "MIT"
 notices = ["Copyright (c) 2017 Redox OS Developers"]
@@ -1171,7 +1171,7 @@ repository = "https://github.com/rust-lang/rustc-hash"
 
 [[dependencies]]
 name = "rustls"
-version = "0.23.19"
+version = "0.23.20"
 description = "Rustls is a modern TLS library written in Rust."
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -1193,7 +1193,7 @@ repository = "https://github.com/rustls/pemfile"
 
 [[dependencies]]
 name = "rustls-pki-types"
-version = "1.10.0"
+version = "1.10.1"
 description = "Shared types for the rustls PKI ecosystem"
 license = "MIT OR Apache-2.0"
 notices = [
@@ -1237,7 +1237,7 @@ repository = "https://github.com/bluss/scopeguard"
 
 [[dependencies]]
 name = "semver"
-version = "1.0.23"
+version = "1.0.24"
 description = "Parser and evaluator for Cargo's flavor of Semantic Versioning"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1245,7 +1245,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.215"
+version = "1.0.216"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1257,7 +1257,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.215"
+version = "1.0.216"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1491,7 +1491,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror"
-version = "2.0.4"
+version = "2.0.7"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1507,7 +1507,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "2.0.4"
+version = "2.0.7"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
