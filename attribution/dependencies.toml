@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.4"
+version = "1.2.5"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -540,7 +540,7 @@ repository = "https://github.com/seanmonstar/httparse"
 
 [[dependencies]]
 name = "hyper"
-version = "1.5.1"
+version = "1.5.2"
 description = "A protective and efficient HTTP library for all."
 license = "MIT"
 notices = ["Copyright (c) 2014-2021 Sean McArthur"]
@@ -550,7 +550,7 @@ homepage = "https://hyper.rs"
 
 [[dependencies]]
 name = "hyper-rustls"
-version = "0.27.3"
+version = "0.27.5"
 description = "Rustls+hyper integration for pure rust HTTPS"
 license = "Apache-2.0 OR ISC OR MIT"
 notices = [
@@ -755,7 +755,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.168"
+version = "0.2.169"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -1000,7 +1000,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quinn-udp"
-version = "0.5.8"
+version = "0.5.9"
 description = "UDP sockets with ECN information for the QUIC transport protocol"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -1491,7 +1491,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror"
-version = "2.0.7"
+version = "2.0.8"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1507,7 +1507,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "2.0.7"
+version = "2.0.8"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1564,7 +1564,7 @@ repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "tinyvec"
-version = "1.8.0"
+version = "1.8.1"
 description = "`tinyvec` provides 100% safe vec-like data structures."
 license = "Zlib OR Apache-2.0 OR MIT"
 notices = ['Copyright (c) 2019 Daniel "Lokathor" Gee.']
