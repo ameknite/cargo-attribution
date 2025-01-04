@@ -140,7 +140,7 @@ repository = "https://github.com/bitflags/bitflags"
 
 [[dependencies]]
 name = "bstr"
-version = "1.11.1"
+version = "1.11.3"
 description = "A string type that is not required to be valid UTF-8."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018-2019 Andrew Gallant"]
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.6"
+version = "1.2.7"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -1113,7 +1113,7 @@ repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.12.11"
+version = "0.12.12"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
@@ -1361,7 +1361,7 @@ repository = "https://github.com/rust-lang/socket2"
 
 [[dependencies]]
 name = "spdx"
-version = "0.10.7"
+version = "0.10.8"
 description = "Helper crate for SPDX expressions"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2019 Embark Studios"]
@@ -1437,7 +1437,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.92"
+version = "2.0.94"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -2048,7 +2048,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.6.20"
+version = "0.6.22"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
