@@ -70,7 +70,7 @@ repository = "https://github.com/rust-cli/anstyle.git"
 
 [[dependencies]]
 name = "anstyle-wincon"
-version = "3.0.6"
+version = "3.0.7"
 description = "Styling legacy Windows terminals"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015 Josh Triplett, 2022 The rust-cli Developers"]
@@ -129,7 +129,7 @@ repository = "https://github.com/maciejhirsz/beef"
 
 [[dependencies]]
 name = "bitflags"
-version = "2.7.0"
+version = "2.8.0"
 description = """
 A macro to generate structures which behave like bitflags.
 """
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.8"
+version = "1.2.10"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -742,7 +742,7 @@ repository = "https://github.com/dtolnay/itoa"
 
 [[dependencies]]
 name = "js-sys"
-version = "0.3.76"
+version = "0.3.77"
 description = """
 Bindings for all JS global objects and functions in all JS environments like
 Node.js and browsers, built on `#[wasm_bindgen]` using the `wasm-bindgen` crate.
@@ -784,7 +784,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "log"
-version = "0.4.24"
+version = "0.4.25"
 description = """
 A lightweight logging facade for Rust
 """
@@ -973,7 +973,7 @@ repository = "https://github.com/cryptocorrosion/cryptocorrosion"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.92"
+version = "1.0.93"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1209,6 +1209,14 @@ description = "Web PKI X.509 Certificate Verification."
 license = "ISC"
 notices = ["Copyright 2015 Brian Smith."]
 repository = "https://github.com/rustls/webpki"
+
+[[dependencies]]
+name = "rustversion"
+version = "1.0.19"
+description = "Conditional compilation according to rustc compiler version"
+license = "MIT OR Apache-2.0"
+authors = ["David Tolnay <dtolnay@gmail.com>"]
+repository = "https://github.com/dtolnay/rustversion"
 
 [[dependencies]]
 name = "ryu"
@@ -1824,7 +1832,7 @@ repository = "https://github.com/bytecodealliance/wasi"
 
 [[dependencies]]
 name = "wasm-bindgen"
-version = "0.2.99"
+version = "0.2.100"
 description = """
 Easy support for interacting between JS and Rust.
 """
@@ -1836,7 +1844,7 @@ homepage = "https://rustwasm.github.io/"
 
 [[dependencies]]
 name = "wasm-bindgen-backend"
-version = "0.2.99"
+version = "0.2.100"
 description = """
 Backend code generation of the wasm-bindgen tool
 """
@@ -1848,7 +1856,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-futures"
-version = "0.4.49"
+version = "0.4.50"
 description = "Bridging the gap between Rust Futures and JavaScript Promises"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2014 Alex Crichton"]
@@ -1858,7 +1866,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro"
-version = "0.2.99"
+version = "0.2.100"
 description = """
 Definition of the `#[wasm_bindgen]` attribute, an internal dependency
 """
@@ -1870,7 +1878,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.99"
+version = "0.2.100"
 description = """
 The part of the implementation of the `#[wasm_bindgen]` attribute that is not in the shared backend crate
 """
@@ -1882,7 +1890,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "wasm-bindgen-shared"
-version = "0.2.99"
+version = "0.2.100"
 description = """
 Shared support between wasm-bindgen and wasm-bindgen cli, an internal
 dependency.
@@ -1895,7 +1903,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "web-sys"
-version = "0.3.76"
+version = "0.3.77"
 description = """
 Bindings for all Web APIs, a procedurally generated crate from WebIDL
 """
