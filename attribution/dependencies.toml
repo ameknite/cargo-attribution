@@ -242,7 +242,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.26"
+version = "4.5.27"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -250,7 +250,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.26"
+version = "4.5.27"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -700,7 +700,7 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "2.7.0"
+version = "2.7.1"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
@@ -708,7 +708,7 @@ repository = "https://github.com/indexmap-rs/indexmap"
 
 [[dependencies]]
 name = "ipnet"
-version = "2.10.1"
+version = "2.11.0"
 description = "Provides types and useful methods for working with IPv4 and IPv6 network addresses, commonly called IP prefixes. The new `IpNet`, `Ipv4Net`, and `Ipv6Net` types build on the existing `IpAddr`, `Ipv4Addr`, and `Ipv6Addr` types already provided in Rust's standard library and align to their design to stay consistent. The module also provides useful traits that extend `Ipv4Addr` and `Ipv6Addr` with methods for `Add`, `Sub`, `BitAnd`, and `BitOr` operations. The module only uses stable feature so it is guaranteed to compile using the stable toolchain."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright 2017 Juniper Networks, Inc."]
@@ -1245,7 +1245,7 @@ repository = "https://github.com/bluss/scopeguard"
 
 [[dependencies]]
 name = "semver"
-version = "1.0.24"
+version = "1.0.25"
 description = "Parser and evaluator for Cargo's flavor of Semantic Versioning"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1277,7 +1277,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.135"
+version = "1.0.137"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1749,7 +1749,7 @@ repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
 name = "unicode-ident"
-version = "1.0.14"
+version = "1.0.15"
 description = "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31"
 license = "(MIT OR Apache-2.0) AND Unicode-3.0"
 notices = ["Copyright © 1991-2023 Unicode, Inc."]
