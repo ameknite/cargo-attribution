@@ -15,7 +15,7 @@ rust-version = "1.81.0"
 [dependencies]
 bytes = "1.9.0"
 cargo_metadata = "0.19.1"
-clap = { version = "4.5.27", features = ["derive"] }
+clap = { version = "4.5.28", features = ["derive"] }
 color-eyre = { version = "0.6.3", default-features = false }
 reqwest = { version = "0.12.12", default-features = false, features = [
   "rustls-tls",
@@ -23,7 +23,7 @@ reqwest = { version = "0.12.12", default-features = false, features = [
 serde = { version = "1.0.217", features = ["derive"] }
 spdx = "0.10.8"
 tokio = { version = "1.43.0", features = ["full"] }
-toml = "0.8.19"
+toml = "0.8.20"
 toml_edit = "0.22.23"
 memchr = "2.7.4"
 regex = "1.11.1"
