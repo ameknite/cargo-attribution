@@ -167,7 +167,7 @@ repository = "https://github.com/BurntSushi/byteorder"
 
 [[dependencies]]
 name = "bytes"
-version = "1.9.0"
+version = "1.10.0"
 description = "Types and traits for working with bytes"
 license = "MIT"
 notices = ["Copyright (c) 2018 Carl Lerche"]
@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.11"
+version = "1.2.12"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -242,7 +242,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.27"
+version = "4.5.28"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -258,7 +258,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.5.24"
+version = "4.5.28"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -878,7 +878,7 @@ repository = "https://github.com/gimli-rs/object"
 
 [[dependencies]]
 name = "once_cell"
-version = "1.20.2"
+version = "1.20.3"
 description = "Single assignment cells and lazy values."
 license = "MIT OR Apache-2.0"
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
@@ -1163,7 +1163,7 @@ repository = "https://github.com/rust-lang-nursery/rustc-hash"
 
 [[dependencies]]
 name = "rustc-hash"
-version = "2.1.0"
+version = "2.1.1"
 description = "A speedy, non-cryptographic hashing algorithm used by rustc"
 license = "Apache-2.0 OR MIT"
 authors = ["The Rust Project Developers"]
@@ -1445,7 +1445,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.96"
+version = "2.0.98"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1626,7 +1626,7 @@ repository = "https://github.com/rustls/tokio-rustls"
 
 [[dependencies]]
 name = "toml"
-version = "0.8.19"
+version = "0.8.20"
 description = """
 A native Rust encoder and decoder of TOML-formatted files and streams. Provides
 implementations of the standard Serialize/Deserialize traits for TOML data to
@@ -2056,7 +2056,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.7.0"
+version = "0.7.1"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
