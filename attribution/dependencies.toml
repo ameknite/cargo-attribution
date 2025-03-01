@@ -207,7 +207,7 @@ repository = "https://github.com/oli-obk/cargo_metadata"
 
 [[dependencies]]
 name = "cc"
-version = "1.2.14"
+version = "1.2.16"
 description = """
 A build-time dependency for Cargo build scripts to assist in invoking the native
 C compiler to compile native C code into a static archive to be linked into Rust
@@ -242,7 +242,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.29"
+version = "4.5.31"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -250,7 +250,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.29"
+version = "4.5.31"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -320,7 +320,7 @@ repository = "https://github.com/yaahc/displaydoc"
 
 [[dependencies]]
 name = "either"
-version = "1.13.0"
+version = "1.14.0"
 description = """
 The enum `Either` with variants `Left` and `Right` is a general purpose sum type with two cases.
 """
@@ -444,7 +444,7 @@ repository = "https://github.com/gimli-rs/gimli"
 
 [[dependencies]]
 name = "globset"
-version = "0.4.15"
+version = "0.4.16"
 description = """
 Cross platform single glob and glob set matching. Glob set matching is the
 process of matching one or more glob patterns against a single candidate path
@@ -755,7 +755,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.169"
+version = "0.2.170"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -766,7 +766,7 @@ repository = "https://github.com/rust-lang/libc"
 
 [[dependencies]]
 name = "litemap"
-version = "0.7.4"
+version = "0.7.5"
 description = "A key-value Map implementation based on a flat, sorted Vec."
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -784,7 +784,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "log"
-version = "0.4.25"
+version = "0.4.26"
 description = """
 A lightweight logging facade for Rust
 """
@@ -1065,7 +1065,7 @@ homepage = "https://rust-random.github.io/book"
 
 [[dependencies]]
 name = "redox_syscall"
-version = "0.5.8"
+version = "0.5.9"
 description = "A Rust library to access raw Redox system calls"
 license = "MIT"
 notices = ["Copyright (c) 2017 Redox OS Developers"]
@@ -1122,17 +1122,15 @@ repository = "https://github.com/seanmonstar/reqwest"
 
 [[dependencies]]
 name = "ring"
-version = "0.17.9"
-description = "Safe, fast, small crypto using Rust."
+version = "0.17.11"
+description = "An experiment."
+license = "Apache-2.0 AND ISC"
 notices = [
-  "* Copyright (c) 1998-2011 The OpenSSL Project.  All rights reserved.",
-  "/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)",
-  "/* Copyright (c) 2015, Google Inc.",
-  "Copyright (c) 2015-2016 the fiat-crypto authors (see",
-  "Copyright 2015-2016 Brian Smith.",
+  "Copyright (c) 2009 The Go Authors. All rights reserved.",
+  "Copyright 2015 The Chromium Authors. All rights reserved.",
+  "Copyright 2015-2025 Brian Smith.",
 ]
-authors = ["Brian Smith <brian@briansmith.org>"]
-repository = "https://github.com/briansmith/ring"
+repository = "https://github.com/ctz/ring"
 
 [[dependencies]]
 name = "rowan"
@@ -1253,7 +1251,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.217"
+version = "1.0.218"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1265,7 +1263,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.217"
+version = "1.0.218"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1277,7 +1275,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.138"
+version = "1.0.139"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1345,7 +1343,7 @@ repository = "https://github.com/tokio-rs/slab"
 
 [[dependencies]]
 name = "smallvec"
-version = "1.13.2"
+version = "1.14.0"
 description = "'Small vector' optimization: store up to a small number of items on the stack"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The Servo Project Developers"]
@@ -1736,7 +1734,7 @@ repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
 name = "unicode-ident"
-version = "1.0.16"
+version = "1.0.17"
 description = "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31"
 license = "(MIT OR Apache-2.0) AND Unicode-3.0"
 notices = ["Copyright © 1991-2023 Unicode, Inc."]
@@ -2043,7 +2041,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "winnow"
-version = "0.7.2"
+version = "0.7.3"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
@@ -2109,7 +2107,7 @@ repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
 name = "zerofrom"
-version = "0.1.5"
+version = "0.1.6"
 description = "ZeroFrom trait for constructing"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -2118,7 +2116,7 @@ repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "zerofrom-derive"
-version = "0.1.5"
+version = "0.1.6"
 description = "Custom derive for the zerofrom crate"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]

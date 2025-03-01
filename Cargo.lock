@@ -173,7 +173,7 @@ dependencies = [
 
 [[package]]
 name = "cargo-attribution"
-version = "0.8.10"
+version = "0.8.11"
 dependencies = [
  "adler",
  "bytes",
