@@ -129,7 +129,7 @@ repository = "https://github.com/maciejhirsz/beef"
 
 [[dependencies]]
 name = "bitflags"
-version = "2.8.0"
+version = "2.9.0"
 description = """
 A macro to generate structures which behave like bitflags.
 """
@@ -167,7 +167,7 @@ repository = "https://github.com/BurntSushi/byteorder"
 
 [[dependencies]]
 name = "bytes"
-version = "1.10.0"
+version = "1.10.1"
 description = "Types and traits for working with bytes"
 license = "MIT"
 notices = ["Copyright (c) 2018 Carl Lerche"]
@@ -199,7 +199,7 @@ repository = "https://github.com/rust-lang/cargo"
 
 [[dependencies]]
 name = "cargo_metadata"
-version = "0.19.1"
+version = "0.19.2"
 description = "structured access to the output of `cargo metadata`"
 license = "MIT"
 authors = ["Oliver Schneider <git-spam-no-reply9815368754983@oli-obk.de>"]
@@ -320,7 +320,7 @@ repository = "https://github.com/yaahc/displaydoc"
 
 [[dependencies]]
 name = "either"
-version = "1.14.0"
+version = "1.15.0"
 description = """
 The enum `Either` with variants `Left` and `Right` is a general purpose sum type with two cases.
 """
@@ -531,7 +531,7 @@ repository = "https://github.com/hyperium/http-body"
 
 [[dependencies]]
 name = "httparse"
-version = "1.10.0"
+version = "1.10.1"
 description = "A tiny, safe, speedy, zero-copy HTTP/1.x parser."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2025 Sean McArthur"]
@@ -734,7 +734,7 @@ repository = "https://github.com/rust-itertools/itertools"
 
 [[dependencies]]
 name = "itoa"
-version = "1.0.14"
+version = "1.0.15"
 description = "Fast integer primitive to string conversion"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -973,7 +973,7 @@ repository = "https://github.com/cryptocorrosion/cryptocorrosion"
 
 [[dependencies]]
 name = "proc-macro2"
-version = "1.0.93"
+version = "1.0.94"
 description = "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case."
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1008,7 +1008,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quote"
-version = "1.0.38"
+version = "1.0.39"
 description = "Quasi-quoting macro quote!(...)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1065,7 +1065,7 @@ homepage = "https://rust-random.github.io/book"
 
 [[dependencies]]
 name = "redox_syscall"
-version = "0.5.9"
+version = "0.5.10"
 description = "A Rust library to access raw Redox system calls"
 license = "MIT"
 notices = ["Copyright (c) 2017 Redox OS Developers"]
@@ -1122,7 +1122,7 @@ repository = "https://github.com/seanmonstar/reqwest"
 
 [[dependencies]]
 name = "ring"
-version = "0.17.11"
+version = "0.17.13"
 description = "An experiment."
 license = "Apache-2.0 AND ISC"
 notices = [
@@ -1130,7 +1130,7 @@ notices = [
   "Copyright 2015 The Chromium Authors. All rights reserved.",
   "Copyright 2015-2025 Brian Smith.",
 ]
-repository = "https://github.com/ctz/ring"
+repository = "https://github.com/briansmith/ring"
 
 [[dependencies]]
 name = "rowan"
@@ -1210,7 +1210,7 @@ repository = "https://github.com/rustls/webpki"
 
 [[dependencies]]
 name = "rustversion"
-version = "1.0.19"
+version = "1.0.20"
 description = "Conditional compilation according to rustc compiler version"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1218,7 +1218,7 @@ repository = "https://github.com/dtolnay/rustversion"
 
 [[dependencies]]
 name = "ryu"
-version = "1.0.19"
+version = "1.0.20"
 description = "Fast floating point to string conversion"
 license = "Apache-2.0 OR BSL-1.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1243,7 +1243,7 @@ repository = "https://github.com/bluss/scopeguard"
 
 [[dependencies]]
 name = "semver"
-version = "1.0.25"
+version = "1.0.26"
 description = "Parser and evaluator for Cargo's flavor of Semantic Versioning"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1275,7 +1275,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_json"
-version = "1.0.139"
+version = "1.0.140"
 description = "A JSON serialization file format"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1430,7 +1430,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.98"
+version = "2.0.99"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1484,7 +1484,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror"
-version = "2.0.11"
+version = "2.0.12"
 description = "derive(Error)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1500,7 +1500,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "thiserror-impl"
-version = "2.0.11"
+version = "2.0.12"
 description = "Implementation detail of the `thiserror` crate"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1508,41 +1508,32 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "time"
-version = "0.3.37"
+version = "0.3.39"
 description = "Date and time library. Fully interoperable with the standard library. Mostly compatible with #![no_std]."
 license = "MIT OR Apache-2.0"
-notices = [
-  "Copyright (c) 2024 Jacob Pratt et al.",
-  "Copyright 2024 Jacob Pratt et al.",
-]
+notices = ["Copyright (c) Jacob Pratt et al."]
 authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
 repository = "https://github.com/time-rs/time"
 homepage = "https://time-rs.github.io"
 
 [[dependencies]]
 name = "time-core"
-version = "0.1.2"
+version = "0.1.3"
 description = "This crate is an implementation detail and should not be relied upon directly."
 license = "MIT OR Apache-2.0"
-notices = [
-  "Copyright (c) 2022 Jacob Pratt et al.",
-  "Copyright 2022 Jacob Pratt et al.",
-]
+notices = ["Copyright (c) Jacob Pratt et al."]
 authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
 repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
 name = "time-macros"
-version = "0.2.19"
+version = "0.2.20"
 description = """
     Procedural macros for the time crate.
     This crate is an implementation detail and should not be relied upon directly.
 """
 license = "MIT OR Apache-2.0"
-notices = [
-  "Copyright (c) 2024 Jacob Pratt et al.",
-  "Copyright 2024 Jacob Pratt et al.",
-]
+notices = ["Copyright (c) Jacob Pratt et al."]
 authors = ["Jacob Pratt <open-source@jhpratt.dev>", "Time contributors"]
 repository = "https://github.com/time-rs/time"
 
@@ -1557,7 +1548,7 @@ repository = "https://github.com/unicode-org/icu4x"
 
 [[dependencies]]
 name = "tinyvec"
-version = "1.8.1"
+version = "1.9.0"
 description = "`tinyvec` provides 100% safe vec-like data structures."
 license = "Zlib OR Apache-2.0 OR MIT"
 notices = ['Copyright (c) 2019 Daniel "Lokathor" Gee.']
@@ -1575,7 +1566,7 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.43.0"
+version = "1.44.0"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
@@ -1603,7 +1594,7 @@ homepage = "https://tokio.rs"
 
 [[dependencies]]
 name = "tokio-rustls"
-version = "0.26.1"
+version = "0.26.2"
 description = "Asynchronous TLS/SSL streams for Tokio using Rustls."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2017 quininer kel", "Copyright 2017 quininer kel"]
@@ -1734,7 +1725,7 @@ repository = "https://github.com/seanmonstar/try-lock"
 
 [[dependencies]]
 name = "unicode-ident"
-version = "1.0.17"
+version = "1.0.18"
 description = "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31"
 license = "(MIT OR Apache-2.0) AND Unicode-3.0"
 notices = ["Copyright © 1991-2023 Unicode, Inc."]
