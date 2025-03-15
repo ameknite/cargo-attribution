@@ -157,15 +157,6 @@ authors = ["Nick Fitzgerald <fitzgen@gmail.com>"]
 repository = "https://github.com/fitzgen/bumpalo"
 
 [[dependencies]]
-name = "byteorder"
-version = "1.5.0"
-description = "Library for reading/writing numbers in big-endian and little-endian."
-license = "Unlicense OR MIT"
-notices = ["Copyright (c) 2015 Andrew Gallant"]
-authors = ["Andrew Gallant <jamslam@gmail.com>"]
-repository = "https://github.com/BurntSushi/byteorder"
-
-[[dependencies]]
 name = "bytes"
 version = "1.10.1"
 description = "Types and traits for working with bytes"
@@ -242,7 +233,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.31"
+version = "4.5.32"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -250,7 +241,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.31"
+version = "4.5.32"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -258,7 +249,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_derive"
-version = "4.5.28"
+version = "4.5.32"
 description = "Parse command line argument by defining a struct, derive crate."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -483,7 +474,7 @@ repository = "https://github.com/withoutboats/heck"
 
 [[dependencies]]
 name = "http"
-version = "1.2.0"
+version = "1.3.1"
 description = """
 A set of types for representing HTTP requests and responses.
 """
@@ -516,12 +507,12 @@ repository = "https://github.com/hyperium/http-body"
 
 [[dependencies]]
 name = "http-body-util"
-version = "0.1.2"
+version = "0.1.3"
 description = """
 Combinators and adapters for HTTP request or response bodies.
 """
 license = "MIT"
-notices = ["Copyright (c) 2019 Hyper Contributors"]
+notices = ["Copyright (c) 2019-2025 Sean McArthur & Hyper Contributors"]
 authors = [
   "Carl Lerche <me@carllerche.com>",
   "Lucio Franco <luciofranco14@gmail.com>",
@@ -700,7 +691,7 @@ repository = "https://github.com/yaahc/indenter"
 
 [[dependencies]]
 name = "indexmap"
-version = "2.7.1"
+version = "2.8.0"
 description = "A hash table with consistent order and fast iteration."
 license = "Apache-2.0 OR MIT"
 notices = ["Copyright (c) 2016--2017"]
@@ -755,7 +746,7 @@ homepage = "https://rustwasm.github.io/wasm-bindgen/"
 
 [[dependencies]]
 name = "libc"
-version = "0.2.170"
+version = "0.2.171"
 description = """
 Raw FFI bindings to platform libraries like libc.
 """
@@ -878,7 +869,7 @@ repository = "https://github.com/gimli-rs/object"
 
 [[dependencies]]
 name = "once_cell"
-version = "1.20.3"
+version = "1.21.1"
 description = "Single assignment cells and lazy values."
 license = "MIT OR Apache-2.0"
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
@@ -961,9 +952,9 @@ repository = "https://github.com/jhpratt/powerfmt"
 
 [[dependencies]]
 name = "ppv-lite86"
-version = "0.2.20"
-description = "Implementation of the crypto-simd API for x86"
-license = "MIT/Apache-2.0"
+version = "0.2.21"
+description = "Cross-platform cryptography-oriented low-level SIMD library."
+license = "MIT OR Apache-2.0"
 notices = [
   "Copyright (c) 2019 The CryptoCorrosion Contributors",
   "Copyright 2019 The CryptoCorrosion Contributors",
@@ -1008,7 +999,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quote"
-version = "1.0.39"
+version = "1.0.40"
 description = "Quasi-quoting macro quote!(...)"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1113,16 +1104,19 @@ repository = "https://github.com/rust-lang/regex/tree/master/regex-syntax"
 
 [[dependencies]]
 name = "reqwest"
-version = "0.12.12"
+version = "0.12.14"
 description = "higher level HTTP client library"
 license = "MIT OR Apache-2.0"
-notices = ["Copyright (c) 2016 Sean McArthur", "Copyright 2016 Sean McArthur"]
+notices = [
+  "Copyright (c) 2016-2025 Sean McArthur",
+  "Copyright 2016 Sean McArthur",
+]
 authors = ["Sean McArthur <sean@seanmonstar.com>"]
 repository = "https://github.com/seanmonstar/reqwest"
 
 [[dependencies]]
 name = "ring"
-version = "0.17.13"
+version = "0.17.14"
 description = "An experiment."
 license = "Apache-2.0 AND ISC"
 notices = [
@@ -1251,7 +1245,7 @@ repository = "https://github.com/dtolnay/semver"
 
 [[dependencies]]
 name = "serde"
-version = "1.0.218"
+version = "1.0.219"
 description = "A generic serialization/deserialization framework"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1263,7 +1257,7 @@ homepage = "https://serde.rs"
 
 [[dependencies]]
 name = "serde_derive"
-version = "1.0.218"
+version = "1.0.219"
 description = "Macros 1.1 implementation of #[derive(Serialize, Deserialize)]"
 license = "MIT OR Apache-2.0"
 authors = [
@@ -1430,7 +1424,7 @@ repository = "https://github.com/dtolnay/syn"
 
 [[dependencies]]
 name = "syn"
-version = "2.0.99"
+version = "2.0.100"
 description = "Parser for Rust source code"
 license = "MIT OR Apache-2.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
@@ -1566,7 +1560,7 @@ repository = "https://github.com/Soveu/tinyvec_macros"
 
 [[dependencies]]
 name = "tokio"
-version = "1.44.0"
+version = "1.44.1"
 description = """
 An event-driven, non-blocking I/O platform for writing asynchronous I/O
 backed applications.
@@ -1905,8 +1899,17 @@ license = "MPL-2.0"
 repository = "https://github.com/rustls/webpki-roots"
 
 [[dependencies]]
+name = "windows-link"
+version = "0.1.0"
+description = "Linking for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows-registry"
-version = "0.2.0"
+version = "0.4.0"
 description = "Windows registry"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1915,7 +1918,7 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows-result"
-version = "0.2.0"
+version = "0.3.1"
 description = "Windows error handling"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1924,8 +1927,8 @@ repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
 name = "windows-strings"
-version = "0.1.0"
-description = "Rust for Windows"
+version = "0.3.1"
+description = "Windows string types"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
 authors = ["Microsoft"]
@@ -1959,8 +1962,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows-targets"
+version = "0.53.0"
+description = "Import libs for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_aarch64_gnullvm"
 version = "0.52.6"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_aarch64_gnullvm"
+version = "0.53.0"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1977,8 +1998,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_aarch64_msvc"
+version = "0.53.0"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_i686_gnu"
 version = "0.52.6"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_i686_gnu"
+version = "0.53.0"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -1995,8 +2034,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_i686_gnullvm"
+version = "0.53.0"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_i686_msvc"
 version = "0.52.6"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_i686_msvc"
+version = "0.53.0"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -2013,8 +2070,26 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_x86_64_gnu"
+version = "0.53.0"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "windows_x86_64_gnullvm"
 version = "0.52.6"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
+name = "windows_x86_64_gnullvm"
+version = "0.53.0"
 description = "Import lib for Windows"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Microsoft Corporation."]
@@ -2031,8 +2106,17 @@ authors = ["Microsoft"]
 repository = "https://github.com/microsoft/windows-rs"
 
 [[dependencies]]
+name = "windows_x86_64_msvc"
+version = "0.53.0"
+description = "Import lib for Windows"
+license = "MIT OR Apache-2.0"
+notices = ["Copyright (c) Microsoft Corporation."]
+authors = ["Microsoft"]
+repository = "https://github.com/microsoft/windows-rs"
+
+[[dependencies]]
 name = "winnow"
-version = "0.7.3"
+version = "0.7.4"
 description = "A byte-oriented, zero-copy, parser combinators library"
 license = "MIT"
 repository = "https://github.com/winnow-rs/winnow"
@@ -2085,6 +2169,21 @@ authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
 repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
+name = "zerocopy"
+version = "0.8.23"
+description = '''Zerocopy makes zero-cost memory manipulation effortless. We write "unsafe" so you don't have to.'''
+license = "BSD-2-Clause OR Apache-2.0 OR MIT"
+notices = [
+  "Copyright 2019 The Fuchsia Authors.",
+  "Copyright 2023 The Fuchsia Authors",
+]
+authors = [
+  "Joshua Liebow-Feeser <joshlf@google.com>",
+  "Jack Wrenn <jswrenn@amazon.com>",
+]
+repository = "https://github.com/google/zerocopy"
+
+[[dependencies]]
 name = "zerocopy-derive"
 version = "0.7.35"
 description = "Custom derive for traits from the zerocopy crate"
@@ -2094,6 +2193,21 @@ notices = [
   "Copyright 2023 The Fuchsia Authors",
 ]
 authors = ["Joshua Liebow-Feeser <joshlf@google.com>"]
+repository = "https://github.com/google/zerocopy"
+
+[[dependencies]]
+name = "zerocopy-derive"
+version = "0.8.23"
+description = "Custom derive for traits from the zerocopy crate"
+license = "BSD-2-Clause OR Apache-2.0 OR MIT"
+notices = [
+  "Copyright 2019 The Fuchsia Authors.",
+  "Copyright 2023 The Fuchsia Authors",
+]
+authors = [
+  "Joshua Liebow-Feeser <joshlf@google.com>",
+  "Jack Wrenn <jswrenn@amazon.com>",
+]
 repository = "https://github.com/google/zerocopy"
 
 [[dependencies]]
