@@ -233,7 +233,7 @@ repository = "https://github.com/katharostech/cfg_aliases"
 
 [[dependencies]]
 name = "clap"
-version = "4.5.32"
+version = "4.5.34"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Individual contributors"]
@@ -241,7 +241,7 @@ repository = "https://github.com/clap-rs/clap"
 
 [[dependencies]]
 name = "clap_builder"
-version = "4.5.32"
+version = "4.5.34"
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2015-2022 Kevin B. Knapp and Clap Contributors"]
@@ -289,7 +289,7 @@ repository = "https://github.com/matklad/countme"
 
 [[dependencies]]
 name = "deranged"
-version = "0.4.0"
+version = "0.4.1"
 description = "Ranged integers"
 license = "MIT OR Apache-2.0"
 notices = [
@@ -604,7 +604,7 @@ homepage = "https://icu4x.unicode.org"
 
 [[dependencies]]
 name = "icu_locid_transform_data"
-version = "1.5.0"
+version = "1.5.1"
 description = "Data for the icu_locid_transform crate"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -624,7 +624,7 @@ homepage = "https://icu4x.unicode.org"
 
 [[dependencies]]
 name = "icu_normalizer_data"
-version = "1.5.0"
+version = "1.5.1"
 description = "Data for the icu_normalizer crate"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -644,7 +644,7 @@ homepage = "https://icu4x.unicode.org"
 
 [[dependencies]]
 name = "icu_properties_data"
-version = "1.5.0"
+version = "1.5.1"
 description = "Data for the icu_properties crate"
 license = "Unicode-3.0"
 notices = ["Copyright © 2020-2024 Unicode, Inc."]
@@ -787,7 +787,7 @@ repository = "https://github.com/Amanieu/parking_lot"
 
 [[dependencies]]
 name = "log"
-version = "0.4.26"
+version = "0.4.27"
 description = """
 A lightweight logging facade for Rust
 """
@@ -881,7 +881,7 @@ repository = "https://github.com/gimli-rs/object"
 
 [[dependencies]]
 name = "once_cell"
-version = "1.21.1"
+version = "1.21.3"
 description = "Single assignment cells and lazy values."
 license = "MIT OR Apache-2.0"
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
@@ -1003,7 +1003,7 @@ repository = "https://github.com/quinn-rs/quinn"
 
 [[dependencies]]
 name = "quinn-udp"
-version = "0.5.10"
+version = "0.5.11"
 description = "UDP sockets with ECN information for the QUIC transport protocol"
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) 2018 The quinn Developers"]
@@ -1216,7 +1216,7 @@ repository = "https://github.com/rustls/pki-types"
 
 [[dependencies]]
 name = "rustls-webpki"
-version = "0.103.0"
+version = "0.103.1"
 description = "Web PKI X.509 Certificate Verification."
 license = "ISC"
 notices = ["Copyright 2015 Brian Smith."]
@@ -1522,7 +1522,7 @@ repository = "https://github.com/dtolnay/thiserror"
 
 [[dependencies]]
 name = "time"
-version = "0.3.40"
+version = "0.3.41"
 description = "Date and time library. Fully interoperable with the standard library. Mostly compatible with #![no_std]."
 license = "MIT OR Apache-2.0"
 notices = ["Copyright (c) Jacob Pratt et al."]
@@ -1541,7 +1541,7 @@ repository = "https://github.com/time-rs/time"
 
 [[dependencies]]
 name = "time-macros"
-version = "0.2.21"
+version = "0.2.22"
 description = """
     Procedural macros for the time crate.
     This crate is an implementation detail and should not be relied upon directly.
