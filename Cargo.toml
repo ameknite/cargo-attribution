@@ -28,7 +28,7 @@ toml_edit = "0.22.24"
 memchr = "2.7.4"
 regex = "1.11.1"
 adler = "1.0.2"
-taplo = "0.13.2"
+taplo = "0.14.0"
 
 [profile.release]
 opt-level = "z"
