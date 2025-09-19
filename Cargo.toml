@@ -20,11 +20,11 @@ color-eyre = { version = "0.6.5", default-features = false }
 reqwest = { version = "0.12.23", default-features = false, features = [
   "rustls-tls",
 ] }
-serde = { version = "1.0.219", features = ["derive"] }
+serde = { version = "1.0.225", features = ["derive"] }
 spdx = "0.12.0"
 tokio = { version = "1.47.1", features = ["full"] }
-toml = "0.9.5"
-toml_edit = "0.23.4"
+toml = "0.9.6"
+toml_edit = "0.23.5"
 memchr = "2.7.5"
 regex = "1.11.2"
 adler = "1.0.2"
