@@ -25,7 +25,7 @@ spdx = "0.13.3"
 tokio = { version = "1.49.0", features = ["full"] }
 toml = "0.9.11"
 toml_edit = "0.24.0"
-memchr = "2.7.6"
+memchr = "2.8.0"
 regex = "1.12.3"
 adler = "1.0.2"
 taplo = "0.14.0"
