@@ -24,7 +24,7 @@ serde = { version = "1.0.228", features = ["derive"] }
 spdx = "0.13.3"
 tokio = { version = "1.49.0", features = ["full"] }
 toml = "1.0.1"
-toml_edit = "0.24.0"
+toml_edit = "0.25.3"
 memchr = "2.8.0"
 regex = "1.12.3"
 adler = "1.0.2"
