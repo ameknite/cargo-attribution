@@ -23,7 +23,7 @@ reqwest = { version = "0.12.28", default-features = false, features = [
 serde = { version = "1.0.228", features = ["derive"] }
 spdx = "0.13.4"
 tokio = { version = "1.50.0", features = ["full"] }
-toml = "1.0.4"
+toml = "1.0.6"
 toml_edit = "0.25.4"
 memchr = "2.8.0"
 regex = "1.12.3"
